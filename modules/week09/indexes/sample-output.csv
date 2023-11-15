@@ -1,0 +1,17 @@
+index,average_time,num_distinct_values
+"none",.7000000,1
+"Site",.0900000,16
+"Species",.0230000,99
+"Year",.0260000,66
+"Observer",.0230000,269
+"ageMethod",.4000000,3
+"Site,Species",.0220000,1584
+"Site,Year",.0220000,1056
+"Site,Observer",.0220000,4304
+"Site,ageMethod",.0400000,48
+"Species,Year",.0230000,6534
+"Species,Observer",.0220000,26631
+"Species,ageMethod",.0220000,297
+"Year,Observer",.0220000,17754
+"Year,ageMethod",.0220000,198
+"Observer,ageMethod",.0230000,807

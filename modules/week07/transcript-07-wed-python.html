@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bren MEDS 213 Spring 2023 - Fragility</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bren MEDS 213 Spring 2023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modules" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Modules</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modules">    
+        <li>
+    <a class="dropdown-item" href="../../modules/week01/index-01.html" rel="" target="">
+ <span class="dropdown-text">Week 1 - Relational databases and data modeling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week02/index-02.html" rel="" target="">
+ <span class="dropdown-text">Week 2 - Ethical and responsible data management</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/index-03.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQLite and SQL</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week04/index-04.html" rel="" target="">
+ <span class="dropdown-text">Week 4 - Reproducible and FAIR data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/index-05.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - SQLite, SQL, and Bash</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week06/index-06.html" rel="" target="">
+ <span class="dropdown-text">Week 6 - Metadata standards</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/index-07.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Programming with databases</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week08/index-08.html" rel="" target="">
+ <span class="dropdown-text">Week 8 - Sensitive data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week09/index-09.html" rel="" target="">
+ <span class="dropdown-text">Week 9 - Advanced database topics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week10/index-10.html" rel="" target="">
+ <span class="dropdown-text">Week 10 - Data licensing and publication</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-assignments" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Assignments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-assignments">    
+        <li>
+    <a class="dropdown-item" href="../../modules/week01/hw-01.html" rel="" target="">
+ <span class="dropdown-text">Week 1 - Data modeling exercise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-1.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-2.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-3.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week04/hw-04.html" rel="" target="">
+ <span class="dropdown-text">Week 4 - Project organization and documentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-1.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Protect yourself</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-2.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Create a trigger</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-3.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Create a test harness</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-4.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Bash scripting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week06/hw-06.html" rel="" target="">
+ <span class="dropdown-text">Week 6 - EML record</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-1.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Little Bobby Tables</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-2.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Who’s the culprit?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-3.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Characterizing egg variation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-4.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Who were the winners?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week08/hw-08.html" rel="" target="">
+ <span class="dropdown-text">Week 8 - sdcMicro exercise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week09/hw-09.html" rel="" target="">
+ <span class="dropdown-text">Week 9 - What makes a good index?</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#safe-interpolation-of-query-parameters" id="toc-safe-interpolation-of-query-parameters" class="nav-link active" data-scroll-target="#safe-interpolation-of-query-parameters">Safe interpolation of query parameters</a></li>
+  <li><a href="#pandas-convenience-function" id="toc-pandas-convenience-function" class="nav-link" data-scroll-target="#pandas-convenience-function">Pandas convenience function</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Fragility</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">"database.db"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Fragile: a non-obvious, distant dependency in software. Eg: relying on the order of columns returned by a <code>SELECT *</code>. The order is determined by the database schema, which is to say it’s not defined anywhere close to the code. The order of columns will not change dynamically in the way that rows can be returned in differing orders on every query. Still, if the schema ever gets updated and the column order changes (which might seem like an innocuous change to the person modifying the schema) code will correspondingly need to be changed. That can be overlooked, or even if remembered, it can be very hard to find all places in the code that need to be changed.</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> conn.cursor()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>c.execute(<span class="st">"SELECT * FROM Species LIMIT 3"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> c.fetchall()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>first_common_name <span class="op">=</span> rows[<span class="dv">0</span>][<span class="dv">1</span>] <span class="co"># assumes second column is common name</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>first_common_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>'Arctic ground squirrel'</code></pre>
+</div>
+</div>
+<p>Same example, but with explicit column names to establish linkage between query and tuples that are returned.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>c.execute(<span class="st">"""</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="st">    SELECT Code, Common_name, Scientific_name, Relevance</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM Species</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="st">    LIMIT 3"""</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>rows <span class="op">=</span> c.fetchall()</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>first_common_name <span class="op">=</span> rows[<span class="dv">0</span>][<span class="dv">1</span>] <span class="co"># can see two lines above that second column is common name</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>first_common_name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>'Arctic ground squirrel'</code></pre>
+</div>
+</div>
+<p>Takeaway: avoid <code>SELECT *</code>, instead explicitly name columns.</p>
+<section id="safe-interpolation-of-query-parameters" class="level1">
+<h1>Safe interpolation of query parameters</h1>
+<p>All the queries we’ve seen so far have been complete and static. But it is common to work with parameterized queries. Think back to goodreads.com example: a user requests to view the reviews for a book. The book ID is not known in advance (i.e., when the software was written), it is supplied as part of the request. Ergo, the website software has a template query in hand: <code>SELECT * FROM book_reviews WHERE book_id = ? ORDER BY ... LIMIT 10</code>. When the request is received it then substitutes the requested book ID into the template.</p>
+<p>The question is, how to do this safely? First, let’s look at using Python interpolation.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>template <span class="op">=</span> <span class="st">"""SELECT Name FROM Personnel</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE Abbreviation = '</span><span class="sc">%s</span><span class="st">'"""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>abbrev <span class="op">=</span> <span class="st">"agottesman"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>c.execute(template <span class="op">%</span> abbrev) <span class="co"># interpolate abbrev into the template</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>c.fetchall()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>[('Aaron Gottesman',)]</code></pre>
+</div>
+</div>
+<p>Extended example that shows a more realistic example of using a query template: doing some processing on each row that is returned. (The processing here is trivial, but in general, including in your homework, it can be far more complex.) This example illustrates: - template query and using Python interpolation - iterating over the rows of a query - creating a second cursor to perform a second query simultaneously - using <code>fetchone</code> to retrieve the one row that is returned by a <code>COUNT(*)</code></p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>template <span class="op">=</span> <span class="st">"""SELECT COUNT(*)</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM Bird_nests</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE Species = '</span><span class="sc">%s</span><span class="st">'</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>c.execute(<span class="st">"SELECT Code FROM Species"</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> c:</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    code <span class="op">=</span> row[<span class="dv">0</span>]</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    c2 <span class="op">=</span> conn.cursor()</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    c2.execute(template <span class="op">%</span> code)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"species </span><span class="sc">%s</span><span class="st"> has </span><span class="sc">%s</span><span class="st"> nests"</span> <span class="op">%</span> (code, c2.fetchone()[<span class="dv">0</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>species agsq has 0 nests
+species amcr has 0 nests
+species amgp has 29 nests
+species arfo has 0 nests
+species arte has 0 nests
+species basa has 0 nests
+species bbis has 0 nests
+species bbpl has 43 nests
+species bbsa has 0 nests
+species besw has 0 nests
+species bltu has 0 nests
+species brant has 0 nests
+species brbe has 0 nests
+species brle has 0 nests
+species btcu has 0 nests
+species btgo has 3 nests
+species cole has 0 nests
+species cora has 0 nests
+species cosn has 0 nests
+species crpl has 2 nests
+species cusa has 0 nests
+species dunl has 101 nests
+species eywa has 0 nests
+species glgu has 0 nests
+species goea has 0 nests
+species gwfg has 0 nests
+species gwgu has 0 nests
+species gwte has 0 nests
+species gyrf has 0 nests
+species herg has 3 nests
+species hore has 0 nests
+species hugo has 0 nests
+species kill has 0 nests
+species lalo has 33 nests
+species lbdo has 1 nests
+species lesa has 0 nests
+species leye has 0 nests
+species list has 0 nests
+species ltdu has 0 nests
+species ltja has 0 nests
+species ltwe has 0 nests
+species mago has 0 nests
+species megu has 0 nests
+species merl has 0 nests
+species noha has 0 nests
+species nopi has 0 nests
+species nrvo has 0 nests
+species nsho has 0 nests
+species pagp has 0 nests
+species paja has 2 nests
+species palo has 0 nests
+species pefa has 0 nests
+species pesa has 14 nests
+species pobe has 0 nests
+species poja has 0 nests
+species pusa has 0 nests
+species refo has 0 nests
+species rekn has 0 nests
+species reph has 80 nests
+species rlha has 0 nests
+species rnph has 74 nests
+species rnst has 0 nests
+species rosa has 0 nests
+species rtpi has 0 nests
+species ruff has 0 nests
+species rutu has 30 nests
+species sacr has 0 nests
+species sagu has 0 nests
+species sand has 0 nests
+species savs has 0 nests
+species sbdo has 1 nests
+species sbgu has 0 nests
+species seow has 0 nests
+species sepl has 105 nests
+species sesa has 485 nests
+species snow has 0 nests
+species spei has 0 nests
+species spre has 0 nests
+species spsa has 0 nests
+species spts has 0 nests
+species stsa has 0 nests
+species stwe has 0 nests
+species test has 1 nests
+species thgu has 0 nests
+species tusw has 0 nests
+species tuvo has 0 nests
+species unfa has 0 nests
+species ungu has 0 nests
+species unja has 0 nests
+species unle has 0 nests
+species unra has 0 nests
+species vegu has 0 nests
+species wesa has 457 nests
+species whim has 0 nests
+species wipt has 0 nests
+species wisn has 0 nests
+species wolv has 0 nests
+species wosa has 0 nests
+species wrsa has 83 nests</code></pre>
+</div>
+</div>
+<p>Refresher: <code>fetchone</code> (returns a single tuple) vs <code>fetchall</code> (returns a list of tuples).</p>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>c.execute(<span class="st">"SELECT Code FROM Species"</span>).fetchone()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>('agsq',)</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>c.execute(<span class="st">"SELECT Code FROM Species LIMIT 3"</span>).fetchall()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>[('agsq',), ('amcr',), ('amgp',)]</code></pre>
+</div>
+</div>
+<p>Now for a safer method of interpolation. Notice <code>?</code> in query without quotes. Notice passing parameter(s) as second argument to <code>execute()</code>.</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>template <span class="op">=</span> <span class="st">"""SELECT COUNT(*)</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="st">    FROM Bird_nests</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE Species = ?</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="st">"""</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>c.execute(<span class="st">"SELECT Code FROM Species"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> c:</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    code <span class="op">=</span> row[<span class="dv">0</span>]</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    c2 <span class="op">=</span> conn.cursor()</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    c2.execute(template, [code])</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"species </span><span class="sc">%s</span><span class="st"> has </span><span class="sc">%s</span><span class="st"> nests"</span> <span class="op">%</span> (code, c2.fetchone()[<span class="dv">0</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>species agsq has 0 nests
+species amcr has 0 nests
+species amgp has 29 nests
+species arfo has 0 nests
+species arte has 0 nests
+species basa has 0 nests
+species bbis has 0 nests
+species bbpl has 43 nests
+species bbsa has 0 nests
+species besw has 0 nests
+species bltu has 0 nests
+species brant has 0 nests
+species brbe has 0 nests
+species brle has 0 nests
+species btcu has 0 nests
+species btgo has 3 nests
+species cole has 0 nests
+species cora has 0 nests
+species cosn has 0 nests
+species crpl has 2 nests
+species cusa has 0 nests
+species dunl has 101 nests
+species eywa has 0 nests
+species glgu has 0 nests
+species goea has 0 nests
+species gwfg has 0 nests
+species gwgu has 0 nests
+species gwte has 0 nests
+species gyrf has 0 nests
+species herg has 3 nests
+species hore has 0 nests
+species hugo has 0 nests
+species kill has 0 nests
+species lalo has 33 nests
+species lbdo has 1 nests
+species lesa has 0 nests
+species leye has 0 nests
+species list has 0 nests
+species ltdu has 0 nests
+species ltja has 0 nests
+species ltwe has 0 nests
+species mago has 0 nests
+species megu has 0 nests
+species merl has 0 nests
+species noha has 0 nests
+species nopi has 0 nests
+species nrvo has 0 nests
+species nsho has 0 nests
+species pagp has 0 nests
+species paja has 2 nests
+species palo has 0 nests
+species pefa has 0 nests
+species pesa has 14 nests
+species pobe has 0 nests
+species poja has 0 nests
+species pusa has 0 nests
+species refo has 0 nests
+species rekn has 0 nests
+species reph has 80 nests
+species rlha has 0 nests
+species rnph has 74 nests
+species rnst has 0 nests
+species rosa has 0 nests
+species rtpi has 0 nests
+species ruff has 0 nests
+species rutu has 30 nests
+species sacr has 0 nests
+species sagu has 0 nests
+species sand has 0 nests
+species savs has 0 nests
+species sbdo has 1 nests
+species sbgu has 0 nests
+species seow has 0 nests
+species sepl has 105 nests
+species sesa has 485 nests
+species snow has 0 nests
+species spei has 0 nests
+species spre has 0 nests
+species spsa has 0 nests
+species spts has 0 nests
+species stsa has 0 nests
+species stwe has 0 nests
+species test has 1 nests
+species thgu has 0 nests
+species tusw has 0 nests
+species tuvo has 0 nests
+species unfa has 0 nests
+species ungu has 0 nests
+species unja has 0 nests
+species unle has 0 nests
+species unra has 0 nests
+species vegu has 0 nests
+species wesa has 457 nests
+species whim has 0 nests
+species wipt has 0 nests
+species wisn has 0 nests
+species wolv has 0 nests
+species wosa has 0 nests
+species wrsa has 83 nests</code></pre>
+</div>
+</div>
+<p>What’s the big improvement? Well, imagine we are interpolating in text values such as personal names. Using Python interpolation:</p>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Aaron Gottesman"</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>template <span class="op">=</span> <span class="st">"""SELECT * FROM Personnel</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE Name = '</span><span class="sc">%s</span><span class="st">'"""</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>c.execute(template <span class="op">%</span> name).fetchone()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>('agottesman', 'Aaron Gottesman')</code></pre>
+</div>
+</div>
+<p>Same example, but now let’s pretend we get a name that has an apostrophe in it.</p>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Dan O'Brien"</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>template <span class="op">=</span> <span class="st">"""SELECT * FROM Personnel</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE Name = '</span><span class="sc">%s</span><span class="st">'"""</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>c.execute(template <span class="op">%</span> name).fetchone()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<pre><code>OperationalError: near "Brien": syntax error</code></pre>
+</div>
+</div>
+<p>Why the error? Because this is what the Python interpolation created. Notice it isn’t syntactically correct.</p>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>template <span class="op">%</span> name</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>"SELECT * FROM Personnel\n    WHERE Name = 'Dan O'Brien'"</code></pre>
+</div>
+</div>
+<p>Now using database interpolation, query succeeds because behind the scenes database adds quotes and does the interpolation correctly:</p>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">"Dan O'Brien"</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>template <span class="op">=</span> <span class="st">"""SELECT * FROM Personnel</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="st">    WHERE Name = ?"""</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>c.execute(template, [name]).fetchall()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>[]</code></pre>
+</div>
+</div>
+<p>Takeaway: use database interpolation. Remember that in <code>execute()</code> parameters are passed in as the second argument, so say this:</p>
+<p><code>c.execute(template, [params...])</code></p>
+<p>Not this:</p>
+<p><code>c.execute(template % [params...])</code></p>
+</section>
+<section id="pandas-convenience-function" class="level1">
+<h1>Pandas convenience function</h1>
+<p>Super easy way to load a query into a dataframe.</p>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>pd.read_sql(<span class="st">"SELECT * FROM Species"</span>, conn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Code</th>
+<th data-quarto-table-cell-role="th">Common_name</th>
+<th data-quarto-table-cell-role="th">Scientific_name</th>
+<th data-quarto-table-cell-role="th">Relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>agsq</td>
+<td>Arctic ground squirrel</td>
+<td>Spermophilus parryii</td>
+<td>Potential predator (eggs; mammal)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>amcr</td>
+<td>American Crow</td>
+<td>Corvus brachyrhynchos</td>
+<td>Potential predator (avian)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>amgp</td>
+<td>American Golden-Plover</td>
+<td>Pluvialis dominica</td>
+<td>Study species</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>arfo</td>
+<td>Arctic fox</td>
+<td>Alopex lagopus</td>
+<td>Potential predator (mammal)</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>arte</td>
+<td>Arctic Tern</td>
+<td>Sterna paradisaea</td>
+<td>Incidental monitoring</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">94</td>
+<td>wipt</td>
+<td>Willow Ptarmigan</td>
+<td>Lagopus lagopus</td>
+<td>Incidental monitoring</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">95</td>
+<td>wisn</td>
+<td>Wilson's Snipe</td>
+<td>Gallinago delicata</td>
+<td>Study species</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">96</td>
+<td>wolv</td>
+<td>Wolverine</td>
+<td>Gulo gulo</td>
+<td>Potential predator (mammal)</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">97</td>
+<td>wosa</td>
+<td>Wood Sandpiper</td>
+<td>Tringa glareola</td>
+<td>Study species</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">98</td>
+<td>wrsa</td>
+<td>White-rumped Sandpiper</td>
+<td>Calidris fuscicollis</td>
+<td>Study species</td>
+</tr>
+</tbody>
+</table>
+
+<p>99 rows × 4 columns</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/UCSB-Library-Research-Data-Services\.github\.io\/bren-meds213-spring-2023\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bren MEDS 213 Spring 2023 - Week 9 - Instructor notes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-concurrency-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-filename',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-filename-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-filename","listing-file-modified"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-concurrency-listing'] = new List('listing-concurrency-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-indexes-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-filename',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-filename-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-filename","listing-file-modified"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-indexes-listing'] = new List('listing-indexes-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bren MEDS 213 Spring 2023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modules" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Modules</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modules">    
+        <li>
+    <a class="dropdown-item" href="../../modules/week01/index-01.html" rel="" target="">
+ <span class="dropdown-text">Week 1 - Relational databases and data modeling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week02/index-02.html" rel="" target="">
+ <span class="dropdown-text">Week 2 - Ethical and responsible data management</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/index-03.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQLite and SQL</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week04/index-04.html" rel="" target="">
+ <span class="dropdown-text">Week 4 - Reproducible and FAIR data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/index-05.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - SQLite, SQL, and Bash</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week06/index-06.html" rel="" target="">
+ <span class="dropdown-text">Week 6 - Metadata standards</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/index-07.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Programming with databases</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week08/index-08.html" rel="" target="">
+ <span class="dropdown-text">Week 8 - Sensitive data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week09/index-09.html" rel="" target="">
+ <span class="dropdown-text">Week 9 - Advanced database topics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week10/index-10.html" rel="" target="">
+ <span class="dropdown-text">Week 10 - Data licensing and publication</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-assignments" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Assignments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-assignments">    
+        <li>
+    <a class="dropdown-item" href="../../modules/week01/hw-01.html" rel="" target="">
+ <span class="dropdown-text">Week 1 - Data modeling exercise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-1.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-2.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-3.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week04/hw-04.html" rel="" target="">
+ <span class="dropdown-text">Week 4 - Project organization and documentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-1.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Protect yourself</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-2.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Create a trigger</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-3.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Create a test harness</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-4.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Bash scripting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week06/hw-06.html" rel="" target="">
+ <span class="dropdown-text">Week 6 - EML record</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-1.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Little Bobby Tables</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-2.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Who’s the culprit?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-3.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Characterizing egg variation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-4.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Who were the winners?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week08/hw-08.html" rel="" target="">
+ <span class="dropdown-text">Week 8 - sdcMicro exercise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week09/hw-09.html" rel="" target="">
+ <span class="dropdown-text">Week 9 - What makes a good index?</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#concurrency-demonstration" id="toc-concurrency-demonstration" class="nav-link active" data-scroll-target="#concurrency-demonstration">Concurrency demonstration</a></li>
+  <li><a href="#index-demonstration-and-homework" id="toc-index-demonstration-and-homework" class="nav-link" data-scroll-target="#index-demonstration-and-homework">Index demonstration and homework</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Week 9 - Instructor notes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="concurrency-demonstration" class="level2">
+<h2 class="anchored" data-anchor-id="concurrency-demonstration">Concurrency demonstration</h2>
+<div id="listing-concurrency-listing" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Files
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1700076338834" data-listing-filename-sort="concurrency.db">
+<td>
+<a href="../../modules/week09/concurrency/concurrency.db" class="filename listing-filename">concurrency.db</a>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1700076338834" data-listing-filename-sort="concurrency.sql">
+<td>
+<a href="../../modules/week09/concurrency/concurrency.sql" class="filename listing-filename">concurrency.sql</a>
+</td>
+</tr>
+<tr data-index="2" data-listing-file-modified-sort="1700076338834" data-listing-filename-sort="experiment.sh">
+<td>
+<a href="../../modules/week09/concurrency/experiment.sh" class="filename listing-filename">experiment.sh</a>
+</td>
+</tr>
+<tr data-index="3" data-listing-file-modified-sort="1700076338834" data-listing-filename-sort="worker.py">
+<td>
+<a href="../../modules/week09/concurrency/worker.py" class="filename listing-filename">worker.py</a>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+<p>The above files, which can be downloaded <em>in toto</em> as <a href="concurrency.zip">concurrency.zip</a>, can be used to demonstrate the necessity of using transactions and locking to avoid race conditions. <code>concurrency.db</code> is an SQLite database created by running the commands in <code>concurrency.sql</code>. It contains a single value <span class="math inline">\(V\)</span> in a single row in a single table.</p>
+<p><code>worker.py</code> is a Python program that adds a specified delta value to <span class="math inline">\(V\)</span> a specified number of times. For example, <code>python worker.py 500 1</code> adds 1 to <span class="math inline">\(V\)</span> 500 times. By default it does no locking at all, but if a <code>wt</code> (“with transactions”) argument is added, as in <code>python worker.py 500 1 wt</code>, it wraps each update in a transaction.</p>
+<p><code>experiment.sh</code> is a Bash script that resets <span class="math inline">\(V\)</span> to 0, runs two instances of <code>worker.py</code> concurrently, one adding +1 to <span class="math inline">\(V\)</span> 500 times and the other adding -1 to <span class="math inline">\(V\)</span> 500 times, and then prints the final value of <span class="math inline">\(V\)</span>. By default it does no locking, but as with <code>worker.py</code>, if it is run with a<code>wt</code> argument then transactions and locking are employed. With no race conditions the final value of <span class="math inline">\(V\)</span> will of course be 0, but if race conditions occur, <span class="math inline">\(V\)</span> will likely have a random nonzero value.</p>
+<p>The database configuration, the connection details, and the timing delays have all been designed to make race conditions very likely to occur. (It is suprisingly difficult to get race conditions to occur due to SQLite’s default locking and due to artifacts of operating system timeslicing.) This experimental setup has been tested on MacOS, Windows, and several Unix platforms and consistently yields the desired result. Here’s an example run without transactions:</p>
+<pre><code>% ./experiment.sh
+value = 14
+% ./experiment.sh
+value = 15
+% ./experiment.sh
+value = -2</code></pre>
+<p>And adding transactions and locking:</p>
+<pre><code>% ./experiment.sh wt
+value = 0
+% ./experiment.sh wt
+value = 0
+% ./experiment.sh wt
+value = 0</code></pre>
+<p>It should take less than 60 seconds to run an experiment.</p>
+</section>
+<section id="index-demonstration-and-homework" class="level2">
+<h2 class="anchored" data-anchor-id="index-demonstration-and-homework">Index demonstration and homework</h2>
+<div id="listing-indexes-listing" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Files
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1700076338835" data-listing-filename-sort="build-big-db.sql">
+<td>
+<a href="../../modules/week09/indexes/build-big-db.sql" class="filename listing-filename">build-big-db.sql</a>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1700076338835" data-listing-filename-sort="generate-rows">
+<td>
+<a href="../../modules/week09/indexes/generate-rows" class="filename listing-filename">generate-rows</a>
+</td>
+</tr>
+<tr data-index="2" data-listing-file-modified-sort="1700076338835" data-listing-filename-sort="index-timer">
+<td>
+<a href="../../modules/week09/indexes/index-timer" class="filename listing-filename">index-timer</a>
+</td>
+</tr>
+<tr data-index="3" data-listing-file-modified-sort="1700076338835" data-listing-filename-sort="query.sql">
+<td>
+<a href="../../modules/week09/indexes/query.sql" class="filename listing-filename">query.sql</a>
+</td>
+</tr>
+<tr data-index="4" data-listing-file-modified-sort="1700076338835" data-listing-filename-sort="sample-output.csv">
+<td>
+<a href="../../modules/week09/indexes/sample-output.csv" class="filename listing-filename">sample-output.csv</a>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+<p>The above files, which can be downloaded <em>in toto</em> as <a href="indexes.zip">indexes.zip</a>, create a large SQLite database to be used for the homework assignment. The database is essentially the same as has been used throughout the course to date, but contains a Bird_nests table having 1 million rows. The rows are valid (i.e., satisfy all table constraints) but have randomly generated values. The rows are also padded so that the database size is inflated to 4GB.</p>
+<p><code>query.sql</code> is a query that returns exactly one row from this enlarged Bird_nests table. The design is such that placing indexes on different column(s) of the table will result in markedly different performance improvements. Furthermore, query performance can be seen to have a clear relationship to index cardinality.</p>
+<p>To build the database, create a copy of the database from week 7 and then run <code>build-big-db.sql</code> on it as shown below. The SQL script internally invokes the <code>generate-rows</code> Python script.</p>
+<pre><code>cp .../week7/database.db db/database-long-wide.db
+sqlite3 -init build-big-db.sql db/database-long-wide.db</code></pre>
+<p><code>index-timer</code> is a Bash script that is essentially what the homework problem asks the students to use, and what the students should have developed in assignment <a href="../../modules/week05/hw-05-3.html">Week 5 - Create a test harness</a>. Running experiments as described in the homework problem should produce data resembling the following:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">index</th>
+<th style="text-align: right;">average_time</th>
+<th style="text-align: right;">num_distinct_values</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">0.700</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Site</td>
+<td style="text-align: right;">0.090</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Species</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">99</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Year</td>
+<td style="text-align: right;">0.026</td>
+<td style="text-align: right;">66</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Observer</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">269</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ageMethod</td>
+<td style="text-align: right;">0.400</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Site,Species</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">1584</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Site,Year</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">1056</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Site,Observer</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">4304</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Site,ageMethod</td>
+<td style="text-align: right;">0.040</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Species,Year</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">6534</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Species,Observer</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">26631</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Species,ageMethod</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">297</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Year,Observer</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">17754</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Year,ageMethod</td>
+<td style="text-align: right;">0.022</td>
+<td style="text-align: right;">198</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Observer,ageMethod</td>
+<td style="text-align: right;">0.023</td>
+<td style="text-align: right;">807</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Which, when plotted, reveals a clear relationship:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="instructor-notes-09_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/UCSB-Library-Research-Data-Services\.github\.io\/bren-meds213-spring-2023\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

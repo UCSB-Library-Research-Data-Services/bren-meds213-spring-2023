@@ -1,0 +1,870 @@
+[
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Burnette. (2022). Managing environmental data: principles, techniques, and best practices. CRC Press. https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma9917095897506531\nChapman, AD, & Grafton, O. (2008). Guide to Best Practices for Generalising Sensitive Species-Occurrence Data (v1.0). https://doi.org/10.15468/doc-b02j-gt10\nCrystal-Ornelas, R., Varadharajan, C., O’Ryan, D., Ramírez-Muñoz, J., Jones, M. B., Lehnert, K. A., … & Servilla, M. (2022). Enabling FAIR data in Earth and environmental science with community-centric (meta)data reporting formats. Scientific Data, 9(1), 700. https://doi.org/10.1038/s41597-022-01606-w\nJones, M. B., O’Brien, M., Mecum, B., Boettiger, C., Schildhauer, M., Maier, M., Whiteaker, T., Earl, S., & Chong, S. (2019). Ecological Metadata Language version 2.2.0. KNB Data Repository. https://doi.org/10.5063/F11834T2\nLabastida, I., & Margoni, T. (2020). Licensing FAIR Data for Reuse. Data Intelligence, 2(1-2), 199-207. https://doi.org/10.1162/dint_a_00042\nMcGovern, A., Ebert-Uphoff, I., Gagne, D., & Bostrom, A. (2022). Why we need to focus on developing ethical, responsible, and trustworthy artificial intelligence approaches for environmental science. Environmental Data Science, 1, E6. https://doi.org/10.1017/eds.2022.5\nRecknagel, F., & Michener, W. K. (Eds.). (2018). Ecological informatics: Data management and knowledge discovery (3rd ed.). Springer."
+  },
+  {
+    "objectID": "resources.html#bibliography",
+    "href": "resources.html#bibliography",
+    "title": "Resources",
+    "section": "",
+    "text": "Burnette. (2022). Managing environmental data: principles, techniques, and best practices. CRC Press. https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma9917095897506531\nChapman, AD, & Grafton, O. (2008). Guide to Best Practices for Generalising Sensitive Species-Occurrence Data (v1.0). https://doi.org/10.15468/doc-b02j-gt10\nCrystal-Ornelas, R., Varadharajan, C., O’Ryan, D., Ramírez-Muñoz, J., Jones, M. B., Lehnert, K. A., … & Servilla, M. (2022). Enabling FAIR data in Earth and environmental science with community-centric (meta)data reporting formats. Scientific Data, 9(1), 700. https://doi.org/10.1038/s41597-022-01606-w\nJones, M. B., O’Brien, M., Mecum, B., Boettiger, C., Schildhauer, M., Maier, M., Whiteaker, T., Earl, S., & Chong, S. (2019). Ecological Metadata Language version 2.2.0. KNB Data Repository. https://doi.org/10.5063/F11834T2\nLabastida, I., & Margoni, T. (2020). Licensing FAIR Data for Reuse. Data Intelligence, 2(1-2), 199-207. https://doi.org/10.1162/dint_a_00042\nMcGovern, A., Ebert-Uphoff, I., Gagne, D., & Bostrom, A. (2022). Why we need to focus on developing ethical, responsible, and trustworthy artificial intelligence approaches for environmental science. Environmental Data Science, 1, E6. https://doi.org/10.1017/eds.2022.5\nRecknagel, F., & Michener, W. K. (Eds.). (2018). Ecological informatics: Data management and knowledge discovery (3rd ed.). Springer."
+  },
+  {
+    "objectID": "modules/week04/index-04.html",
+    "href": "modules/week04/index-04.html",
+    "title": "Week 4 - Reproducible and FAIR data",
+    "section": "",
+    "text": "Understand the implications of data management and organization for reproducible and FAIR (Findable, Accessible, Interoperable, and Reusable) data science.\nOperationalize reproducibility and the FAIR principles by adopting good and responsible data management, code, and workflow documentation practices in your daily work.\nApply strategies to mitigate issues that could prevent reproducibility."
+  },
+  {
+    "objectID": "modules/week04/index-04.html#learning-goals",
+    "href": "modules/week04/index-04.html#learning-goals",
+    "title": "Week 4 - Reproducible and FAIR data",
+    "section": "",
+    "text": "Understand the implications of data management and organization for reproducible and FAIR (Findable, Accessible, Interoperable, and Reusable) data science.\nOperationalize reproducibility and the FAIR principles by adopting good and responsible data management, code, and workflow documentation practices in your daily work.\nApply strategies to mitigate issues that could prevent reproducibility."
+  },
+  {
+    "objectID": "modules/week04/index-04.html#slides",
+    "href": "modules/week04/index-04.html#slides",
+    "title": "Week 4 - Reproducible and FAIR data",
+    "section": "Slides",
+    "text": "Slides\nslides-04.pptx"
+  },
+  {
+    "objectID": "modules/week04/index-04.html#in-class-exercise",
+    "href": "modules/week04/index-04.html#in-class-exercise",
+    "title": "Week 4 - Reproducible and FAIR data",
+    "section": "In-class exercise",
+    "text": "In-class exercise\n\nRenv for R (graded)\nOpen the project example in the class data GitHub repository, week 4 in RStudio.\nInspect files and documentation. Take a quick look. What opportunities for improvement can you spot in this project (README, file naming, and organization)?\n\nLet’s look together at the scripts. Any issues when you try to run it?\nCreate a renv.lock file for the project\nOrganize the files in a way that would make things better (optional)\n\n\n\nVenv for Python (optional)\n\nLet’s use the terminal in VS Code on the tsosie server and see how we can set up a virtual environment for Python\n\n\n\nBinder (optional)\n\nCreate a project on GitHub using the data and code from the project example (give a good name to it!)\n“Binderize” your example repo\nShare the link to your repo\n\nVirtual environments notes"
+  },
+  {
+    "objectID": "modules/week04/index-04.html#recommended-readings",
+    "href": "modules/week04/index-04.html#recommended-readings",
+    "title": "Week 4 - Reproducible and FAIR data",
+    "section": "Recommended readings",
+    "text": "Recommended readings\n\nMarwick B, Boettiger C, Mullen L. 2018. Packaging data analytical work reproducibly using R (and friends). PeerJ Preprints 6:e3192v2 https://doi.org/10.7287/peerj.preprints.3192v2.\nPowers, S. M., & Hampton, S. E. (2019). Open science, reproducibility, and transparency in ecology. Ecological applications : a publication of the Ecological Society of America, 29(1), e01822. https://doi.org/10.1002/eap.1822.\nPyPA Guides. (Apr. 4, 2023). Installing packages using pip and virtual environments. https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment.\nUshey, K. (April, 6, 2023). Renv: Project environments (Version 0.17.3) [Computer software]. Retrieved from https://cran.r-project.org/web/packages/renv/renv.pdf.\nWilkinson, M. D., Dumontier, M., Aalbersberg, I. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J. W., da Silva Santos, L. B., Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., Gonzalez-Beltran, A., … Mons, B. (2016). The FAIR Guiding Principles for scientific data management and stewardship. Scientific data, 3, 160018. https://doi.org/10.1038/sdata.2016.18Links\n\nOther suggested readings and resources are noted in the slide deck."
+  },
+  {
+    "objectID": "modules/week04/index-04.html#homework",
+    "href": "modules/week04/index-04.html#homework",
+    "title": "Week 4 - Reproducible and FAIR data",
+    "section": "Homework",
+    "text": "Homework\nProject organization and documentation"
+  },
+  {
+    "objectID": "modules/week03/index-03.html",
+    "href": "modules/week03/index-03.html",
+    "title": "Week 3 - SQLite and SQL",
+    "section": "",
+    "text": "Understand the relationship of SQL to relational databases\nUnderstand how SQLite differs from client/server databases\nUnderstand basic SQL syntax and statements\nBe able to answer basic questions about data"
+  },
+  {
+    "objectID": "modules/week03/index-03.html#learning-objectives",
+    "href": "modules/week03/index-03.html#learning-objectives",
+    "title": "Week 3 - SQLite and SQL",
+    "section": "",
+    "text": "Understand the relationship of SQL to relational databases\nUnderstand how SQLite differs from client/server databases\nUnderstand basic SQL syntax and statements\nBe able to answer basic questions about data"
+  },
+  {
+    "objectID": "modules/week03/index-03.html#slides-and-other-materials",
+    "href": "modules/week03/index-03.html#slides-and-other-materials",
+    "title": "Week 3 - SQLite and SQL",
+    "section": "Slides and other materials",
+    "text": "Slides and other materials\nslides-03.pptx\nLecture notes:\n\nlecture-notes-03-mon.txt\nlecture-notes-03-wed.txt\n\nASDN dataset ER (entity-relationship) diagram\nClass data GitHub repository, week 3"
+  },
+  {
+    "objectID": "modules/week03/index-03.html#resources",
+    "href": "modules/week03/index-03.html#resources",
+    "title": "Week 3 - SQLite and SQL",
+    "section": "Resources",
+    "text": "Resources\n\nhttp://swcarpentry.github.io/sql-novice-survey/\n\nGood Carpentry lesson, our lesson is drawn from this.\n\nC.J. Date and Hugh Darwen (1993). A Guide to the SQL Standard. 3rd ed. Reading, MA: Addison-Wesley.\nAccess via Library Catalog\n\nThe ANSI standard.\n\nJoe Celko (1995). Joe Celko’s SQL For Smarties: Advanced SQL Programming. San Francisco, CA: Morgan Kaufmann.\nAccess via Library Catalog\n\nThis guy is an SQL guru. Newer versions of this book are available online, check the Library catalog (a bug is preventing me from linking directly).\n\nGrant Allen and Mike Owens (2010). The Definitive Guide to SQLite. 2nd ed. Berkeley, CA: Apress.\nAccess via Library Catalog\n\nGood reference. Can access online!\n\nJeffrey D. Ullman and Jennifer Widom (2008). A First Course in Database Systems. 3rd ed. Upper Saddle River, NJ: Pearson/Prentice Hall.\nAccess via Library Catalog\n\nComplete but theoretical introduction to relational databases, data modeling, and relational algebra."
+  },
+  {
+    "objectID": "modules/week03/index-03.html#homework",
+    "href": "modules/week03/index-03.html#homework",
+    "title": "Week 3 - SQLite and SQL",
+    "section": "Homework",
+    "text": "Homework\nSQL problem 1\nSQL problem 2\nSQL problem 3"
+  },
+  {
+    "objectID": "modules/week03/hw-03-2.html",
+    "href": "modules/week03/hw-03-2.html",
+    "title": "Week 3 - SQL problem 2",
+    "section": "",
+    "text": "If you want to know which site has the largest area, it’s tempting to say\nSELECT Site_name, MAX(Area) FROM Site;\nbut as explained in class, databases will correctly compute the maximum but will select an arbitrary row to fill in the Site_name column. No good! This misleading behavior is more apparent if we do an average instead of a maximum:\nSELECT Site_name, AVG(Area) FROM Site;\n\n┌───────────┬───────────┐\n│ Site_name │ AVG(Area) │\n├───────────┼───────────┤\n│ Barrow    │ 440.6125  │\n└───────────┴───────────┘\nfor there is no site whose area exactly equals the average, and so there is nothing you could reasonably put in Site_name, and it certainly wouldn’t be Barrow. (SQLite is special in that if you do a MIN or MAX, it will return the row (or one of the rows, if there are multiple rows) that matches the minimum or maximum. But other databases do not do that.) So, we need a plan B.\n\nPart 1\nFind the site name and area of the site having the largest area. Do so by ordering the rows in a particularly convenient order, and using LIMIT to select just the first row. Your result should look like:\n┌──────────────┬────────┐\n│  Site_name   │  Area  │\n├──────────────┼────────┤\n│ Coats Island │ 1239.1 │\n└──────────────┴────────┘\nPlease submit your SQL.\n\n\nPart 2\nDo the same, but use a nested query. First, create a query that finds the maximum area. Then, create a query that selects the site name and area of the site whose area equals the maximum. Your overall query will look something like:\nSELECT Site_name, Area FROM Site WHERE Area = (SELECT ...);"
+  },
+  {
+    "objectID": "modules/week02/index-02.html",
+    "href": "modules/week02/index-02.html",
+    "title": "Week 2 - Ethical and responsible data management",
+    "section": "",
+    "text": "Understand fundamental ethical and responsible data management principles, focusing on the importance of data documentation, preventing bias and harm, properly handling sensitive data, ownership, and licensing issues\nApply ethical and responsible data management principles to real-world scenarios"
+  },
+  {
+    "objectID": "modules/week02/index-02.html#learning-objectives",
+    "href": "modules/week02/index-02.html#learning-objectives",
+    "title": "Week 2 - Ethical and responsible data management",
+    "section": "",
+    "text": "Understand fundamental ethical and responsible data management principles, focusing on the importance of data documentation, preventing bias and harm, properly handling sensitive data, ownership, and licensing issues\nApply ethical and responsible data management principles to real-world scenarios"
+  },
+  {
+    "objectID": "modules/week02/index-02.html#slides",
+    "href": "modules/week02/index-02.html#slides",
+    "title": "Week 2 - Ethical and responsible data management",
+    "section": "Slides",
+    "text": "Slides\nslides-02.pptx"
+  },
+  {
+    "objectID": "modules/week02/index-02.html#preparatory-work-for-in-class-exercise",
+    "href": "modules/week02/index-02.html#preparatory-work-for-in-class-exercise",
+    "title": "Week 2 - Ethical and responsible data management",
+    "section": "Preparatory work for in-class exercise",
+    "text": "Preparatory work for in-class exercise\nRequired readings\n\nBoté, J. J., & Térmens, M. (2019). Reusing data: Technical and ethical challenges. DESIDOC Journal of Library & Information Technology, 39(6) http://hdl.handle.net/2445/151341\nMcGovern, A., Ebert-Uphoff, I., Gagne, D., & Bostrom, A. (2022). Why we need to focus on developing ethical, responsible, and trustworthy artificial intelligence approaches for environmental science. Environmental Data Science, 1, E6. https://doi.org/10.1017/eds.2022.5\n\nQuestions to consider: (no need to answer the questions on paper)\n\nBoté and Térmens (2019) present some technical and ethical challenges researchers may face when using pre-existing data. Based on the lecture and our group discussion on day 3, in what ways do you think the technical challenges highlighted in this paper can also have ethical implications?\nCan you think of ways some of the ethical concerns presented by Boté and Térmens (2019) can affect other stages of the data lifecycle other than reuse?\nBased on concrete examples, McGovern et al. (2022) discuss how AI and ML can go wrong for environmental sciences. While the community is still grappling with these challenges, what responsible and ethical data management practices could help to minimize such problems?\nReflecting on both settings of readings, can you identify any ethical concerns that resonate with your capstone project? How have you or do you plan to mitigate them?\n\nAdditional suggested readings are noted in the slides."
+  },
+  {
+    "objectID": "modules/week02/index-02.html#in-class-exercise",
+    "href": "modules/week02/index-02.html#in-class-exercise",
+    "title": "Week 2 - Ethical and responsible data management",
+    "section": "In-class exercise",
+    "text": "In-class exercise\nInstructions\n\nFind a partner (preferably someone from a different capstone project team).\nRead the cases listed below, discuss them with your partner, and answer the quizzes individually.\n\nCase Study A: Containing the flames of bias in machine learning\nCase Study B: The caveat is the caviar: navigating ethics to protect endangered river wildlife\nCase Study C: To reuse or not reuse, that is the key question!\nCase Study D: Navigating the complexities of ownership zones\n\nSwitch partners and discuss your answers.\nReflect on your answers and change them or refine the open ones if you’d like.\nSubmit your final answers (individually) before the end of the class."
+  },
+  {
+    "objectID": "modules/week02/case-c.html",
+    "href": "modules/week02/case-c.html",
+    "title": "Case Study C: To reuse or not reuse, that is the key question!",
+    "section": "",
+    "text": "Read the scenario and answer the questions based on the weekly readings and the lecture:\nAdam is a researcher for a non-profit organization dedicated to accelerating the adoption of solar energy. The organization relies on data from various sources, including sensors, satellite imagery, and field measurements, to inform solar energy allocation, usage, and conservation decisions.\nRecently, he identified an available dataset containing data on the solar energy market size, including trends, competition, and customer demand. These data can inform business and policy decisions related to solar energy adoption. Adam is particularly excited because this is a multivariate time series dataset from the past ten years. Also, the data documentation listed many important variables for his project, including the compound annual growth rates (CAGR) for solar energy companies. However, when Adam inspected some of the data files, he noticed a few data points that needed to be corrected. For example, some rows had NAs; others had 000, 999, and -999 or were utterly blank; the documentation does not help him infer those values.\nWhen he contacted the corresponding researcher for clarification, he was told these inconsistencies could have been caused either due to system migration or by human error in inaccurate data entry. The researcher mentioned that his team had multiple contributors throughout the years and noted there were no enforced validation rules or data quality checks. Ultimately, Adam should choose a solution that balances the benefits of using the existing dataset with the potential risks of using incomplete or inaccurate data.\nAdam faces a dilemma. On the one hand, the dataset could provide valuable insights into the solar energy market and inform better policies and management decisions. On the other hand, the missing and anomalous data could affect the dataset’s overall quality and integrity, potentially leading to incorrect conclusions and decisions."
+  },
+  {
+    "objectID": "modules/week02/case-c.html#instructions",
+    "href": "modules/week02/case-c.html#instructions",
+    "title": "Case Study C: To reuse or not reuse, that is the key question!",
+    "section": "",
+    "text": "Read the scenario and answer the questions based on the weekly readings and the lecture:\nAdam is a researcher for a non-profit organization dedicated to accelerating the adoption of solar energy. The organization relies on data from various sources, including sensors, satellite imagery, and field measurements, to inform solar energy allocation, usage, and conservation decisions.\nRecently, he identified an available dataset containing data on the solar energy market size, including trends, competition, and customer demand. These data can inform business and policy decisions related to solar energy adoption. Adam is particularly excited because this is a multivariate time series dataset from the past ten years. Also, the data documentation listed many important variables for his project, including the compound annual growth rates (CAGR) for solar energy companies. However, when Adam inspected some of the data files, he noticed a few data points that needed to be corrected. For example, some rows had NAs; others had 000, 999, and -999 or were utterly blank; the documentation does not help him infer those values.\nWhen he contacted the corresponding researcher for clarification, he was told these inconsistencies could have been caused either due to system migration or by human error in inaccurate data entry. The researcher mentioned that his team had multiple contributors throughout the years and noted there were no enforced validation rules or data quality checks. Ultimately, Adam should choose a solution that balances the benefits of using the existing dataset with the potential risks of using incomplete or inaccurate data.\nAdam faces a dilemma. On the one hand, the dataset could provide valuable insights into the solar energy market and inform better policies and management decisions. On the other hand, the missing and anomalous data could affect the dataset’s overall quality and integrity, potentially leading to incorrect conclusions and decisions."
+  },
+  {
+    "objectID": "modules/week02/case-c.html#questions",
+    "href": "modules/week02/case-c.html#questions",
+    "title": "Case Study C: To reuse or not reuse, that is the key question!",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nSuppose Adam is leaning toward reusing the dataset despite the identified problems. What general ethical and responsible steps would you advise him to take moving forward? (Select all that apply)\n\nAdam should carefully examine the dataset to map all existing issues to determine the extent of missing and anomalous data and how it could affect the accuracy of his analysis.\nIf Adam collects new data, he should enforce data validation rules to tables and perform quality checks to avoid similar problems.\nIf Adam integrates new data and perform all necessarily adjustments to remove uncertainties and other problems in the data, he no longer needs to attribute original data creators.\nIf the dataset has significant missing or anomalous data, Adam may need to collect additional data to ensure the analysis is accurate and representative. This may involve additional time and resources but could lead to more accurate and reliable insights.\nAdam may be able to proceed with the analysis after carefully documenting and accounting for any uncertainties or limitations in the data.\nAdam should produce new documentation for the dataset based on all improvements he makes to the original data."
+  },
+  {
+    "objectID": "modules/week02/case-d.html",
+    "href": "modules/week02/case-d.html",
+    "title": "Bren MEDS 213 Spring 2023",
+    "section": "",
+    "text": "Read the scenario and answer the questions based on the weekly readings and the lecture:\nTina, a researcher working on coastal vulnerability analysis in Southern California, acquired LiDAR data from a vendor in 2017. Based on the acquired dataset, she submitted a paper to a high-impact academic journal early this year. The paper was accepted but is pending publication until Tina complies with the mandate of sharing supporting data and associated documentation in an open repository. While inspecting the data documentation, Max, the repository data manager, noticed that the files included raw and processed data from a vendor; however, no explicit declaration of authorization to share the data was included in the submission package. Tina presented an invoice of $20,000 USD certifying that she obtained the data and said she was told verbally that the data was not subject to any use restrictions."
+  },
+  {
+    "objectID": "modules/week02/case-d.html#instructions",
+    "href": "modules/week02/case-d.html#instructions",
+    "title": "Bren MEDS 213 Spring 2023",
+    "section": "",
+    "text": "Read the scenario and answer the questions based on the weekly readings and the lecture:\nTina, a researcher working on coastal vulnerability analysis in Southern California, acquired LiDAR data from a vendor in 2017. Based on the acquired dataset, she submitted a paper to a high-impact academic journal early this year. The paper was accepted but is pending publication until Tina complies with the mandate of sharing supporting data and associated documentation in an open repository. While inspecting the data documentation, Max, the repository data manager, noticed that the files included raw and processed data from a vendor; however, no explicit declaration of authorization to share the data was included in the submission package. Tina presented an invoice of $20,000 USD certifying that she obtained the data and said she was told verbally that the data was not subject to any use restrictions."
+  },
+  {
+    "objectID": "modules/week02/case-d.html#questions",
+    "href": "modules/week02/case-d.html#questions",
+    "title": "Bren MEDS 213 Spring 2023",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nMax should advise Tina to acquire explicit permission from the data vendor to share the data.\n\nTrue\nFalse\n\n\n\nQuestion 2\nBecause Tina paid for the data, Max can move forward with the data publication without infringing on any legal and ethical aspects.\n\nTrue\nFalse\n\n\n\nQuestion 3\nIf Tina does not acquire explicit permission from the vendor to share the data, Max can’t publish the data in the repository.\n\nTrue\nFalse\n\n\n\nQuestion 4\nIf Tina does not acquire written permission to share the data, Max can suggest Tina share only aggregated data.\n\nTrue\nFalse"
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html",
+    "href": "modules/week05/bash-essentials.html",
+    "title": "Ten Bash Essentials",
+    "section": "",
+    "text": "Greg Janée &lt;gjanee@ucsb.edu&gt;\nMay 2023\nSome essential concepts to get you started writing your first Bash script."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#what-does-bash-or-any-shell-for-that-matter-do",
+    "href": "modules/week05/bash-essentials.html#what-does-bash-or-any-shell-for-that-matter-do",
+    "title": "Ten Bash Essentials",
+    "section": "1. What does Bash (or any shell for that matter) do?",
+    "text": "1. What does Bash (or any shell for that matter) do?\nBash is program on your machine that allows you to interactively run other programs. It:\n\nWrites a prompt, reads a line from the terminal window\nPerforms various “expansions” to arrive at a final command or command pipeline\nLocates where the program(s) requested to be run are\nRuns the requested program(s) and links their input/output/error streams to and from files and into pipelines\nWrites any output to the terminal window\nRepeat\n\nThese steps are described in more detail below."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#fundamentals-review",
+    "href": "modules/week05/bash-essentials.html#fundamentals-review",
+    "title": "Ten Bash Essentials",
+    "section": "2. Fundamentals review",
+    "text": "2. Fundamentals review\nFiles in Unix and Unix-like systems are organized into hierarchical directories identified by “pathnames” as in /Users/moe/somefile.txt. Here the leading / represents the root directory on the machine, Users is a directory within that, moe a directory within that directory, and so forth until we get to a final directory or file.\nAt any given time you are “in” a directory. Handy commands:\n\npwd: where am I?\ncd new_directory: change directories\nls: what files and subdirectories are in here?\nls -F: same, but nicer formatting\n\nAn “absolute” pathname begins with / and identifies a directory or file starting from the root directory as in the example above. A “relative” pathname does not begin with / and does the same, but relative to the current directory.\nSome pseudo directory names. Wherever you are:\n\n.: current directory\n..: parent directory of current directory\n~: home directory\n\nSo:\n\n/Users/shemp: absolute pathname of Shemp’s home directory\n../shemp: same, relative to /Users/moe\n~: your home directory\n~shemp: Shemp’s home directory\n\nBy convention Unix commands accept “options” followed by “arguments”. Options begin with a single (-) or double (--) hyphen. Multiple options that begin with a single hyphen can be combined for brevity.\n\nls foo: list files in directory foo\nls -A foo: same, option -A to include hidden files\nls -A -l foo: add long listing option\nls -Al foo: equivalent to above\npython --version: print Python version number\n\nBut be aware that these are only conventions, and there are idiosyncracies in how commands are run."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#variables",
+    "href": "modules/week05/bash-essentials.html#variables",
+    "title": "Ten Bash Essentials",
+    "section": "3. Variables",
+    "text": "3. Variables\nBash supports variables, and variables are essential in writing Bash scripts. To set a variable:\nname=Moe\nNo space between the variable name and equals sign! Variables are referenced as ${name}, or as just $name if not ambiguous. Lots of other stuff can go inside the braces, such as string processing and array indexing. Refer to the Bash manual or a good cheat sheet for examples.\nNames defined as above are local to the current Bash session or script. “Environment variables” are variables that are inherited by (visible to) programs and any scripts you run. To set, add export:\nexport DEBUG_ENABLED=1\nThe two most important environment variables are HOME (your home directory) and PATH (discussed below). The use of all-caps environment variable names is just a convention."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#expansions",
+    "href": "modules/week05/bash-essentials.html#expansions",
+    "title": "Ten Bash Essentials",
+    "section": "4. Expansions",
+    "text": "4. Expansions\nBefore running any commands Bash performs various kinds of expansions. The rules about what expansions it performs and when and in what order are confusing. If you feel lost, join the club.\n\nVariable substitution.\nname=Moe\necho \"Hello $name\"\nis expanded to\necho \"Hello Moe\"\nThe meaning of the above is that $name is literally replaced with Moe before the echo command is run.\nCommand alias substitution. Aliases are handy abbreviations usually defined in the ~/.bashrc Bash configuration file.\nalias ll=\"ls -l\"\nll foo\nis expanded to\nls -l foo\nWildcard expansion (“globbing”).\nwc -l *.csv\nis expanded to\nwc -l ASDN_Bird_eggs.csv species.csv ...\nAs with variable substitutions, the globbing expansion literally replaces the wildcard expression with a list of filenames before the wc command is run.\nRunning subcommands.\nnow=\"$(date)\"\nis expanded to\nnow=\"Sat May  6 19:02:07 PDT 2023\"\nThe expression placed in the $(...) can be an entire command pipeline. When done, the subcommand is replaced with any output produced.\nArithmetic.\nanswer=$(( 21 * 2 ))\nis expanded to\nanswer=42\nBash can do integer arithmetic only.\n\nTakeaway: program(s) that are run see only the finally expanded command line."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#quoting",
+    "href": "modules/week05/bash-essentials.html#quoting",
+    "title": "Ten Bash Essentials",
+    "section": "5. Quoting",
+    "text": "5. Quoting\nQuoting is another difficult area of Bash. It’s hard to get right.\n\nDouble quotes support variable, subcommand, and arithmetic expansions. We’ve already seen these examples:\necho \"Hello $name\"\necho \"Today is $(date)\"\nget expanded to\necho \"Hello Moe\"\necho \"Today is Sat May  6 19:02:07 PDT 2023\"\nSingle quotes don’t.\necho 'Hello $name'\njust remains\necho 'Hello $name'\n\nGenerally, arguments to programs must be quoted to prevent Bash from expanding them into multiple arguments. This is easier to appreciate when you’re passing in an explicitly quoted string as in the examples above. But it’s less obvious that quoting is required even if you’re referencing a variable. Sometimes you want to allow a referenced variable to be expanded into multiple arguments, and quotes should be left off:\nmy_fave_ls_options=\"-l -F\"\nls $my_fave_ls_options foo\ngets expanded to\nls -l -F foo\nOther times you don’t:\nquery=\"SELECT * FROM table\"\nsqlite3 db \"$query\"\ngets expanded to\nsqlite3 db \"SELECT * FROM table\"\nIf $query is not quoted in the previous example, SELECT, *, etc., will be passed as separate arguments, which is not what sqlite3 expects. Making matters worse, * will then be interpreted as a wildcard and expanded into a list of all files in the current directory!"
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#path-determines-what-programs-are-run",
+    "href": "modules/week05/bash-essentials.html#path-determines-what-programs-are-run",
+    "title": "Ten Bash Essentials",
+    "section": "6. PATH determines what programs are run",
+    "text": "6. PATH determines what programs are run\nA few commands (cd, pwd, if, while) are Bash built-ins. All other commands are simply programs on the system, whether coming packaged along with Unix (ls, cp, mkdir, grep, etc.) or installed later (sqlite3, python, etc.).\nThe PATH environment variable is a colon-separated list of directories in which Bash looks for programs, in order. You can inspect it:\necho $PATH\nTo see where a command is coming from:\nwhich ls\nTo see all places where you have Python installed (cf. https://xkcd.com/1987/):\nwhich -a python\nYou can modify PATH to, for example, add a directory to it (recall export is used for environment variables):\nexport PATH=$PATH:/another/directory/I/want/Bash/to/look/in\nIt’s typical to set PATH in one of the Bash configuration files ~/.bash_profile or ~/.profile, so that it is automatically set upon each login."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#io-redirection",
+    "href": "modules/week05/bash-essentials.html#io-redirection",
+    "title": "Ten Bash Essentials",
+    "section": "7. I/O redirection",
+    "text": "7. I/O redirection\nEvery program running in a Unix or Unix-like environment has three I/O streams: one for input (stdin), one for output (stdout), and one for error messages and other out-of-band output (stderr).\nBy convention, Unix programs read from file(s) specified on the command line, but if none are given, from stdin. And also by convention, Unix programs write to stdout. In this way it is easy to construct pipelines. Ex:\nwc -l *.csv | sort -n\nHere the wc -l command, which counts the number of lines in files, is given filenames on the command line, so it counts the lines in those files. It writes its output to stdout. sort -n sorts lines in files. It was given no files to sort, so it sorts whatever lines come in via stdin. By piping these together (i.e., by hooking wc’s stdout to sort’s stdin using the pipe operator), the output from wc -l is thereby sorted.\nThere are various operators for redirecting where stdin comes from and where stdout and stderr go:\n\n&lt; file: read stdin from file\n&gt; file: write stdout to file\n2&gt; file: write stderr to file\n&gt;& file: write both stdout and stderr to file\n&gt;&gt; file: append stdout to file\n\nCaution: except for &gt;&gt;, all forms of &gt; are destructive: Bash overwrites any existing file with an empty file before the program is run.\nWant to get rid of output you don’t want to see? Use the Unix black hole: &gt;& /dev/null. (This is a cultural meme, you’ll see it on T-shirts and license plates.)\nThe above are the main redirections, but there are others."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#control-statements",
+    "href": "modules/week05/bash-essentials.html#control-statements",
+    "title": "Ten Bash Essentials",
+    "section": "8. Control statements",
+    "text": "8. Control statements\nThe syntax of Bash’s control statements is a little funky. A conditional statement looks like this:\nif [ sometest ]; then\n    ...\nfi\nIt can also be formatted like so:\nif [ sometest ]\nthen\n    ...\nfi\nWhat can go in inside [ ... ]? A lot of things. Believe it or not, [ is a program! Do a man [ to read about it (see section 10 for other ways to get help).\nA for loop iterates over a list of items:\nfor file in *.csv; do\n    echo \"$file has $(wc -l &lt; $file) lines\"\ndone\nRecall expansions from section 4. The *.csv is expanded before the loop is run, ergo the above is equivalent to listing the files explicitly:\nfor file in ASDN_Bird_eggs.csv species.csv ...; do\n    echo \"$file has $(wc -l &lt; $file) lines\"\ndone\nWant to do something 99 times? You can use a while loop and a variable as a counter (recall arithmetic from section 4), or you can use seq (try seq by itself to see what it outputs):\nfor i in $(seq 99); do\n    echo \"Putting $i bottles of beer on the wall\"\ndone\nThere are other control statements."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#scripts",
+    "href": "modules/week05/bash-essentials.html#scripts",
+    "title": "Ten Bash Essentials",
+    "section": "9. Scripts",
+    "text": "9. Scripts\nA Bash script is a text file containing the same Bash commands you might type interactively. It’s analogous to an R or Python script but written in Bash instead of one of those other languages.\nBash knows it is reading from a file instead of the terminal window, and it operates slightly differently:\n\nIt doesn’t print a prompt.\nIt doesn’t read Bash configuration files (~/.bashrc, ~/.bash_profile, ~/.profile, etc.). As a consequence, aliases and variables defined in those files are not visible to scripts. (Any environment variables set in configuration files are visible, but that’s because environment variables are inherited.)\n\nBash makes arguments passed to your script available as variables $1, $2, etc. Variable $# is the number of arguments. Ex:\nif [ $# -ne 3 ]; then\n    echo \"This script requires 3 arguments\"\n    exit 1  # terminate with error status (exit 0 = success)\nfi\nA Bash script can be run as so:\nbash myscript.sh\nTo run a script just by saying\nmyscript.sh\ni.e., to make it look more like a command, requires that two things be done:\n\nThe first line of the script file must be:\n#!/bin/bash\nThere can’t be any spaces before the #!. (You can similarly make a Python or R script directly runnable by including such a first line, but with the pathname of the R or Python interpreter to run.)\nSet the “execute” flag on the script file:\nchmod +x myscript.sh\nYou can see that the file has the execute flag set by doing a long listing and looking for the x characters in the permissions mask.\nls -l myscript.sh\n\nYou might find that you still can’t run your script just by saying\nmyscript.sh\nThis is likely due to the current directory not being included in PATH. (echo $PATH to see.) You can either qualify the script name with a directory name:\n./myscript.sh\nor you can modify PATH per section 6.\nA complete example of a script:\n#!/bin/bash\n# Add two numbers.\nif [ $# -ne 2 ]; then\n    echo \"Supply two numbers, no more, no less\"\n    exit 1\nfi\nfirst=$1\nsecond=$2\necho \"The sum of $first and $second is $(( $first + $second ))\""
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#getting-help-and-a-couple-tips",
+    "href": "modules/week05/bash-essentials.html#getting-help-and-a-couple-tips",
+    "title": "Ten Bash Essentials",
+    "section": "10. Getting help and a couple tips",
+    "text": "10. Getting help and a couple tips\nTo get help on a command, for example ls, try one of the following:\nman ls\nls --help\nMost but not all systems support man; MacOS does not support the --help option. Failing either of those, do an internet search for “ls man page”.\nWhen writing a script, it can be invaluable to run it through https://shellcheck.net. The advice is good and the creator of that tool knows way more about Bash than you or I. Other good resources:\n\nOfficial Bash user manual: https://www.gnu.org/software/bash/manual/\nBash pitfalls, or, how to do things the right way: http://mywiki.wooledge.org/BashPitfalls\nCheat sheet that is better than most: https://www.pcwdld.com/bash-cheat-sheet\n\nAnd two tips.\n\nIf you’re about to embark on a potentially destructive operation, first try just echoing the commands to confirm they’ll do what you want:\n# rename files from .JPG to .jpg\nfor file in *.JPG; do\necho mv $file ${file/.JPG/.jpg}\ndone\nOnce you’re satisfied, remove echo and run your script for real.\nrm, particulary when paired with a wildcard, is a notoriously dangerous command: it deletes files instantly and permanently. Consider creating an alias\nalias rm=\"rm -i\"\nto confirm deletion."
+  },
+  {
+    "objectID": "modules/week05/bash-essentials.html#test-your-understanding",
+    "href": "modules/week05/bash-essentials.html#test-your-understanding",
+    "title": "Ten Bash Essentials",
+    "section": "Test your understanding",
+    "text": "Test your understanding\nBe sure to cd to the MEDS 213 git repo directory, week5 subdirectory, before answering these.\n\nCompare the output of these three commands:\nls\nls .\nls \"$(pwd)/../week5\"\nExplain why you see what you see.\nTry the following two commands:\nwc -l *.csv\ncat *.csv | wc -l\nThe first prints filenames and line counts. The second prints a bare number. Why does it print that number, and why does it not print any filenames?\nYou want to count the total number of lines in all CSV files and try this command:\ncat *.csv | wc -l species.csv\nWhat happens and why?\nYou’re given\nname=Moe\nand you’d like to print “Moe_Howard”. You try this:\necho \"$name_Howard\"\nbut that doesn’t quite work. What fix can you apply to make this command give the desired effect?\nYou create a script and run it like so:\nbash myscript.sh *.csv\nWhat are the values of variables $1 and $#? Explain why the script does not see just one argument passed to it.\nYou create a script and run it like so:\nbash myscript.sh \"$(date)\" $(date)\nIn your script, what is the value of variable $3?\nCreate a file you don’t care about (because you’re about to destroy it):\necho \"yo ho a line of text\" &gt; junk_file.txt\necho \"another line\" &gt;&gt; junk_file.txt\nYou want to sort the lines in this file, so you try:\nsort junk_file.txt\nWell that prints the lines in sorted order, but it doesn’t actually change the file. You recall section 7 and try:\nsort junk_file.txt &gt; junk_file.txt\nWhat happens and why? How can you sort the lines in your file? (Hint: it involves creating a second file and using mv.)\nYou want to delete all files ending in .csv, so you type (don’t actually try this):\nrm * .csv\nbut as can be seen, your thumb accidentally hit the space bar and you got an extra space in there. What will rm do?"
+  },
+  {
+    "objectID": "modules/week05/hw-05-3.html",
+    "href": "modules/week05/hw-05-3.html",
+    "title": "Week 5 - Create a test harness",
+    "section": "",
+    "text": "Part 1\nA common task is to create a script — a “test harness” — that will allow you to test something (some code, an algorithm, a model, etc.) by running it repeatedly, perhaps under varying conditions. Example applications include machine learning using different hyperparameters and Monte Carlo simulation using different random seeds. In this assignment you will create a Bash script that will allow you to time how long it takes to run an SQL query. You will be using this script in the last week of class to explore the performance effects of indexes, so hang on to it.\nYour script will be invoked like so:\n% bash my_sqlite_tester.sh label num_reps query db_file csv_file\n\n  Arguments:\n      label:    explanatory label that will be output\n      num_reps: number of repetitions\n      query:    SQL query to run\n      db_file:  database file\n      csv_file: CSV file to create or append to\nFor example, you might run:\n% bash my_sqlite_tester.sh with_index_a 1000 'SELECT COUNT(*) FROM Bird_nests' database.db timings.csv\nIn this example your script would run the given query (i.e., SELECT COUNT(*) FROM Bird_nests) on the given database (database.db) 1000 times. If the total time that took was 3 seconds, your script will divide that time by the number of repetitions (1000) and compute that each SQLite invocation took 0.003 seconds. Finally, your script will append the following record to the CSV tile timings.csv:\nwith_index_a,0.003\nConceptually, your script will look something like this (this is pseudocode):\nget current time and store it\nloop num_reps times\n    sqlite3 db_file query\nend loop\nget current time\ncompute elapsed time\ndivide elapsed time by num_reps\nwrite output\nI would like you to follow the above pseudocode because this exercise is fundamentally about using certain Bash features.\n(BTW, is this a fair way to time queries? Yes and no. Clearly it’s a bit unfair that we are counting the overhead of repeatedly firing up SQLite and opening the database file. And there may be other processing going on on the machine that affects the wall-clock time that we’re measuring here. On the other hand, databases are almost always I/O-bound and not compute-bound, that is, their performance is primarily limited by the time it takes to read data into memory from disk, and because of that, wall-clock time can be a better measure than CPU time.)\nWe’re doing this in Bash, so every one of these steps is a challenge (it is okay to hate Bash). So here are a lot of tips and hints:\n\nGetting the current time: try date +%s or use the magic SECONDS variable (do a man bash to read about it).\nLooping: see below.\nIn executing sqlite3, be sure to appropriately quote the query.\nComputing elapsed time: use Bash arithmetic.\nDivision. Bash does not support floating point numbers, so you’ll have to use a helper program. Take yer pick depending on what’s available to you. Let’s say you want to divide 10 by 3 (you will want to reference variables in your computation, but here I’m just illustrating dividing two literal numbers). You might say something like:\n\nelapsed=$(echo \"scale=7; 10/3\" | bc)\nelapsed=$(echo \"10/3\" | awk -F / '{print $1/$2}')\nelapsed=$(python -c \"print(10/3)\")\nelapsed=$(perl -l -e \"print 10/3\")\n\nOutput: be sure to use the appropriate I/O redirection.\n\nTwo approaches to looping. If you want to do something 10 times, you can use a while loop that increments a counter:\ni=0\nwhile [ $i -lt 10 ]; do\n    echo \"this is loop iteration $i\"\n    i=$((i+1))\ndone\nOr, you can use seq. Generally you can use a for loop to loop through a list of items like so:\nfor i in 0 1 2 3 4 5 6 7 8 9; do\n    echo \"this is loop iteration $i\"\ndone\nBut you can use seq to generate a list of numbers of a desired length:\nfor i in $(seq 10); do\n    echo \"this is loop iteration $i\"\ndone\nAnd some more advice. The reason for making the number of repetitions an argument to this script, as opposed to a fixed constant, is that you may have to adjust the number of repetitions depending how fast the query is. The date command and SECONDS variable have a resolution of only 1 second, so if running the query 10 times still fits in under 1 second your elapsed time will show up as 0. You may need to run a query 100 or 1000 times or more to get positive elapsed times, and to get more precision.\nAlso, we don’t actually care about the output from the query here. I would keep the output while you’re debugging your script (so that you can verify that SQLite is being run repeatedly), but once you feel your script is working you can redirect SQLite’s output and error streams to /dev/null.\nFinally, it is highly recommended that you upload your script to https://www.shellcheck.net. You’re not required to follow its advice, but I have found its advice to be enlightening.\nPlease submit your Bash script.\n\n\nPart 2\nIn class we looked at three ways to find out which species we do not have nest data for. Method using NOT IN:\nSELECT Code\n    FROM Species\n    WHERE Code NOT IN (SELECT DISTINCT Species FROM Bird_nests);\nMethod using an outer join:\nSELECT Species.Code\n    FROM Bird_nests RIGHT JOIN Species\n    ON Bird_nests.Species = Species.Code\n    WHERE Bird_nests.Nest_ID IS NULL;\nMethod using a set operation:\nSELECT Code FROM Species\nEXCEPT\nSELECT DISTINCT Species FROM Bird_nests;\nUse your test harness to time these three queries. Report back how many repetitions you had to use to get good timings, the query times, and which method is fastest."
+  },
+  {
+    "objectID": "modules/week05/hw-05-4.html",
+    "href": "modules/week05/hw-05-4.html",
+    "title": "Week 5 - Bash scripting",
+    "section": "",
+    "text": "Read Ten Bash Essentials and answer the 8 questions at the end. Be sure you are in the week5 directory of the class data GitHub repository before answering the questions, as they rely on the files contained therein."
+  },
+  {
+    "objectID": "modules/week07/hw-07-2.html",
+    "href": "modules/week07/hw-07-2.html",
+    "title": "Week 7 - Who’s the culprit?",
+    "section": "",
+    "text": "You’re reading up on how eggs are aged by floating them in water 1:\nwhen you receive an urgent phone call from a colleague who says they just discovered that an observer, who worked at the “nome” site between 1998 and 2008 inclusive, had been floating eggs in salt water and not freshwater. The density of salt water being different, those measurements are incorrect and need to be adjusted. The colleague says that this incorrect technique was used on exactly 36 nests, but before you can ask who the observer was, the phone is disconnected. Who made this error? That is, looking at nest data for “nome” between 1998 and 2008 inclusive, and for which egg age was determined by floating, can you determine the name of the observer who observed exactly 36 nests? Please submit your SQL. Your SQL should return exactly one row, the answer. That is, your query should produce:"
+  },
+  {
+    "objectID": "modules/week07/hw-07-2.html#footnotes",
+    "href": "modules/week07/hw-07-2.html#footnotes",
+    "title": "Week 7 - Who’s the culprit?",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nLiebezeit, Joseph R., et al. “Assessing the Development of Shorebird Eggs Using the Flotation Method: Species-Specific and Generalized Regression Models.” The Condor, vol. 109, no. 1, 2007, pp. 32–47. JSTOR, http://www.jstor.org/stable/4122529↩︎"
+  },
+  {
+    "objectID": "modules/week07/hw-07-1.html",
+    "href": "modules/week07/hw-07-1.html",
+    "title": "Week 7 - Little Bobby Tables",
+    "section": "",
+    "text": "View this classic XKCD cartoon: https://xkcd.com/327/\nFor the purposes of this problem you may assume that at some point the school’s software performs the query\nSELECT *\n    FROM Students\n    WHERE (name = '%s' AND year = 2023);\nwhere the student’s name is directly substituted for the %s. Explain exactly how Little Bobby Tables’ name can cause a catastrophe. Explain what happens to the AND year = 2023 clause in the query."
+  },
+  {
+    "objectID": "modules/week07/index-07.html",
+    "href": "modules/week07/index-07.html",
+    "title": "Week 7 - Programming with databases",
+    "section": "",
+    "text": "Review: understand how the data model relates to queries\nUnderstand the basic database programming model\nAccess an SQLite database from Python and R\nUnderstand how to use the Python/Pandas and R/dbplyr convenience functions"
+  },
+  {
+    "objectID": "modules/week07/index-07.html#learning-objectives",
+    "href": "modules/week07/index-07.html#learning-objectives",
+    "title": "Week 7 - Programming with databases",
+    "section": "",
+    "text": "Review: understand how the data model relates to queries\nUnderstand the basic database programming model\nAccess an SQLite database from Python and R\nUnderstand how to use the Python/Pandas and R/dbplyr convenience functions"
+  },
+  {
+    "objectID": "modules/week07/index-07.html#slides-and-other-materials",
+    "href": "modules/week07/index-07.html#slides-and-other-materials",
+    "title": "Week 7 - Programming with databases",
+    "section": "Slides and other materials",
+    "text": "Slides and other materials\nslides-07.pptx\nCoding transcripts:\n\ntranscript-07-mon.ipynb\ntranscript-07-wed-python.ipynb\ntranscript-07-wed-r.R"
+  },
+  {
+    "objectID": "modules/week07/index-07.html#resources",
+    "href": "modules/week07/index-07.html#resources",
+    "title": "Week 7 - Programming with databases",
+    "section": "Resources",
+    "text": "Resources\n\nhttps://peps.python.org/pep-0249/\n\nCommon Python-RDBMS API\n\nhttps://docs.python.org/3.11/library/sqlite3.html\n\nPython SQLite module\n\nhttps://dbplyr.tidyverse.org/\n\nR dbplyr documentation"
+  },
+  {
+    "objectID": "modules/week07/index-07.html#homework",
+    "href": "modules/week07/index-07.html#homework",
+    "title": "Week 7 - Programming with databases",
+    "section": "Homework",
+    "text": "Homework\nLittle Bobby Tables\nWho’s the culprit?\nCharacterizing egg variation\nWho were the winners?"
+  },
+  {
+    "objectID": "modules/week09/instructor-notes-09.html",
+    "href": "modules/week09/instructor-notes-09.html",
+    "title": "Week 9 - Instructor notes",
+    "section": "",
+    "text": "Files\n\n\n\n\n\n\nconcurrency.db\n\n\n\n\nconcurrency.sql\n\n\n\n\nexperiment.sh\n\n\n\n\nworker.py\n\n\n\n\n\n\nNo matching items\n\n\nThe above files, which can be downloaded in toto as concurrency.zip, can be used to demonstrate the necessity of using transactions and locking to avoid race conditions. concurrency.db is an SQLite database created by running the commands in concurrency.sql. It contains a single value \\(V\\) in a single row in a single table.\nworker.py is a Python program that adds a specified delta value to \\(V\\) a specified number of times. For example, python worker.py 500 1 adds 1 to \\(V\\) 500 times. By default it does no locking at all, but if a wt (“with transactions”) argument is added, as in python worker.py 500 1 wt, it wraps each update in a transaction.\nexperiment.sh is a Bash script that resets \\(V\\) to 0, runs two instances of worker.py concurrently, one adding +1 to \\(V\\) 500 times and the other adding -1 to \\(V\\) 500 times, and then prints the final value of \\(V\\). By default it does no locking, but as with worker.py, if it is run with awt argument then transactions and locking are employed. With no race conditions the final value of \\(V\\) will of course be 0, but if race conditions occur, \\(V\\) will likely have a random nonzero value.\nThe database configuration, the connection details, and the timing delays have all been designed to make race conditions very likely to occur. (It is suprisingly difficult to get race conditions to occur due to SQLite’s default locking and due to artifacts of operating system timeslicing.) This experimental setup has been tested on MacOS, Windows, and several Unix platforms and consistently yields the desired result. Here’s an example run without transactions:\n% ./experiment.sh\nvalue = 14\n% ./experiment.sh\nvalue = 15\n% ./experiment.sh\nvalue = -2\nAnd adding transactions and locking:\n% ./experiment.sh wt\nvalue = 0\n% ./experiment.sh wt\nvalue = 0\n% ./experiment.sh wt\nvalue = 0\nIt should take less than 60 seconds to run an experiment."
+  },
+  {
+    "objectID": "modules/week09/instructor-notes-09.html#concurrency-demonstration",
+    "href": "modules/week09/instructor-notes-09.html#concurrency-demonstration",
+    "title": "Week 9 - Instructor notes",
+    "section": "",
+    "text": "Files\n\n\n\n\n\n\nconcurrency.db\n\n\n\n\nconcurrency.sql\n\n\n\n\nexperiment.sh\n\n\n\n\nworker.py\n\n\n\n\n\n\nNo matching items\n\n\nThe above files, which can be downloaded in toto as concurrency.zip, can be used to demonstrate the necessity of using transactions and locking to avoid race conditions. concurrency.db is an SQLite database created by running the commands in concurrency.sql. It contains a single value \\(V\\) in a single row in a single table.\nworker.py is a Python program that adds a specified delta value to \\(V\\) a specified number of times. For example, python worker.py 500 1 adds 1 to \\(V\\) 500 times. By default it does no locking at all, but if a wt (“with transactions”) argument is added, as in python worker.py 500 1 wt, it wraps each update in a transaction.\nexperiment.sh is a Bash script that resets \\(V\\) to 0, runs two instances of worker.py concurrently, one adding +1 to \\(V\\) 500 times and the other adding -1 to \\(V\\) 500 times, and then prints the final value of \\(V\\). By default it does no locking, but as with worker.py, if it is run with awt argument then transactions and locking are employed. With no race conditions the final value of \\(V\\) will of course be 0, but if race conditions occur, \\(V\\) will likely have a random nonzero value.\nThe database configuration, the connection details, and the timing delays have all been designed to make race conditions very likely to occur. (It is suprisingly difficult to get race conditions to occur due to SQLite’s default locking and due to artifacts of operating system timeslicing.) This experimental setup has been tested on MacOS, Windows, and several Unix platforms and consistently yields the desired result. Here’s an example run without transactions:\n% ./experiment.sh\nvalue = 14\n% ./experiment.sh\nvalue = 15\n% ./experiment.sh\nvalue = -2\nAnd adding transactions and locking:\n% ./experiment.sh wt\nvalue = 0\n% ./experiment.sh wt\nvalue = 0\n% ./experiment.sh wt\nvalue = 0\nIt should take less than 60 seconds to run an experiment."
+  },
+  {
+    "objectID": "modules/week09/instructor-notes-09.html#index-demonstration-and-homework",
+    "href": "modules/week09/instructor-notes-09.html#index-demonstration-and-homework",
+    "title": "Week 9 - Instructor notes",
+    "section": "Index demonstration and homework",
+    "text": "Index demonstration and homework\n\n\n\n\n\n\nFiles\n\n\n\n\n\n\nbuild-big-db.sql\n\n\n\n\ngenerate-rows\n\n\n\n\nindex-timer\n\n\n\n\nquery.sql\n\n\n\n\nsample-output.csv\n\n\n\n\n\n\nNo matching items\n\n\nThe above files, which can be downloaded in toto as indexes.zip, create a large SQLite database to be used for the homework assignment. The database is essentially the same as has been used throughout the course to date, but contains a Bird_nests table having 1 million rows. The rows are valid (i.e., satisfy all table constraints) but have randomly generated values. The rows are also padded so that the database size is inflated to 4GB.\nquery.sql is a query that returns exactly one row from this enlarged Bird_nests table. The design is such that placing indexes on different column(s) of the table will result in markedly different performance improvements. Furthermore, query performance can be seen to have a clear relationship to index cardinality.\nTo build the database, create a copy of the database from week 7 and then run build-big-db.sql on it as shown below. The SQL script internally invokes the generate-rows Python script.\ncp .../week7/database.db db/database-long-wide.db\nsqlite3 -init build-big-db.sql db/database-long-wide.db\nindex-timer is a Bash script that is essentially what the homework problem asks the students to use, and what the students should have developed in assignment Week 5 - Create a test harness. Running experiments as described in the homework problem should produce data resembling the following:\n\n\n\n\n\nindex\naverage_time\nnum_distinct_values\n\n\n\n\nnone\n0.700\n1\n\n\nSite\n0.090\n16\n\n\nSpecies\n0.023\n99\n\n\nYear\n0.026\n66\n\n\nObserver\n0.023\n269\n\n\nageMethod\n0.400\n3\n\n\nSite,Species\n0.022\n1584\n\n\nSite,Year\n0.022\n1056\n\n\nSite,Observer\n0.022\n4304\n\n\nSite,ageMethod\n0.040\n48\n\n\nSpecies,Year\n0.023\n6534\n\n\nSpecies,Observer\n0.022\n26631\n\n\nSpecies,ageMethod\n0.022\n297\n\n\nYear,Observer\n0.022\n17754\n\n\nYear,ageMethod\n0.022\n198\n\n\nObserver,ageMethod\n0.023\n807\n\n\n\n\n\nWhich, when plotted, reveals a clear relationship:"
+  },
+  {
+    "objectID": "modules/week09/index-09.html",
+    "href": "modules/week09/index-09.html",
+    "title": "Week 9 - Advanced database topics",
+    "section": "",
+    "text": "Exposure to the concepts of:\n\nConcurrency and transactions\nBackups\nIndexes"
+  },
+  {
+    "objectID": "modules/week09/index-09.html#learning-objectives",
+    "href": "modules/week09/index-09.html#learning-objectives",
+    "title": "Week 9 - Advanced database topics",
+    "section": "",
+    "text": "Exposure to the concepts of:\n\nConcurrency and transactions\nBackups\nIndexes"
+  },
+  {
+    "objectID": "modules/week09/index-09.html#slides",
+    "href": "modules/week09/index-09.html#slides",
+    "title": "Week 9 - Advanced database topics",
+    "section": "Slides",
+    "text": "Slides\nslides-09.pptx"
+  },
+  {
+    "objectID": "modules/week09/index-09.html#instructor-materials",
+    "href": "modules/week09/index-09.html#instructor-materials",
+    "title": "Week 9 - Advanced database topics",
+    "section": "Instructor materials",
+    "text": "Instructor materials\nInstructor notes\nInstructor files:\n\nconcurrency.zip\nindexes.zip"
+  },
+  {
+    "objectID": "modules/week09/index-09.html#resources",
+    "href": "modules/week09/index-09.html#resources",
+    "title": "Week 9 - Advanced database topics",
+    "section": "Resources",
+    "text": "Resources\n\nJeffrey D. Ullman and Jennifer Widom (2008). A First Course in Database Systems. 3rd ed. Upper Saddle River, NJ: Pearson/Prentice Hall.\nAccess via Library Catalog\n\nComplete but theoretical introduction to relational databases, data modeling, and relational algebra."
+  },
+  {
+    "objectID": "modules/week09/index-09.html#homework",
+    "href": "modules/week09/index-09.html#homework",
+    "title": "Week 9 - Advanced database topics",
+    "section": "Homework",
+    "text": "Homework\nWhat makes a good index?"
+  },
+  {
+    "objectID": "modules/week08/hw-08.html",
+    "href": "modules/week08/hw-08.html",
+    "title": "Week 8 - sdcMicro exercise",
+    "section": "",
+    "text": "Your team has successfully obtained a dataset1 that encompasses whale entanglement data associated with specific fisheries along the West Coast. This dataset, named whale-sdc.csv, and an accompanying file called whale-exercise.Rmd, are available on the class data GitHub repository, week 8 directory.\nIn groups of two or three, your task is to thoroughly examine the dataset and complete the provided R Markdown file. This entails implementing the necessary code and addressing the given questions. To ensure proper identification, please include the names of all participating members in the YAML header before submitting the modified R Markdown file."
+  },
+  {
+    "objectID": "modules/week08/hw-08.html#footnotes",
+    "href": "modules/week08/hw-08.html#footnotes",
+    "title": "Week 8 - sdcMicro exercise",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis dataset was purposefully adapted exclusively for instruction use.↩︎"
+  },
+  {
+    "objectID": "modules/week06/index-06.html",
+    "href": "modules/week06/index-06.html",
+    "title": "Week 6 - Metadata standards",
+    "section": "",
+    "text": "Understand the role of metadata in facilitating the management, discovery, interoperability, and reuse of digital resources and research data.\nRecognize the importance of adhering to domain-specific metadata standards and determining which standard should be used.\nAcquire familiarity with the overall structure of the Ecological Metadata Language (EML) schema and the anatomy of an EML record.\nProgrammatically create EML metadata records using R."
+  },
+  {
+    "objectID": "modules/week06/index-06.html#learning-goals",
+    "href": "modules/week06/index-06.html#learning-goals",
+    "title": "Week 6 - Metadata standards",
+    "section": "",
+    "text": "Understand the role of metadata in facilitating the management, discovery, interoperability, and reuse of digital resources and research data.\nRecognize the importance of adhering to domain-specific metadata standards and determining which standard should be used.\nAcquire familiarity with the overall structure of the Ecological Metadata Language (EML) schema and the anatomy of an EML record.\nProgrammatically create EML metadata records using R."
+  },
+  {
+    "objectID": "modules/week06/index-06.html#slides-and-other-materials",
+    "href": "modules/week06/index-06.html#slides-and-other-materials",
+    "title": "Week 6 - Metadata standards",
+    "section": "Slides and other materials",
+    "text": "Slides and other materials\nslides-06.pptx\nClass data GitHub repository, week 6 for in-class exercise\nRelated resources:\n\nResearch Data Alliance (RDA) Metadata Standard Catalog.\nEML Schema Documentation.\nEML Best Practices.\nCreating EML records in R.\nEzEML - Ecological Data Initiative (EDI).\nExcel to EML.\ncapemlGIS - a package that extends the CAPLTER/capeml to facilitate the creation of EML spatialRaster and spatialVector objects and metadata."
+  },
+  {
+    "objectID": "modules/week06/index-06.html#recommended-readings",
+    "href": "modules/week06/index-06.html#recommended-readings",
+    "title": "Week 6 - Metadata standards",
+    "section": "Recommended readings",
+    "text": "Recommended readings\n\nGries, C., Hanson, P. C., O’Brien, M., Servilla, M., Vanderbilt, K., & Waide, R. (2023). The Environmental Data Initiative: Connecting the past to the future through data reuse. Ecology and Evolution, 13(1), e9592. https://doi.org/10.1002/ece3.9592\nLeipzig, J., Nüst, D., Hoyt, C. T., Ram, K., & Greenberg, J. (2021). The role of metadata in reproducible computational research. Patterns, 2(9), https://doi.org/10.1016/j.patter.2021.100322"
+  },
+  {
+    "objectID": "modules/week06/index-06.html#homework",
+    "href": "modules/week06/index-06.html#homework",
+    "title": "Week 6 - Metadata standards",
+    "section": "Homework",
+    "text": "Homework\nEML record"
+  },
+  {
+    "objectID": "modules/week01/hw-01.html",
+    "href": "modules/week01/hw-01.html",
+    "title": "Week 1 - Data modeling exercise",
+    "section": "",
+    "text": "Create a table definition for the Snow_survey table that is maximally expressive, that is, that captures as much of the semantics and characteristics of the data using SQL’s data definition language as is possible.\nIn the class data GitHub repository, week 1 directory you will find the table described in the metadata (consult 01_ASDN_Readme.txt) and the data can be found in ASDN_Snow_survey.csv. You will want to look at the values that occur in the data using a tool like R, Python, or OpenRefine.\nPlease consider:\nYou may (or may not) want to take advantage of the Species, Site, Color_band_code, and Personnel supporting tables. These are also documented in the metadata, and SQL table definitions for them have already been created and are included below.\nPlease express your table definition in SQL, but don’t worry about getting the SQL syntax exactly correct. This assignment is just a thought exercise. If you do want to try to write correct SQL, though, your may find it helpful to consult the SQLite CREATE TABLE documentation.\nFinally, please provide some explanation for why you made the choices you did, and any questions or uncertainties you have. Don’t write an essay! Bullet points are sufficient."
+  },
+  {
+    "objectID": "modules/week01/hw-01.html#appendix",
+    "href": "modules/week01/hw-01.html#appendix",
+    "title": "Week 1 - Data modeling exercise",
+    "section": "Appendix",
+    "text": "Appendix\nCREATE TABLE Species (\n    Code TEXT PRIMARY KEY,\n    Common_name TEXT UNIQUE NOT NULL,\n    Scientific_name TEXT,\n    Relevance TEXT\n);\n\nCREATE TABLE Site (\n    Code TEXT PRIMARY KEY,\n    Site_name TEXT UNIQUE NOT NULL,\n    Location TEXT NOT NULL,\n    Latitude REAL NOT NULL CHECK (Latitude BETWEEN -90 AND 90),\n    Longitude REAL NOT NULL CHECK (Longitude BETWEEN -180 AND 180),\n    \"Total_Study_Plot_Area_(ha)\" REAL NOT NULL\n        CHECK (\"Total_Study_Plot_Area_(ha)\" &gt; 0),\n    UNIQUE (Latitude, Longitude)\n);\n\nCREATE TABLE Color_band_code (\n    Code TEXT PRIMARY KEY,\n    Color TEXT NOT NULL UNIQUE\n);\n\nCREATE TABLE Personnel (\n    Abbreviation TEXT PRIMARY KEY,\n    Name TEXT NOT NULL UNIQUE\n);"
+  },
+  {
+    "objectID": "installing-sqlite.html",
+    "href": "installing-sqlite.html",
+    "title": "Installing SQLite",
+    "section": "",
+    "text": "SQLite (the sqlite3 command) comes already installed on Mac and Linux machines. However even with those machines some configuration of SQLite will be required for this course, see below."
+  },
+  {
+    "objectID": "installing-sqlite.html#windows-installation",
+    "href": "installing-sqlite.html#windows-installation",
+    "title": "Installing SQLite",
+    "section": "Windows installation",
+    "text": "Windows installation\nIf not already installed, install Git for Windows. Instructions and some good default settings can be found here. Note that it is not necessary to install Git or Bash in order to run SQLite on Windows; SQLite can be run from the desktop or from the DOS command prompt. But for this course we will be using Bash.\nNext, install SQLite from https://www.sqlite.org/download.html. Select, under “Precompiled Binaries for Windows,” the download that includes “A bundle of command-line tools for managing SQLite database files.” Extract the download into a directory C:\\sqlite. The SQLite command line tool will be located at a path resembling C:\\sqlite\\sqlite-tools-win32-x86-3410200\\sqlite3.exe. Instructions for further setting up to run SQLite under the DOS command prompt can be found here if you’re interested, but we won’t be needing that.\nTo be able to easily run SQLite from any directory, update your Bash path by editing ~/.bash_profile. If you’re not familiar with Unix text editors, trying using nano from the Bash prompt:\ncd ~\nnano .bash_profile\nIf your sqlite3.exe is located in C:\\sqlite\\sqlite-tools-win32-x86-3410200, the equivalent Unix pathname is /c/sqlite/sqlite-tools-win32-x86-3410200. You want to add this directory (or whatever yours is called) to your PATH environment variable. To do so, add the following line to your .bash_profile:\nexport PATH=$PATH:/c/sqlite/sqlite-tools-win32-x86-3410200\nAgain, your pathname may differ depending on where sqlite3.exe is located.\nWith that set up, after starting a new Bash session you will be able to run SQLite from any directory simply by typing:\nsqlite3"
+  },
+  {
+    "objectID": "installing-sqlite.html#configuring-sqlite3",
+    "href": "installing-sqlite.html#configuring-sqlite3",
+    "title": "Installing SQLite",
+    "section": "Configuring sqlite3",
+    "text": "Configuring sqlite3\nFor this class it will be necessary to configure SQLite every time it runs. This is accomplished by created a file ~/.sqliterc. So, from Bash:\ncd ~\nnano .sqliterc\nIn this file put the following two lines:\n.mode box\nPRAGMA foreign_keys = ON;\nThe first line turns on some nice display formatting. The second line is necessary to enable certain SQL functionality this is disabled by default."
+  },
+  {
+    "objectID": "installing-sqlite.html#confirming-that-sqlite-works",
+    "href": "installing-sqlite.html#confirming-that-sqlite-works",
+    "title": "Installing SQLite",
+    "section": "Confirming that SQLite works",
+    "text": "Confirming that SQLite works\nFrom any directory, you should be able to run sqlite3, issue a “PRAGMA foreign_keys” command that returns 1, and get output resembling below.\nbash% sqlite3\n-- Loading resources from C:\\Users\\user\\.sqliterc\nSQLite version 3.39.4 2022-09-29 15:55:41\nEnter \".help\" for usage hints.\nConnected to a transient in-memory database.\nUse \".open FILENAME\" to reopen on a persistent database.\nsqlite&gt; PRAGMA foreign_keys;\n┌──────────────┐\n│ foreign_keys │\n├──────────────┤\n│ 1            │\n└──────────────┘\nsqlite&gt; .exit\nbash%"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bren MEDS 213: Databases and Data Management",
+    "section": "",
+    "text": "Greg Janée (gjanee@ucsb.edu) and Renata Curty (rcurty@ucsb.edu)\nThis is an archive of the materials used for a 4-unit, letter-grade course delivered in Spring 2023 as part of the Master of Environmental Data Science (MEDS) program in the Bren School of Environmental Science & Management. It includes PowerPoint presentations, instructor notes, live coding transcripts, supplemental materials and readings, and homework assignments.\nThe goals of the course were to give MEDS students the skills they need to practically, successfully, and ethically manage their data, and to create, manage, and use relational databases where appropriate. Relational database topics went farther than just SQL queries and included a significant unit on data modeling and database constraints and integrity, in addition to advanced database topics such as triggers and indexes and accessing databases from programming environments. The data management portion tied into the students’ capstone projects in a couple places, and included analyzing data from an ethical perspective, creating standards-compliant metadata, and employing data de-identification techniques. The course also included a unit on the Unix command line, with an emphasis on creating reusable Bash scripts, given in the spirit that Bash is a generally useful tool that all data scientists should have at least some familiarity with.\nFor the database portion of the course the Arctic Shorebird Demographics Network dataset, obtained from the Arctic Data Center, was used as a running example. While this dataset is not distributed as a relational database (it is packaged as a set of related CSV files), its structure is highly amenable to a relational approach and provides a realistic example of where and why one would want to use a relational database in the Earth and environmental sciences. It also provides just enough complexity to support realistic and complex queries and views. Note that the dataset used in the course, and included in this archive, is a cleaned-up subset of the full dataset. It is necessarily a subset of the full dataset to keep the size and complexity manageable for pedagogical purposes, and it had to be cleaned up because, unfortunately, the full dataset has many errors that would have precluded creating foreign keys.\nSQLite was used as the database platform. To get SQLite to behave as other relational databases do in terms of data typing and constraints, the STRICT keyword was added to table definitions. However, in the classroom it was discovered that this is a relatively new feature of SQLite and that databases that use this keyword cannot be opened at all by older versions of SQLite, and thus it was removed.\nA class data GitHub repository, linked below, was used as the mechanism for distributing files to students. Each week a new directory of files was added to the repository and the students were asked to pull the repository to their local environment. The repository linked here includes the files for all weeks."
+  },
+  {
+    "objectID": "index.html#course-content",
+    "href": "index.html#course-content",
+    "title": "Bren MEDS 213: Databases and Data Management",
+    "section": "Course content",
+    "text": "Course content\nSyllabus\nInstalling SQLite\nResources\nClass data GitHub repository"
+  },
+  {
+    "objectID": "index.html#modules",
+    "href": "index.html#modules",
+    "title": "Bren MEDS 213: Databases and Data Management",
+    "section": "Modules",
+    "text": "Modules\n\n\n\nWeek\nTopic/Content\n\n\n\n\n1\nRelational databases and data modeling\n\n\n2\nEthical and responsible data management\n\n\n3\nSQLite and SQL\n\n\n4\nReproducible and FAIR data\n\n\n5\nSQLite, SQL, and Bash\n\n\n6\nMetadata standards\n\n\n7\nProgramming with databases\n\n\n8\nSensitive data\n\n\n9\nAdvanced database topics\n\n\n10\nData licensing and publication"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Course syllabus",
+    "section": "",
+    "text": "This course will teach students the fundamentals of relational databases and data management. Students will learn the principles of database modeling and design and gain practical experience applying SQL (Structured Query Language) to manage and manipulate relational databases. The course also introduces the role and application of data documentation and metadata standards for interoperability and effective data management. By the end of the course, students will be equipped to make informed decisions about managing databases and data ethically and responsibly, focusing on issues such as bias, data privacy, sharing, ownership, and licensing."
+  },
+  {
+    "objectID": "syllabus.html#overview",
+    "href": "syllabus.html#overview",
+    "title": "Course syllabus",
+    "section": "",
+    "text": "This course will teach students the fundamentals of relational databases and data management. Students will learn the principles of database modeling and design and gain practical experience applying SQL (Structured Query Language) to manage and manipulate relational databases. The course also introduces the role and application of data documentation and metadata standards for interoperability and effective data management. By the end of the course, students will be equipped to make informed decisions about managing databases and data ethically and responsibly, focusing on issues such as bias, data privacy, sharing, ownership, and licensing."
+  },
+  {
+    "objectID": "syllabus.html#learning-objectives",
+    "href": "syllabus.html#learning-objectives",
+    "title": "Course syllabus",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nUnderstand the fundamental principles of relational databases and relational data modeling, including table structures, primary and foreign keys, relationships between tables, and data normalization.\nUnderstand how to use the Unix command line and how manage SQLite databases from the command line.\nUse SQL to retrieve, manipulate, and manage data stored in a relational database.\nDemonstrate proficiency in querying, filtering, sorting, and programmatically accessing and interacting with relational databases from R and Python.\nBecome familiar with advanced database topics such as concurrency, transactions, indexing, backups, and publication.\nUnderstand the role of good data documentation and metadata standards for interoperability, effective data management, and reproducibility.\nOperationalize the FAIR principles into data management practices.\nProduce a metadata record in EML (Ecological Metadata Language) and apply metadata crosswalks to programmatically convert metadata schemas.\nUnderstand the ethics of sensitive data and how to de-identify sensitive data.\nEvaluate ethical and responsible data management practices, including bias, data privacy, sharing, ownership, and licensing issues."
+  },
+  {
+    "objectID": "syllabus.html#schedule",
+    "href": "syllabus.html#schedule",
+    "title": "Course syllabus",
+    "section": "Schedule*",
+    "text": "Schedule*\n\n\n\nWeek\nTopic/Content\n\n\n\n\n1 (April 3-5)\nRelational databases and data modeling\n\n\n2 (April 10-12)\nEthical and responsible data management\n\n\n3 (April 17-19)\nSQLite and SQL\n\n\n4 (April 24-26)\nReproducible and FAIR data\n\n\n5 (May 1-3)\nSQLite, SQL, and Bash\n\n\n6 (May 8-10)\nMetadata standards\n\n\n7 (May 15-17)\nProgramming with databases\n\n\n8 (May 22-24)\nSensitive data\n\n\n9 (May 31)\nAdvanced database topics\n\n\n10 (June 5-6)\nData licensing and publication\n\n\n\n*Schedule subject to change."
+  },
+  {
+    "objectID": "syllabus.html#course-assessment",
+    "href": "syllabus.html#course-assessment",
+    "title": "Course syllabus",
+    "section": "Course assessment",
+    "text": "Course assessment\nYour performance in this course will depend 90% on weekly homework assignments and quizzes and 10% on participation. There will be no graded exercises or homework the last week."
+  },
+  {
+    "objectID": "syllabus.html#attendance-and-homework-policy",
+    "href": "syllabus.html#attendance-and-homework-policy",
+    "title": "Course syllabus",
+    "section": "Attendance and homework policy",
+    "text": "Attendance and homework policy\nAttendance is required. Material will be given in class that is not covered by slides or background readings.\nHomework is expected to be turned in on time. A generous amount of time will be given to complete assignments. Do not wait until the last minute to work on homework in case something unexpected comes up. Homework turned in late will be docked 25% per day."
+  },
+  {
+    "objectID": "syllabus.html#code-of-conduct",
+    "href": "syllabus.html#code-of-conduct",
+    "title": "Course syllabus",
+    "section": "Code of conduct",
+    "text": "Code of conduct\nAll students are expected to read and comply with the UCSB Student Conduct Code. We expect cooperation from all members to help ensure a welcoming and inclusive environment for everybody. We are determined to make our courses welcoming, inclusive and harassment-free for everyone regardless of gender, gender identity and expression, race, age, sexual orientation, disability, physical appearance, or religion (or lack thereof). We do not tolerate harassment of class participants, teaching assistants, or instructors in any form. Derogatory, abusive, or demeaning language or imagery will not be tolerated."
+  },
+  {
+    "objectID": "syllabus.html#student-support",
+    "href": "syllabus.html#student-support",
+    "title": "Course syllabus",
+    "section": "Student support",
+    "text": "Student support\nWe understand that ongoing crises impact students differently based on experiences, identities, living situations and resources, family responsibilities, and unforeseen challenges. We encourage you to prioritize your well-being. We are here to help you reach your learning and career goals. You are always welcome to reach out to our teaching team so that we can best support you. Please see the UCSB Campus Resource Guide for campus student support and services."
+  },
+  {
+    "objectID": "syllabus.html#disabled-students-program",
+    "href": "syllabus.html#disabled-students-program",
+    "title": "Course syllabus",
+    "section": "Disabled students program",
+    "text": "Disabled students program\nStudents with disabilities and/or alternative learning needs are encouraged to work with the Disabled Students Program at UCSB to ensure we can best support your learning and success."
+  },
+  {
+    "objectID": "modules/week01/index-01.html",
+    "href": "modules/week01/index-01.html",
+    "title": "Week 1 - Relational databases and data modeling",
+    "section": "",
+    "text": "Benefits of relational databases\nRelational data model and SQL data definition\nData modeling"
+  },
+  {
+    "objectID": "modules/week01/index-01.html#learning-objectives",
+    "href": "modules/week01/index-01.html#learning-objectives",
+    "title": "Week 1 - Relational databases and data modeling",
+    "section": "",
+    "text": "Benefits of relational databases\nRelational data model and SQL data definition\nData modeling"
+  },
+  {
+    "objectID": "modules/week01/index-01.html#slides",
+    "href": "modules/week01/index-01.html#slides",
+    "title": "Week 1 - Relational databases and data modeling",
+    "section": "Slides",
+    "text": "Slides\nslides-01.pptx"
+  },
+  {
+    "objectID": "modules/week01/index-01.html#resources",
+    "href": "modules/week01/index-01.html#resources",
+    "title": "Week 1 - Relational databases and data modeling",
+    "section": "Resources",
+    "text": "Resources\n\nhttps://learning.nceas.ucsb.edu/2022-04-arctic/data-modeling-essentials.html\n\nVery brief introduction to data modeling, ties into “tidy data.”\n\nChristoph Wohner, Johannes Peterseil, and Hermann Klug (2022). Designing and implementing a data model for describing environmental monitoring and research sites. Ecological Informatics 70, 101708.\nhttps://doi.org/10.1016/j.ecoinf.2022.101708\n\nGood case study.\n\nGerald A. Burnette (2022). Managing environmental data: principles, techniques, and best practices. CRC Press.\nAccess via Library Catalog\n\nComprehensive text, specific to environmental sciences.\n\nGraeme C. Simsion and Graham C. Witt (2005). Data Modeling Essentials. 3rd ed. Amsterdam: Morgan Kaufmann.\nAccess via Library Catalog\nGoogle Books\n\nComprehensive text, not specific to the environmental sciences.\n\nHartmut Hebbel (1994). Environmental data modeling. Annals of Operations Research 54, 263-278.\nhttps://doi.org/10.1007/BF02031737\n\nA broader view of data organization.\n\nJeffrey D. Ullman and Jennifer Widom (2008). A First Course in Database Systems. 3rd ed. Upper Saddle River, NJ: Pearson/Prentice Hall.\nAccess via Library Catalog\n\nComplete but theoretical introduction to relational databases, data modeling, and relational algebra."
+  },
+  {
+    "objectID": "modules/week01/index-01.html#homework",
+    "href": "modules/week01/index-01.html#homework",
+    "title": "Week 1 - Relational databases and data modeling",
+    "section": "Homework",
+    "text": "Homework\nData modeling exercise"
+  },
+  {
+    "objectID": "modules/week06/hw-06.html",
+    "href": "modules/week06/hw-06.html",
+    "title": "Week 6 - EML record",
+    "section": "",
+    "text": "Each Capstone group should create an EML metadata record using the EML R Package for one of the analysis-ready datasets the project has generated or reused (consider a tabular dataset with 5-8 columns).\nAll groups must include the minimum elements covered in class, plus any additional attributes and descriptions required to describe your chosen dataset fully. For example, if attributes have specific units of measure, you should incorporate them into the code.\nExplore the package documentation, the README.md file you created for Week 4, and the important resources listed on Week 6 - Metadata standards.\nSubmit two files, the R script and the XML."
+  },
+  {
+    "objectID": "modules/week08/index-08.html",
+    "href": "modules/week08/index-08.html",
+    "title": "Week 8 - Sensitive data",
+    "section": "",
+    "text": "Understand the importance of protecting sensitive data and ensuring privacy and confidentiality.\nIdentify and evaluate established approaches and techniques for de-identifying and anonymizing data to mitigate the risk of re-identification.\nApply the acquired techniques while quantifying the information loss and utility, utilizing an R package."
+  },
+  {
+    "objectID": "modules/week08/index-08.html#learning-goals",
+    "href": "modules/week08/index-08.html#learning-goals",
+    "title": "Week 8 - Sensitive data",
+    "section": "",
+    "text": "Understand the importance of protecting sensitive data and ensuring privacy and confidentiality.\nIdentify and evaluate established approaches and techniques for de-identifying and anonymizing data to mitigate the risk of re-identification.\nApply the acquired techniques while quantifying the information loss and utility, utilizing an R package."
+  },
+  {
+    "objectID": "modules/week08/index-08.html#student-notes",
+    "href": "modules/week08/index-08.html#student-notes",
+    "title": "Week 8 - Sensitive data",
+    "section": "Student notes",
+    "text": "Student notes\nBefore class, install the sdcMicro package if you choose not to use the servers.\nIf testing out using sensitive data, make sure to launch it from RStudio, not from the online website."
+  },
+  {
+    "objectID": "modules/week08/index-08.html#slides-and-other-materials",
+    "href": "modules/week08/index-08.html#slides-and-other-materials",
+    "title": "Week 8 - Sensitive data",
+    "section": "Slides and other materials",
+    "text": "Slides and other materials\nslides-08.pptx\nClass data GitHub repository, week 8 for in-class demo and homework"
+  },
+  {
+    "objectID": "modules/week08/index-08.html#resources",
+    "href": "modules/week08/index-08.html#resources",
+    "title": "Week 8 - Sensitive data",
+    "section": "Resources",
+    "text": "Resources\n\nsdcMicro Documentation: https://sdcpractice.readthedocs.io/en/latest/intro.html\nsdcMicro Shiny app: https://sdcappdocs.readthedocs.io/en/latest/introsdcApp.html\n\nOther useful links can be found on slides."
+  },
+  {
+    "objectID": "modules/week08/index-08.html#suggested-readings",
+    "href": "modules/week08/index-08.html#suggested-readings",
+    "title": "Week 8 - Sensitive data",
+    "section": "Suggested readings",
+    "text": "Suggested readings\n\nBledsoe, E. K., Burant, J. B., Higino, G. T., Roche, D. G., Binning, S. A., Finlay, K., … & Srivastava, D. S. (2022). Data rescue: saving environmental data from extinction. Proceedings of the Royal Society B, 289(1979), https://doi.org/10.1098/rspb.2022.0938\nBourgault, B., Tremblay, H.; Schloss, I.R.; Plante, S. & Archambault, P. (2017). “Commercially Sensitive” Environmental Data: A Case Study of Oil Seep Claims for the Old Harry Prospect in the Gulf of St. Lawrence, Canada. Case Studies in the Environment. https://doi.org/10.1525/cse.2017.sc.454841\nGehrke, J., Kifer, D., Machanavajjhala, A. (2011). ℓ-Diversity. In: van Tilborg, H.C.A., Jajodia, S. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA. https://doi.org/10.1007/978-1-4419-5906-5_899\nSamarati, P., & Sweeney, L. (1998). Protecting privacy when disclosing information: k-anonymity and its enforcement through generalization and suppression. https://dataprivacylab.org/dataprivacy/projects/kanonymity/paper3.pdf"
+  },
+  {
+    "objectID": "modules/week08/index-08.html#homework",
+    "href": "modules/week08/index-08.html#homework",
+    "title": "Week 8 - Sensitive data",
+    "section": "Homework",
+    "text": "Homework\nsdcMicro exercise"
+  },
+  {
+    "objectID": "modules/week09/hw-09.html",
+    "href": "modules/week09/hw-09.html",
+    "title": "Week 9 - What makes a good index?",
+    "section": "",
+    "text": "Recall from class that an index IC on a column C in a table T is in effect a mini-table, kept in sync with T, that contains all the values of column C in order. If there are a million rows in table T, there will be a million values in index IC. If the values of column C are unique, the index will hold a million unique values. If column C takes on only a few possible values, then index IC will still have a million values, but many of those values will be repeated.\nSuppose we are given a query that includes a constraint against column C, i.e., that includes WHERE C = someval possibly among other constraints. To use index IC means that the database looks up the constraint value someval in the index to obtain a smaller number of table rows (in the ideal case, just one row in the case of a unique index) to subsequently examine and match additional constraints against. The essential purpose of an index is to reduce the number of table rows that must be examined.\nFor the purposes of this assignment we will be working with a database that has the same structure as previous class databases but in which the Bird_nests table has 1 million rows, each of which has been fattened to occupy multiple kilobytes. As a consequence, the database file is approximately 4GB. The database file can be found on taylor.bren.ucsb.edu at /courses/EDS213/database-long-wide.db. To use it you will have to copy or download it to your own space.\nWe will also be working with the following query:\nSELECT Nest_ID\n    FROM Bird_nests\n    WHERE Site = 'nome' AND\n          Species = 'ruff' AND\n          Year = 1983 AND\n          Observer = 'cbishop' AND\n          ageMethod = 'float';\nThis query returns exactly one row.\n\nPart 1\nAnswer the following questions.\n\nIs there already an index on the Bird_nests table? If so, what is that index and will SQLite use it in the above query? Why or why not?\nWill adding an index on a column not mentioned in the WHERE clause be used by the database? Why or why not?\n\n\n\nPart 2\nQuery optimization, which falls under the general heading of “database tuning,” is a complex subject, as query performance depends on the query or queries being supported, the distribution and nature of the data, the abilities and characteristics of the query planner, and the costs of creating and maintaining indexes. Still, we can make a general observation about what makes for a good index (“good” meaning improving query performance here) by examining the effects of adding different indexes on the Bird_nests table and timing the above query.\nYour task is to conduct at least 10 experiments. In each experiment perform the following steps:\n\nCreate an index on a column or columns.\nTime the above query.\nDrop the index (to avoid accumulating indexes on the table).\nAlso, determine the number of distinct values in the index, i.e., the number of distinct values in the column or number of distinct tuples if the index is over multiple columns.\n\nWhat experiments to run?\n\nRun an initial experiment with no added index. For this experiment only, record the number of distinct values as 1.\nTry adding an index on each column mentioned in the WHERE clause (e.g., Site): that’s 5 experiments right there.\nFor other experiments, try adding an index on multiple columns, e.g., Site and Observer, or even 3 or 4 columns together.\n\nWhen done, you will want your results in the form of a CSV file with three columns: label, query time, and number of distinct values.\nFor timing, you will probably want to use the Bash test harness you developed in week 5. You can run your test harness manually, and manually retrieve the number of distinct values for step 4 above. But you can also automate the whole process; some hints for doing so are below. Be careful when running your test harness, as in the end you want just one row in your CSV file per experiment.\nOnce you have your data, load it in Jupyter or RStudio and create a log-log scatter plot of the number of distinct index values (X axis) versus query time (Y axis). (Results will be difficult to see if both axes are not logarithmic.) What relationship do you observe? Please hypothesize why you see the relationship you do.\nPlease upload your Jupyter notebook or Rmarkdown document. You do not need to submit your data.\n\n\nModifying your test harness\nA few tips on modifying your test harness to make it more useful for this assignment. First, if you find it annoying to have to try different numbers of repetitions to get positive and more precise timings, you can automate your script to try different numbers of repetitions until it achieves something reasonable. Here’s one idea:\nnum_reps=1\nwhile true; do\n    start=$SECONDS\n    for _ in $(seq $num_reps); do\n        sqlite3 $db_file \"$query\" &gt;& /dev/null\n    done\n    end=$SECONDS\n    if [ $((end - start)) -gt 3 ]; then\n        break\n    fi\n    echo \"Too fast, trying again!\"\n    num_reps=$((num_reps * 10))\ndone\nThis will try 1 repetition, then 10, then 100, etc.\nSecond, you can gather the number of distinct values by adding an sqlite3 -csv $db_file \"$num_values_query\" command and saving the output in a variable, and then echoing that variable out to your CSV file along with your other variables.\nAnd third, if you make the column(s) you want to index an argument to your script, you can automate adding and dropping indexes by adding more sqlite3 commands."
+  },
+  {
+    "objectID": "modules/week07/transcript-07-mon.html",
+    "href": "modules/week07/transcript-07-mon.html",
+    "title": "Python preliminaries",
+    "section": "",
+    "text": "%pwd\n\n'/Users/gjanee-local/work/meds213/bren-meds213-class-data/week7'\n%ls\n\nUntitled.ipynb  database.db\nThere are lots of these % Jupyter “magic” commands, a few are Bash equivalents."
+  },
+  {
+    "objectID": "modules/week07/transcript-07-mon.html#mega-quotes",
+    "href": "modules/week07/transcript-07-mon.html#mega-quotes",
+    "title": "Python preliminaries",
+    "section": "Mega quotes",
+    "text": "Mega quotes\nAllow you to create a string that spans lines, useful for long queries\n\n\"this is a string\"\n\n'this is also a string'\n\n\"\"\"\nSELECT * FROM table\nWHERE whatever\nsdfsd\nsdf\"\"\"\n\n'\\nSELECT * FROM table\\nWHERE whatever\\nsdfsd\\nsdf'"
+  },
+  {
+    "objectID": "modules/week07/transcript-07-mon.html#string-interpolation",
+    "href": "modules/week07/transcript-07-mon.html#string-interpolation",
+    "title": "Python preliminaries",
+    "section": "String interpolation",
+    "text": "String interpolation\n\n\"Hello, %s!\" % \"Greg\"\n\n'Hello, Greg!'\n\n\n\n\"%s, %s says hi\" % (\"Renata\", \"Greg\")\n\n'Renata, Greg says hi'"
+  },
+  {
+    "objectID": "modules/week07/transcript-07-mon.html#tuples",
+    "href": "modules/week07/transcript-07-mon.html#tuples",
+    "title": "Python preliminaries",
+    "section": "Tuples",
+    "text": "Tuples\nTuples are like lists, but are immutable\n\n[2, 3, 5] # list with 3 elements\n[2, 3]    # list with 2 elements\n[2]       # list with 1 element\n\n[2]\n\n\n\n(2, 3, 5) # tuple with 3 elements\n(2, 3)    # tuple with 2 elements\n(2,)      # tuple with 1 element\n\n(2,)\n\n\n1-tuple has weird syntax to avoid interpretation as parenthesized expression\n\n(2) # parenthesized expression\n\n2\n\n\n\nmy_list = [2, 3, 5]\nmy_list[0]\n\n2\n\n\n\nmy_tuple = (2, 3, 5)\nmy_tuple[0]\n\n2\n\n\n\nmy_list[2] = 47\nmy_list\n\n[2, 3, 47]\n\n\n\nmy_tuple[2] = 47\n\nTypeError: 'tuple' object does not support item assignment"
+  },
+  {
+    "objectID": "modules/week07/transcript-07-mon.html#list-comprehensions",
+    "href": "modules/week07/transcript-07-mon.html#list-comprehensions",
+    "title": "Python preliminaries",
+    "section": "List comprehensions",
+    "text": "List comprehensions\nMuch more concise than writing a loop\n\nmy_list = [2, 3, 5, 7]\nlist_squares = []\nfor n in my_list:\n    list_squares.append(n*n)\nlist_squares\n\n[4, 9, 25, 49]\n\n\n\n[n*n for n in my_list]\n\n[4, 9, 25, 49]\n\n\n\nquery_result = [(2,), (3,), (5,), (7,)]\n[t[0] for t in query_result]\n\n[2, 3, 5, 7]"
+  },
+  {
+    "objectID": "modules/week07/hw-07-4.html",
+    "href": "modules/week07/hw-07-4.html",
+    "title": "Week 7 - Who were the winners?",
+    "section": "",
+    "text": "At the conclusion of the ASDN project the PIs decided to hand out first, second, and third prizes to the observers who measured the most eggs. Who won? Please use R and dbplyr to answer this question, and please submit your R code. Your code should print out:\n# Ordered by: desc(total_eggs)\n  Name            total_eggs\n  &lt;chr&gt;                &lt;int&gt;\n1 Vanessa Loverti        163\n2 Dylan Kessler           87\n3 Richard Lanctot         50\nYou’ll want to load database tables using statements such as:\negg_table &lt;- tbl(conn, \"Bird_eggs\")\nand then use tidyverse grouping, summarization, joining, and other functions to compute the desired result.\nAlso, take your final expression and pipe it into show_query(). If you used multiple R statements, did dbplyr create a temporary table, or did it manage to do everything in one query? Did it limit to the first three rows using an R expression or an SQL LIMIT clause?"
+  },
+  {
+    "objectID": "modules/week07/transcript-07-wed-python.html",
+    "href": "modules/week07/transcript-07-wed-python.html",
+    "title": "Fragility",
+    "section": "",
+    "text": "import sqlite3\nconn = sqlite3.connect(\"database.db\")\n\nFragile: a non-obvious, distant dependency in software. Eg: relying on the order of columns returned by a SELECT *. The order is determined by the database schema, which is to say it’s not defined anywhere close to the code. The order of columns will not change dynamically in the way that rows can be returned in differing orders on every query. Still, if the schema ever gets updated and the column order changes (which might seem like an innocuous change to the person modifying the schema) code will correspondingly need to be changed. That can be overlooked, or even if remembered, it can be very hard to find all places in the code that need to be changed.\n\nc = conn.cursor()\nc.execute(\"SELECT * FROM Species LIMIT 3\")\nrows = c.fetchall()\n\n\nfirst_common_name = rows[0][1] # assumes second column is common name\nfirst_common_name\n\n'Arctic ground squirrel'\n\n\nSame example, but with explicit column names to establish linkage between query and tuples that are returned.\n\nc.execute(\"\"\"\n    SELECT Code, Common_name, Scientific_name, Relevance\n    FROM Species\n    LIMIT 3\"\"\")\n\nrows = c.fetchall()\nfirst_common_name = rows[0][1] # can see two lines above that second column is common name\nfirst_common_name\n\n'Arctic ground squirrel'\n\n\nTakeaway: avoid SELECT *, instead explicitly name columns.\n\nSafe interpolation of query parameters\nAll the queries we’ve seen so far have been complete and static. But it is common to work with parameterized queries. Think back to goodreads.com example: a user requests to view the reviews for a book. The book ID is not known in advance (i.e., when the software was written), it is supplied as part of the request. Ergo, the website software has a template query in hand: SELECT * FROM book_reviews WHERE book_id = ? ORDER BY ... LIMIT 10. When the request is received it then substitutes the requested book ID into the template.\nThe question is, how to do this safely? First, let’s look at using Python interpolation.\n\ntemplate = \"\"\"SELECT Name FROM Personnel\n    WHERE Abbreviation = '%s'\"\"\"\n\n\nabbrev = \"agottesman\"\nc.execute(template % abbrev) # interpolate abbrev into the template\nc.fetchall()\n\n[('Aaron Gottesman',)]\n\n\nExtended example that shows a more realistic example of using a query template: doing some processing on each row that is returned. (The processing here is trivial, but in general, including in your homework, it can be far more complex.) This example illustrates: - template query and using Python interpolation - iterating over the rows of a query - creating a second cursor to perform a second query simultaneously - using fetchone to retrieve the one row that is returned by a COUNT(*)\n\ntemplate = \"\"\"SELECT COUNT(*)\n    FROM Bird_nests\n    WHERE Species = '%s'\n\"\"\"\n\nc.execute(\"SELECT Code FROM Species\")\nfor row in c:\n    code = row[0]\n    c2 = conn.cursor()\n    c2.execute(template % code)\n    print(\"species %s has %s nests\" % (code, c2.fetchone()[0]))\n\nspecies agsq has 0 nests\nspecies amcr has 0 nests\nspecies amgp has 29 nests\nspecies arfo has 0 nests\nspecies arte has 0 nests\nspecies basa has 0 nests\nspecies bbis has 0 nests\nspecies bbpl has 43 nests\nspecies bbsa has 0 nests\nspecies besw has 0 nests\nspecies bltu has 0 nests\nspecies brant has 0 nests\nspecies brbe has 0 nests\nspecies brle has 0 nests\nspecies btcu has 0 nests\nspecies btgo has 3 nests\nspecies cole has 0 nests\nspecies cora has 0 nests\nspecies cosn has 0 nests\nspecies crpl has 2 nests\nspecies cusa has 0 nests\nspecies dunl has 101 nests\nspecies eywa has 0 nests\nspecies glgu has 0 nests\nspecies goea has 0 nests\nspecies gwfg has 0 nests\nspecies gwgu has 0 nests\nspecies gwte has 0 nests\nspecies gyrf has 0 nests\nspecies herg has 3 nests\nspecies hore has 0 nests\nspecies hugo has 0 nests\nspecies kill has 0 nests\nspecies lalo has 33 nests\nspecies lbdo has 1 nests\nspecies lesa has 0 nests\nspecies leye has 0 nests\nspecies list has 0 nests\nspecies ltdu has 0 nests\nspecies ltja has 0 nests\nspecies ltwe has 0 nests\nspecies mago has 0 nests\nspecies megu has 0 nests\nspecies merl has 0 nests\nspecies noha has 0 nests\nspecies nopi has 0 nests\nspecies nrvo has 0 nests\nspecies nsho has 0 nests\nspecies pagp has 0 nests\nspecies paja has 2 nests\nspecies palo has 0 nests\nspecies pefa has 0 nests\nspecies pesa has 14 nests\nspecies pobe has 0 nests\nspecies poja has 0 nests\nspecies pusa has 0 nests\nspecies refo has 0 nests\nspecies rekn has 0 nests\nspecies reph has 80 nests\nspecies rlha has 0 nests\nspecies rnph has 74 nests\nspecies rnst has 0 nests\nspecies rosa has 0 nests\nspecies rtpi has 0 nests\nspecies ruff has 0 nests\nspecies rutu has 30 nests\nspecies sacr has 0 nests\nspecies sagu has 0 nests\nspecies sand has 0 nests\nspecies savs has 0 nests\nspecies sbdo has 1 nests\nspecies sbgu has 0 nests\nspecies seow has 0 nests\nspecies sepl has 105 nests\nspecies sesa has 485 nests\nspecies snow has 0 nests\nspecies spei has 0 nests\nspecies spre has 0 nests\nspecies spsa has 0 nests\nspecies spts has 0 nests\nspecies stsa has 0 nests\nspecies stwe has 0 nests\nspecies test has 1 nests\nspecies thgu has 0 nests\nspecies tusw has 0 nests\nspecies tuvo has 0 nests\nspecies unfa has 0 nests\nspecies ungu has 0 nests\nspecies unja has 0 nests\nspecies unle has 0 nests\nspecies unra has 0 nests\nspecies vegu has 0 nests\nspecies wesa has 457 nests\nspecies whim has 0 nests\nspecies wipt has 0 nests\nspecies wisn has 0 nests\nspecies wolv has 0 nests\nspecies wosa has 0 nests\nspecies wrsa has 83 nests\n\n\nRefresher: fetchone (returns a single tuple) vs fetchall (returns a list of tuples).\n\nc.execute(\"SELECT Code FROM Species\").fetchone()\n\n('agsq',)\n\n\n\nc.execute(\"SELECT Code FROM Species LIMIT 3\").fetchall()\n\n[('agsq',), ('amcr',), ('amgp',)]\n\n\nNow for a safer method of interpolation. Notice ? in query without quotes. Notice passing parameter(s) as second argument to execute().\n\ntemplate = \"\"\"SELECT COUNT(*)\n    FROM Bird_nests\n    WHERE Species = ?\n\"\"\"\n\nc.execute(\"SELECT Code FROM Species\")\nfor row in c:\n    code = row[0]\n    c2 = conn.cursor()\n    c2.execute(template, [code])\n    print(\"species %s has %s nests\" % (code, c2.fetchone()[0]))\n\nspecies agsq has 0 nests\nspecies amcr has 0 nests\nspecies amgp has 29 nests\nspecies arfo has 0 nests\nspecies arte has 0 nests\nspecies basa has 0 nests\nspecies bbis has 0 nests\nspecies bbpl has 43 nests\nspecies bbsa has 0 nests\nspecies besw has 0 nests\nspecies bltu has 0 nests\nspecies brant has 0 nests\nspecies brbe has 0 nests\nspecies brle has 0 nests\nspecies btcu has 0 nests\nspecies btgo has 3 nests\nspecies cole has 0 nests\nspecies cora has 0 nests\nspecies cosn has 0 nests\nspecies crpl has 2 nests\nspecies cusa has 0 nests\nspecies dunl has 101 nests\nspecies eywa has 0 nests\nspecies glgu has 0 nests\nspecies goea has 0 nests\nspecies gwfg has 0 nests\nspecies gwgu has 0 nests\nspecies gwte has 0 nests\nspecies gyrf has 0 nests\nspecies herg has 3 nests\nspecies hore has 0 nests\nspecies hugo has 0 nests\nspecies kill has 0 nests\nspecies lalo has 33 nests\nspecies lbdo has 1 nests\nspecies lesa has 0 nests\nspecies leye has 0 nests\nspecies list has 0 nests\nspecies ltdu has 0 nests\nspecies ltja has 0 nests\nspecies ltwe has 0 nests\nspecies mago has 0 nests\nspecies megu has 0 nests\nspecies merl has 0 nests\nspecies noha has 0 nests\nspecies nopi has 0 nests\nspecies nrvo has 0 nests\nspecies nsho has 0 nests\nspecies pagp has 0 nests\nspecies paja has 2 nests\nspecies palo has 0 nests\nspecies pefa has 0 nests\nspecies pesa has 14 nests\nspecies pobe has 0 nests\nspecies poja has 0 nests\nspecies pusa has 0 nests\nspecies refo has 0 nests\nspecies rekn has 0 nests\nspecies reph has 80 nests\nspecies rlha has 0 nests\nspecies rnph has 74 nests\nspecies rnst has 0 nests\nspecies rosa has 0 nests\nspecies rtpi has 0 nests\nspecies ruff has 0 nests\nspecies rutu has 30 nests\nspecies sacr has 0 nests\nspecies sagu has 0 nests\nspecies sand has 0 nests\nspecies savs has 0 nests\nspecies sbdo has 1 nests\nspecies sbgu has 0 nests\nspecies seow has 0 nests\nspecies sepl has 105 nests\nspecies sesa has 485 nests\nspecies snow has 0 nests\nspecies spei has 0 nests\nspecies spre has 0 nests\nspecies spsa has 0 nests\nspecies spts has 0 nests\nspecies stsa has 0 nests\nspecies stwe has 0 nests\nspecies test has 1 nests\nspecies thgu has 0 nests\nspecies tusw has 0 nests\nspecies tuvo has 0 nests\nspecies unfa has 0 nests\nspecies ungu has 0 nests\nspecies unja has 0 nests\nspecies unle has 0 nests\nspecies unra has 0 nests\nspecies vegu has 0 nests\nspecies wesa has 457 nests\nspecies whim has 0 nests\nspecies wipt has 0 nests\nspecies wisn has 0 nests\nspecies wolv has 0 nests\nspecies wosa has 0 nests\nspecies wrsa has 83 nests\n\n\nWhat’s the big improvement? Well, imagine we are interpolating in text values such as personal names. Using Python interpolation:\n\nname = \"Aaron Gottesman\"\ntemplate = \"\"\"SELECT * FROM Personnel\n    WHERE Name = '%s'\"\"\"\nc.execute(template % name).fetchone()\n\n('agottesman', 'Aaron Gottesman')\n\n\nSame example, but now let’s pretend we get a name that has an apostrophe in it.\n\nname = \"Dan O'Brien\"\ntemplate = \"\"\"SELECT * FROM Personnel\n    WHERE Name = '%s'\"\"\"\nc.execute(template % name).fetchone()\n\nOperationalError: near \"Brien\": syntax error\n\n\nWhy the error? Because this is what the Python interpolation created. Notice it isn’t syntactically correct.\n\ntemplate % name\n\n\"SELECT * FROM Personnel\\n    WHERE Name = 'Dan O'Brien'\"\n\n\nNow using database interpolation, query succeeds because behind the scenes database adds quotes and does the interpolation correctly:\n\nname = \"Dan O'Brien\"\ntemplate = \"\"\"SELECT * FROM Personnel\n    WHERE Name = ?\"\"\"\nc.execute(template, [name]).fetchall()\n\n[]\n\n\nTakeaway: use database interpolation. Remember that in execute() parameters are passed in as the second argument, so say this:\nc.execute(template, [params...])\nNot this:\nc.execute(template % [params...])\n\n\nPandas convenience function\nSuper easy way to load a query into a dataframe.\n\nimport pandas as pd\n\n\npd.read_sql(\"SELECT * FROM Species\", conn)\n\n\n\n\n\n\n\n\nCode\nCommon_name\nScientific_name\nRelevance\n\n\n\n\n0\nagsq\nArctic ground squirrel\nSpermophilus parryii\nPotential predator (eggs; mammal)\n\n\n1\namcr\nAmerican Crow\nCorvus brachyrhynchos\nPotential predator (avian)\n\n\n2\namgp\nAmerican Golden-Plover\nPluvialis dominica\nStudy species\n\n\n3\narfo\nArctic fox\nAlopex lagopus\nPotential predator (mammal)\n\n\n4\narte\nArctic Tern\nSterna paradisaea\nIncidental monitoring\n\n\n...\n...\n...\n...\n...\n\n\n94\nwipt\nWillow Ptarmigan\nLagopus lagopus\nIncidental monitoring\n\n\n95\nwisn\nWilson's Snipe\nGallinago delicata\nStudy species\n\n\n96\nwolv\nWolverine\nGulo gulo\nPotential predator (mammal)\n\n\n97\nwosa\nWood Sandpiper\nTringa glareola\nStudy species\n\n\n98\nwrsa\nWhite-rumped Sandpiper\nCalidris fuscicollis\nStudy species\n\n\n\n\n99 rows × 4 columns"
+  },
+  {
+    "objectID": "modules/week07/hw-07-3.html",
+    "href": "modules/week07/hw-07-3.html",
+    "title": "Week 7 - Characterizing egg variation",
+    "section": "",
+    "text": "You read Egg Dimensions and Neonatal Mass of Shorebirds by Robert E. Ricklefs and want to see how the egg data we’ve been using in class compares to his results. Specifically, Ricklefs reported, “Coefficients of variation were 4 to 9% for egg volume” for shorebird eggs gathered in Manitoba, Canada. What is the range of coefficients of variation in our ASDN dataset?\nThe “coefficient of variation,” or CV, is a unitless measure of the variation of a sample, defined as the standard deviation divided by the mean and multiplied by 100 to express as a percentage. Thus, a CV of 10% means the standard deviation is 10% of the mean value. For the purposes of this computation, we will copy Ricklefs and use as a proxy for egg volume the formula\n\\[ W^2 L \\]\nwhere \\(W\\) is egg width and \\(L\\) is egg length.\nYour task is to create a Python program that reads data from the ASDN database and uses Pandas to compute, for each species in the database (for which there is egg data), the coefficient of variation of volume using the above formula. There are many ways this can be done. Because this assignment is primarily about programming in Python, please follow the steps below. Please submit your Python code when done.\n\nStep 1\nCreate a query that will return the distinct species for which there is egg data (not all species and not all nests have egg data), so that you can then loop over those species. Your query should return two columns, species code and scientific name.\n\n\nStep 2\nAfter you’ve connected to the database and created a cursor c, iterate over the species like so:\nspecies_query = \"\"\"SELECT Code, Scientific_name FROM...\"\"\"\nfor row in c.execute(species_query):\n    species_code = row[0]\n    scientific_name = row[1]\n    # query egg data for that species (step 3)\n    # compute statistics and print results (step 4)\n\n\nStep 3\nYou will need to construct a query template that gathers egg data for a species that will be supplied as a parameter. You can compute the formula\n\\[ W^2 L \\]\nin SQL or in Pandas. For simplicity, SQL is suggested:\negg_query = \"\"\"SELECT Width*Width*Length AS Volume FROM...\"\"\"\nWithin the loop, you will want to execute the query on the current species in the loop iteration. You may use the Pandas function pd.read_sql to do so and also directly load the results into a dataframe:\ndf = pd.read_sql(egg_query, conn, ...)\nDo a help(pd.read_sql) to figure out how to pass parameters to a query.\n\n\nStep 4\nFinally, and still within your loop, you’ll want to compute statistics and print out the results:\ncv = round(df.Volume.std()/df.Volume.mean()*100, 2)\nprint(f\"{scientific_name} {cv}%\")\nYour output should look like this:\nCharadrius semipalmatus 8.99%\nPluvialis dominica 19.88%\nPluvialis squatarola 6.94%\nCalidris alpina 5.46%\nCalidris fuscicollis 16.77%\nPhalaropus fulicarius 4.65%\nArenaria interpres 21.12%\n\n\nAppendix\nIt’s not necessary to use pd.read_sql to get data into a dataframe, it’s just a convenience. To do so manually (and to show you it’s not that hard), imagine that your query returns three columns. Collect the row data into three separate lists, then manually create a dataframe specifying the contents as a dictionary:\nrows = c.execute(\"SELECT Species, Width, Length FROM...\").fetchall()\nspecies_column = [t[0] for t in rows]\nwidth_column = [t[1] for t in rows]\nlength_column = [t[2] for t in rows]\n\ndf = pd.DataFrame(\n    {\n        \"species\": species_column,\n        \"width\": width_column,\n        \"length\": length_column\n    }\n)"
+  },
+  {
+    "objectID": "modules/week05/index-05.html",
+    "href": "modules/week05/index-05.html",
+    "title": "Week 5 - SQLite, SQL, and Bash",
+    "section": "",
+    "text": "Continued exploration of SQL concepts including joins, views, set operations, and triggers\nRead and write data from SQLite\nWrite a basic Bash script"
+  },
+  {
+    "objectID": "modules/week05/index-05.html#learning-objectives",
+    "href": "modules/week05/index-05.html#learning-objectives",
+    "title": "Week 5 - SQLite, SQL, and Bash",
+    "section": "",
+    "text": "Continued exploration of SQL concepts including joins, views, set operations, and triggers\nRead and write data from SQLite\nWrite a basic Bash script"
+  },
+  {
+    "objectID": "modules/week05/index-05.html#slides-and-other-materials",
+    "href": "modules/week05/index-05.html#slides-and-other-materials",
+    "title": "Week 5 - SQLite, SQL, and Bash",
+    "section": "Slides and other materials",
+    "text": "Slides and other materials\nslides-05-intro.pptx\nslides-05-triggers.pptx\nLecture notes:\n\nlecture-notes-05-mon.txt\nlecture-notes-05-wed.txt\n\nASDN dataset ER (entity-relationship) diagram\nClass data GitHub repository, week 5\nTen Bash Essentials"
+  },
+  {
+    "objectID": "modules/week05/index-05.html#bash-resources",
+    "href": "modules/week05/index-05.html#bash-resources",
+    "title": "Week 5 - SQLite, SQL, and Bash",
+    "section": "Bash resources",
+    "text": "Bash resources\n\nhttps://swcarpentry.github.io/shell-novice/\n\nGood Carpentry lesson, our lesson on Bash is drawn from this.\n\nhttps://www.gnu.org/software/bash/manual/\n\nThe official user manual.\n\nhttps://www.pcwdld.com/bash-cheat-sheet\n\nA cheat sheet that is better than most.\n\nhttps://www.shellcheck.net/\n\nIndispensable tool for writing scripts.\n\nhttp://mywiki.wooledge.org/BashPitfalls\n\nHow to do things the right way in Bash."
+  },
+  {
+    "objectID": "modules/week05/index-05.html#homework",
+    "href": "modules/week05/index-05.html#homework",
+    "title": "Week 5 - SQLite, SQL, and Bash",
+    "section": "Homework",
+    "text": "Homework\nProtect yourself\nCreate a trigger\nCreate a test harness\nBash scripting"
+  },
+  {
+    "objectID": "modules/week05/hw-05-2.html",
+    "href": "modules/week05/hw-05-2.html",
+    "title": "Week 5 - Create a trigger",
+    "section": "",
+    "text": "For this assignment, you must use week5/database.db in the class data GitHub repository!\nThe Bird_eggs table uniquely identifies each egg by a pair (Nest_ID, Egg_num). The egg numbers for a given nest always have the sequential values 1, 2, 3, 4, etc. For example, there are 3 eggs in nest 14eabaage01:\nSELECT * FROM Bird_eggs WHERE Nest_ID = '14eabaage01';\n┌───────────┬──────┬──────┬─────────────┬─────────┬────────┬───────┐\n│ Book_page │ Year │ Site │   Nest_ID   │ Egg_num │ Length │ Width │\n├───────────┼──────┼──────┼─────────────┼─────────┼────────┼───────┤\n│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 1       │ 39.14  │ 33.0  │\n│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 2       │ 41.51  │ 33.39 │\n│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 3       │ 48.29  │ 33.4  │\n└───────────┴──────┴──────┴─────────────┴─────────┴────────┴───────┘\n\nPart 1\nWhen inserting a new egg measurement, wouldn’t it be nice if the database just automatically filled in the next sequential egg number for us? Indeed, we can accomplish this with an AFTER INSERT trigger that does an UPDATE.\nThe schema for the database has been modified for this exercise so that Egg_num can be NULL and furthermore has a default value of NULL. This means we can insert a row without supplying an egg number. For example, we might say:\nINSERT INTO Bird_eggs\n    (Book_page, Year, Site, Nest_ID, Length, Width)\n    VALUES ('b14.6', 2014, 'eaba', '14eabaage01', 12.34, 56.78);\nIf this were the first egg measurement for this particular nest, immediately after the insert we would see:\n.nullvalue -NULL-\nSELECT * FROM Bird_eggs WHERE Nest_ID = '14eabaage01';\n┌───────────┬──────┬──────┬─────────────┬─────────┬────────┬───────┐\n│ Book_page │ Year │ Site │   Nest_ID   │ Egg_num │ Length │ Width │\n├───────────┼──────┼──────┼─────────────┼─────────┼────────┼───────┤\n│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ -NULL-  │ 12.34  │ 56.78 │\n└───────────┴──────┴──────┴─────────────┴─────────┴────────┴───────┘\nIf there were already some egg measurements for this nest (as in fact there are), immediately after the insert we would see:\n.nullvalue -NULL-\nSELECT * FROM Bird_eggs WHERE Nest_ID = '14eabaage01';\n┌───────────┬──────┬──────┬─────────────┬─────────┬────────┬───────┐\n│ Book_page │ Year │ Site │   Nest_ID   │ Egg_num │ Length │ Width │\n├───────────┼──────┼──────┼─────────────┼─────────┼────────┼───────┤\n│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 1       │ 39.14  │ 33.0  │\n│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 2       │ 41.51  │ 33.39 │\n│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 3       │ 48.29  │ 33.4  │\n│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ -NULL-  │ 12.34  │ 56.78 │\n└───────────┴──────┴──────┴─────────────┴─────────┴────────┴───────┘\nYour job is to create a trigger that will fire an UPDATE statement that will fill in a value for Egg_num in either situation above.\nYour trigger will have the form\nCREATE TRIGGER egg_filler\n    AFTER INSERT ON Bird_eggs\n    FOR EACH ROW\n    BEGIN\n        UPDATE ...;\n    END;\nA word of warning. Notice the two semicolons above: the UPDATE statement must be terminated by a semicolon, and the CREATE TRIGGER statement must be terminated by a semicolon.\nThe crux is in the UPDATE statement. Recall from class that in your UPDATE statement you can refer to the values just inserted as new.Book_page, new.Year, new.Site, new.Nest_ID, etc. For example, using the INSERT above, new.Nest_ID will have the value ‘14eabaage01’ and new.Length will have the value 12.34. You need to figure out:\n\nWhat column(s) to update. Well that’s easy, it’s just Egg_num.\nWhat Egg_num’s new value should be. Hint: the value can be computed from a SELECT statement. What SELECT statement could you use that will return the right value to use as the next sequential egg number?\nWhat row(s) to modify. Well, you want to modify just one row, the row that was just inserted. What WHERE clause could you use to identify this brand-new row? It has a unique signature.\n\nYou can try out your trigger by creating it, doing an INSERT, and then seeing what the rows for that particular nest look like. If your trigger doesn’t work for some reason, you may need to DROP TRIGGER egg_filler; before creating it again. As before, you will probably find it convenient to write your trigger code in a separate file, and load it into SQLite using the .read built-in command.\nPlease submit your SQL.\n\n\nPart 2\nWhy stop there? Recall that Book_page, Year, and Site all duplicate the information from the Bird_nests table. Wouldn’t it be nice if the database automatically filled in those values as well? Then we could just say:\nINSERT INTO Bird_eggs\n    (Nest_ID, Length, Width)\n    VALUES ('14eabaage01', 12.34, 56.78);\nThis can be accomplished by augmenting your previous trigger. Two options. One, you can add more UPDATE statements:\nCREATE TRIGGER egg_filler\n    AFTER INSERT ON Bird_eggs\n    FOR EACH ROW\n    BEGIN\n        UPDATE Bird_eggs SET Egg_num = (SELECT...) WHERE...;\n        UPDATE Bird_eggs SET Book_page = (SELECT...) WHERE...;\n        UPDATE Bird_eggs SET Year = (SELECT...) WHERE...;\n        etc.\n    END;\nOr two, you can add more clauses to a single UPDATE statement:\nCREATE TRIGGER egg_filler\n    AFTER INSERT ON Bird_eggs\n    FOR EACH ROW\n    BEGIN\n        UPDATE Bird_eggs\n            SET\n                Egg_num = (SELECT...),\n                Book_page = (SELECT...),\n                Year = (SELECT...),\n                etc.\n            WHERE ...;\n    END;\n(Honestly, this is not the most compact or efficient SQL, but sometimes it’s better sticking with a simple and understandable approach.)\nYou need to figure out what SELECT statements to use to find the values to insert. That is, given that you can reference new.Nest_ID, new.Length, and new.Width, what SELECT statements could you use to find the correct values for Book_page, Year, and Nest_ID?\nTry out your trigger, marvel at what you have automated, and submit your SQL.\n\n\nPart 3\nOkay, there isn’t a part 3. But wouldn’t it be nice to be able to insert egg measurements even more compactly? That is, instead of having to say:\nINSERT INTO Bird_eggs\n    (Nest_ID, Length, Width)\n    VALUES ('14eabaage01', 12.34, 56.78);\nwhat if you could just say:\nINSERT INTO Bird_eggs\n    VALUES ('14eabaage01', 12.34, 56.78);\nWell you can do that! It involves creating a view and adding an INSTEAD OF INSERT trigger on the view. If there’s time I’ll show an example in class."
+  },
+  {
+    "objectID": "modules/week05/hw-05-1.html",
+    "href": "modules/week05/hw-05-1.html",
+    "title": "Week 5 - Protect yourself",
+    "section": "",
+    "text": "Some example strategies were mentioned in class for reducing the possibility of performing UPDATEs and DELETEs that have catastrophic consequences. What strategy will you use?"
+  },
+  {
+    "objectID": "modules/week02/case-b.html",
+    "href": "modules/week02/case-b.html",
+    "title": "Case Study B: The caveat of the caviar: navigating ethics to protect endangered river wildlife",
+    "section": "",
+    "text": "Read the scenario and answer questions based on the weekly readings and the lecture:\nA team of environmental scientists from the University of Wisconsin is researching the impact of climate change on the Mississippi River wildlife. The research involves collecting data on various environmental factors, including water temperature, salinity, pH, and nutrient levels, as well as data on the abundance and diversity of aquatic species on the lower basins of the river.\nThe team collects the data using various methods, including river sensors, underwater cameras, and traditional sampling techniques. The data is stored on a cloud-based platform, allowing sharing and real-time collaboration with multiple partners. However, the researchers soon realized that some of the collected data might be sensitive, including information on the distribution and abundance of the pallid sturgeon, recently listed by the Wisconsin Department of Natural Resources as one of the endangered species. They also realized that some data points might be of commercial interest, which can threaten the protection of the species and its habitat. For example, exposing the exact locations of the pallid sturgeon and their critical habitats could lead to increased poaching or unauthorized fishing, as the species is highly valued for its caviar.\nResearchers face ethical considerations related to sensitive data sharing. They want to comply with best practices in open science. However, in this process, they must balance the need to share their data openly to advance research and understanding of climate change and the Mississippi River ecosystem while protecting sensitive data and preventing it from being used for commercial purposes that could harm the environment."
+  },
+  {
+    "objectID": "modules/week02/case-b.html#instructions",
+    "href": "modules/week02/case-b.html#instructions",
+    "title": "Case Study B: The caveat of the caviar: navigating ethics to protect endangered river wildlife",
+    "section": "",
+    "text": "Read the scenario and answer questions based on the weekly readings and the lecture:\nA team of environmental scientists from the University of Wisconsin is researching the impact of climate change on the Mississippi River wildlife. The research involves collecting data on various environmental factors, including water temperature, salinity, pH, and nutrient levels, as well as data on the abundance and diversity of aquatic species on the lower basins of the river.\nThe team collects the data using various methods, including river sensors, underwater cameras, and traditional sampling techniques. The data is stored on a cloud-based platform, allowing sharing and real-time collaboration with multiple partners. However, the researchers soon realized that some of the collected data might be sensitive, including information on the distribution and abundance of the pallid sturgeon, recently listed by the Wisconsin Department of Natural Resources as one of the endangered species. They also realized that some data points might be of commercial interest, which can threaten the protection of the species and its habitat. For example, exposing the exact locations of the pallid sturgeon and their critical habitats could lead to increased poaching or unauthorized fishing, as the species is highly valued for its caviar.\nResearchers face ethical considerations related to sensitive data sharing. They want to comply with best practices in open science. However, in this process, they must balance the need to share their data openly to advance research and understanding of climate change and the Mississippi River ecosystem while protecting sensitive data and preventing it from being used for commercial purposes that could harm the environment."
+  },
+  {
+    "objectID": "modules/week02/case-b.html#questions",
+    "href": "modules/week02/case-b.html#questions",
+    "title": "Case Study B: The caveat of the caviar: navigating ethics to protect endangered river wildlife",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nAs a data manager, what recommendations would you offer to the researchers to avoid commercial exploitation of the pallid sturgeon while contributing to advancing the research in the field? You do not need to write a long essay; elaborating your advice in bullet points is enough.\n\n\nQuestion 2\nAs a general rule, the _____________ of endangered, sensitive species should not be shared publicly. (hint: 1-2 words)"
+  },
+  {
+    "objectID": "modules/week02/case-a.html",
+    "href": "modules/week02/case-a.html",
+    "title": "Case Study A: Containing the flames of bias in machine learning",
+    "section": "",
+    "text": "Read the scenario and answer questions based on the weekly readings and the lecture:\nWildfires have become increasingly common and destructive in many regions worldwide, causing significant environmental and social problems. In response, many communities have implemented fire prevention and management strategies, including using machine learning (ML) algorithms to predict and mitigate the risk of wildfires.\nOakdale, located in a densely forested area in British Columbia, Canada, has implemented an ML algorithm to predict the risk of wildfires and prioritize fire prevention resources. The algorithm uses a variety of inputs, including historical fire data, weather patterns, topography, and vegetation coverage, to generate a risk score for each area of the city. However, after several months of using the algorithm, city officials noticed that specific neighborhoods with low-income and minority populations consistently receive lower risk scores than other areas with very similar environmental conditions. Upon closer examination of those patterns in the data, they realized that the historical data used to train the algorithm was heavily concentrated on more affluent and predominantly white neighborhoods, resulting in a skewed view of the fire risks for the whole city."
+  },
+  {
+    "objectID": "modules/week02/case-a.html#instructions",
+    "href": "modules/week02/case-a.html#instructions",
+    "title": "Case Study A: Containing the flames of bias in machine learning",
+    "section": "",
+    "text": "Read the scenario and answer questions based on the weekly readings and the lecture:\nWildfires have become increasingly common and destructive in many regions worldwide, causing significant environmental and social problems. In response, many communities have implemented fire prevention and management strategies, including using machine learning (ML) algorithms to predict and mitigate the risk of wildfires.\nOakdale, located in a densely forested area in British Columbia, Canada, has implemented an ML algorithm to predict the risk of wildfires and prioritize fire prevention resources. The algorithm uses a variety of inputs, including historical fire data, weather patterns, topography, and vegetation coverage, to generate a risk score for each area of the city. However, after several months of using the algorithm, city officials noticed that specific neighborhoods with low-income and minority populations consistently receive lower risk scores than other areas with very similar environmental conditions. Upon closer examination of those patterns in the data, they realized that the historical data used to train the algorithm was heavily concentrated on more affluent and predominantly white neighborhoods, resulting in a skewed view of the fire risks for the whole city."
+  },
+  {
+    "objectID": "modules/week02/case-a.html#questions",
+    "href": "modules/week02/case-a.html#questions",
+    "title": "Case Study A: Containing the flames of bias in machine learning",
+    "section": "Questions",
+    "text": "Questions\n\nQuestion 1\nThis case presents an ethical concern primarily associated with what?\n\n\nQuestion 2\nAccording to McGovern et al. (2022), which AI/ML issues can be identified in this case study? Justify your answer.\n\n\nQuestion 3\nSuppose you were hired as a consultant by Oakdale’s city officials. Which of the following recommendations would you give them to prevent perpetuating bias and inequitable outcomes? (Select all that apply)\n\nImplement transparency measures that make the algorithms’ decision-making processes more visible and understandable to stakeholders. This may include clarifying how decisions are made, sharing data sources, and providing access to model outputs. Fully document any limitations and shortcomings of the model and data.\nInvolve diverse stakeholders in the algorithm development and testing, including individuals from communities whose outputs may disproportionately impact. This can help identify and address potential biases and ensure that the algorithm is designed with the interests of all community members in mind.\nContinue using the algorithm as the official decision-making source until the re-training is completed. After all, ML methods are more efficient than traditional fire prevention strategies (e.g., fire breaks and vegetation management)."
+  },
+  {
+    "objectID": "modules/week03/hw-03-3.html",
+    "href": "modules/week03/hw-03-3.html",
+    "title": "Week 3 - SQL problem 3",
+    "section": "",
+    "text": "Your mission, should you choose to accept it, is to list the scientific names of bird species in descending order of their maximum average egg volumes. That is, compute the average volume of the eggs in each nest, and then for the nests of each species compute the maximum of those average volumes, and list by species in descending order of maximum volume. You final table should look like:\n┌─────────────────────────┬──────────────────┐\n│     Scientific_name     │  Max_avg_volume  │\n├─────────────────────────┼──────────────────┤\n│ Pluvialis squatarola    │ 36541.8531755592 │\n│ Pluvialis dominica      │ 33847.8550096089 │\n│ Arenaria interpres      │ 23338.620942275  │\n│ Calidris fuscicollis    │ 13277.1428014342 │\n│ Calidris alpina         │ 12196.2368406617 │\n│ Charadrius semipalmatus │ 11266.9746753467 │\n│ Phalaropus fulicarius   │ 8906.7745740725  │\n└─────────────────────────┴──────────────────┘\n(By the way, regarding the leader in egg size above, Birds of the World says that Pluvialis squatarola’s eggs are “Exceptionally large for size of female (ca. 16% weight of female)”.)\nTo calculate the volume of an egg, use the simplified formula\n\\[{\\pi \\over 6} W^2 L\\]\nwhere \\(W\\) is the egg width and \\(L\\) is the egg length. You can use 3.14 for \\(\\pi\\). (The real formula takes into account the ovoid shape of eggs, but only width and length are available to us here.)\nA good place to start is just to group bird eggs by nest (i.e., Nest_ID) and compute average volumes:\nCREATE TEMP TABLE Averages AS\n    SELECT Nest_ID, AVG(...) AS Avg_volume\n        FROM ...\n        GROUP BY ...;\nYou can now join that table with Bird_nests, so that you can group by species, and also join with the Species table to pick up scientific names. To do just the first of those joins, you could say something like\nSELECT Species, MAX(...)\n    FROM Bird_nests, Averages USING (Nest_ID)\n    GROUP BY ...;\nThat’s not the whole story, we want scientific names not species codes. Another join is needed. A couple strategies here. One, you can modify the above query to also join with the Species table (you’ll need to replace USING with ON …). Two, you can save the above as another temp table and join it to Species separately.\nDon’t forget to order the results. Here it is convenient to give computed quantities nice names so you can refer to them.\nPlease submit all of the SQL you used to solve the problem. Bonus points if you can do all of the above in one statement."
+  },
+  {
+    "objectID": "modules/week03/hw-03-1.html",
+    "href": "modules/week03/hw-03-1.html",
+    "title": "Week 3 - SQL problem 1",
+    "section": "",
+    "text": "It’s a useful skill in life (I’m not being rhetorical, I really mean that, it’s a useful skill) to be able to construct an experiment to answer a hypothesis. Suppose you’re not sure what the AVG function returns if there are NULL values in the column being averaged. Suppose you either didn’t have access to any documentation, or didn’t trust it. What experiment could you run to find out what happens?\nThere are two parts to this problem.\n\nPart 1\nConstruct an SQL experiment to determine the answer to the question above. Does SQL abort with some kind of error? Does it ignore NULL values? Do the NULL values somehow factor into the calculation, and if so, how?\nI would suggest you start by creating a table (in the bird database, in a new database, in a transient in-memory database, doesn’t matter) with a single column that has data type REAL (for part 2 below, it must be REAL). You can make your table a temp table or not, your choice.\nCREATE TEMP TABLE mytable... ;\nNow insert some real numbers and at least one NULL into your table.\nINSERT INTO mytable... ;\n(Hmm, can you insert multiple rows at once, or do you have to do a separate INSERT for each row?)\nOnce you have your little table constructed, try doing an AVG on the column and see what is returned. What would the average be if the function ignored NULLs? What would the average be if it somehow factored them in? What is actually returned?\nPlease submit both your SQL and your answer to the question about how AVG operates in the presence of NULL values.\n\n\nPart 2\nIf SQL didn’t have an AVG function, you could compute the average value of a column by doing something like this on your table:\nSELECT SUM(mycolumn)/COUNT(*) FROM mytable;\nSELECT SUM(mycolumn)/COUNT(mycolumn) FROM mytable;\nWhich query above is correct? Please explain why.\nNow that you’re done with your table, you can delete it if desired:\nDROP TABLE mytable;"
+  },
+  {
+    "objectID": "modules/week04/hw-04.html",
+    "href": "modules/week04/hw-04.html",
+    "title": "Week 4 - Project organization and documentation",
+    "section": "",
+    "text": "Fill out and upload a Project Organization & Documentation Worksheet for your capstone project (one per group).\nFill out and upload a README.txt file for your capstone project (one per group).\nReproducible R project. Submit the link to your GitHub repository with the R project example with a Binder Badge and a renv.lock file."
+  },
+  {
+    "objectID": "modules/week10/index-10.html",
+    "href": "modules/week10/index-10.html",
+    "title": "Week 10 - Data licensing and publication",
+    "section": "",
+    "text": "Become familiar with data licensing in the academic context.\nDistinguish which research deliverables can or cannot be subject to copyright and explore alternatives to that.\nGain an understanding of the Creative Commons license family and the differences in their applicability.\n\n\n\n\nslides-10-part1.pptx"
+  },
+  {
+    "objectID": "modules/week10/index-10.html#part-i---data-licensing",
+    "href": "modules/week10/index-10.html#part-i---data-licensing",
+    "title": "Week 10 - Data licensing and publication",
+    "section": "",
+    "text": "Become familiar with data licensing in the academic context.\nDistinguish which research deliverables can or cannot be subject to copyright and explore alternatives to that.\nGain an understanding of the Creative Commons license family and the differences in their applicability.\n\n\n\n\nslides-10-part1.pptx"
+  },
+  {
+    "objectID": "modules/week10/index-10.html#part-ii---data-publication",
+    "href": "modules/week10/index-10.html#part-ii---data-publication",
+    "title": "Week 10 - Data licensing and publication",
+    "section": "Part II - Data publication",
+    "text": "Part II - Data publication\n\nLearning goals\n\nUnderstand the importance of publishing research data.\nIdentify and select appropriate approaches to data publication.\nExplain the role of persistent identifiers.\n\n\n\nSlides\nslides-10-part2.pptx"
+  },
+  {
+    "objectID": "modules/week10/index-10.html#suggested-readings",
+    "href": "modules/week10/index-10.html#suggested-readings",
+    "title": "Week 10 - Data licensing and publication",
+    "section": "Suggested readings*",
+    "text": "Suggested readings*\n\nCarroll, M. W. (2015) Sharing Research Data and Intellectual Property Law: A Primer. PLoS Biol 13(8): e1002235. https://doi.org/10.1371/journal.pbio.1002235\nFay, C. (2019). Licensing R. https://thinkr-open.github.io/licensing-r\nReitz, K., & Schlusser, T. (2022). The Hitchhiker’s guide to Python: best practices for development. ” O’Reilly Media, Inc.”. https://docs.python-guide.org/writing/license\n\n*Useful links and other supporting materials are noted in the slides."
+  },
+  {
+    "objectID": "modules/week10/index-10.html#homework",
+    "href": "modules/week10/index-10.html#homework",
+    "title": "Week 10 - Data licensing and publication",
+    "section": "Homework",
+    "text": "Homework\nNo homework this week!"
+  }
+]

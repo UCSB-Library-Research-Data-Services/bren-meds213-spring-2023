@@ -1,0 +1,95 @@
+RECAP
+- make sure ORDER BY is last step
+-- a join creates a whole new table, order may be completely different
+- where is SQL used in E&ES in practice?
+-- within projects
+-- ex: NCEAS BIEN, mongo DB schema
+-- SQL to build, manage such a database
+-- ASDN: should have used RDBMS on this project
+-- SQL exposed to outsiders? no
+--- presumes SQL knowledge
+--- security risk
+--- danger of long-running queries
+-- SQL from R/Python usually streamlined to ask specific questions for
+   purposes of analysis
+
+OUTER JOINS
+- what's happening?
+- value in creating experiment
+- CREATE TABLE a (cola INTEGER, common INTEGER);
+- INSERT INTO a VALUES (1, 1), (2, 2), (3, 3);
+- CREATE TABLE b (common INTEGER, colb INTEGER);
+- INSERT INTO b VALUES (2, 2), (3, 3), (4, 4), (5, 5);
+- OUTER JOIN b includes all rows of b and fills in a's columns with NULL
+- what species do *not* have nest data?
+- SELECT Code FROM Species
+      WHERE Code NOT IN (SELECT DISTINCT Species FROM Bird_nests);
+- SELECT Code
+      Species LEFT JOIN Bird_nests
+      ON Species.Code = Bird_nests.Species
+      WHERE Bird_nests.Species IS NULL;
+
+SELF JOINS
+- 2 copies of same table (conceptually)
+- used with hierarchical data
+- or this problem: list all pairs of people who worked together
+- (i.e., same site, overlapping time intervals)
+- SELECT A.Site, A.Observer, B.Observer
+      FROM Camp_assignment A, Camp_assignment B
+      ON A.Site = B.Site AND A.Observer < B.Observer
+      WHERE A.Start <= B.End AND B.Start <= A.End
+      ORDER BY A.Site, A.Observer;
+- < needed to avoid listed people working with themselves,
+  and to avoid listing pairs twice, once for each name order
+
+VIEWS
+- make normalized tables more palatable
+- virtual, not materialized like CREATE TABLE AS
+- virtual implies always reflects current data in source tables
+- CREATE VIEW v AS
+      SELECT Year, Site, Name, Start, End
+      FROM Camp_assignment, Personnel
+      ON Camp_assignment.Observer = Personnel.Abbreviation;
+- inserts, updates, deletes possible?  maybe, depends on DB intelligence
+- can't insert/update on view the uses aggregate function
+
+SET OPERATIONS
+- UNION, INTERSECT, EXCEPT
+- last one is set difference
+- BTW: 3rd way to get species that do *not* have nest data: use EXCEPT
+- SELECT Code FROM Species
+  EXCEPT
+  SELECT DISTINCT Species FROM Bird_nests;
+- example: book b14 measured in inches, not millimeters, adjust on fly
+- SELECT Book_page, Nest_ID, Egg_num, Length*25.4, Width*25.4
+      FROM Bird_eggs
+      WHERE Book_page LIKE 'b14%'
+  UNION
+  SELECT Book_page, Nest_ID, Egg_num, Length, Width
+      FROM Bird_eggs
+      WHERE Book_page NOT LIKE 'b14%';
+- caution: not really looking at names of columns, just #columns and data types
+- so is possible to union nonsensical things together
+- UNION throws out duplicates, UNION ALL keeps all
+- UNION ALL = rbind in R, except matches on column names
+
+DATA MANAGEMENT STATEMENTS
+- INSERT: already seen that
+- UPDATE table SET ... WHERE ...
+- DELETE FROM table WHERE ...
+- caution: these operate on whole tables if unqualified
+- strategies to avoid catastrophes
+-- just subconsciouly be careful, like holding a kitchen knife
+-- put comment in front: -- DELETE FROM ..., then remove comment
+-- do SELECT first, then replace SELECT with DELETE <- allows inspection
+   of what's about to be deleted
+-- tweak table name, put x in front, then remove
+
+I/O
+- all RDBMSs have scriptable I/O tools
+- generally, INSERT one at a time is slow
+- output to CSV
+-- .mode csv, .headers on, .output file
+-- plain .output to turn output off
+- loading CSVs: see build script
+- if table doesn't exist, is created w/ all text columns (don't skip header)

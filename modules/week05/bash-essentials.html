@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Bren MEDS 213 Spring 2023 - Ten Bash Essentials</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Bren MEDS 213 Spring 2023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-modules" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Modules</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-modules">    
+        <li>
+    <a class="dropdown-item" href="../../modules/week01/index-01.html" rel="" target="">
+ <span class="dropdown-text">Week 1 - Relational databases and data modeling</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week02/index-02.html" rel="" target="">
+ <span class="dropdown-text">Week 2 - Ethical and responsible data management</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/index-03.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQLite and SQL</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week04/index-04.html" rel="" target="">
+ <span class="dropdown-text">Week 4 - Reproducible and FAIR data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/index-05.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - SQLite, SQL, and Bash</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week06/index-06.html" rel="" target="">
+ <span class="dropdown-text">Week 6 - Metadata standards</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/index-07.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Programming with databases</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week08/index-08.html" rel="" target="">
+ <span class="dropdown-text">Week 8 - Sensitive data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week09/index-09.html" rel="" target="">
+ <span class="dropdown-text">Week 9 - Advanced database topics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week10/index-10.html" rel="" target="">
+ <span class="dropdown-text">Week 10 - Data licensing and publication</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-assignments" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Assignments</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-assignments">    
+        <li>
+    <a class="dropdown-item" href="../../modules/week01/hw-01.html" rel="" target="">
+ <span class="dropdown-text">Week 1 - Data modeling exercise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-1.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-2.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week03/hw-03-3.html" rel="" target="">
+ <span class="dropdown-text">Week 3 - SQL problem 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week04/hw-04.html" rel="" target="">
+ <span class="dropdown-text">Week 4 - Project organization and documentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-1.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Protect yourself</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-2.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Create a trigger</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-3.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Create a test harness</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week05/hw-05-4.html" rel="" target="">
+ <span class="dropdown-text">Week 5 - Bash scripting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week06/hw-06.html" rel="" target="">
+ <span class="dropdown-text">Week 6 - EML record</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-1.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Little Bobby Tables</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-2.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Who’s the culprit?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-3.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Characterizing egg variation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week07/hw-07-4.html" rel="" target="">
+ <span class="dropdown-text">Week 7 - Who were the winners?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week08/hw-08.html" rel="" target="">
+ <span class="dropdown-text">Week 8 - sdcMicro exercise</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../modules/week09/hw-09.html" rel="" target="">
+ <span class="dropdown-text">Week 9 - What makes a good index?</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-does-bash-or-any-shell-for-that-matter-do" id="toc-what-does-bash-or-any-shell-for-that-matter-do" class="nav-link active" data-scroll-target="#what-does-bash-or-any-shell-for-that-matter-do">1. What does Bash (or any shell for that matter) do?</a></li>
+  <li><a href="#fundamentals-review" id="toc-fundamentals-review" class="nav-link" data-scroll-target="#fundamentals-review">2. Fundamentals review</a></li>
+  <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables">3. Variables</a></li>
+  <li><a href="#expansions" id="toc-expansions" class="nav-link" data-scroll-target="#expansions">4. Expansions</a></li>
+  <li><a href="#quoting" id="toc-quoting" class="nav-link" data-scroll-target="#quoting">5. Quoting</a></li>
+  <li><a href="#path-determines-what-programs-are-run" id="toc-path-determines-what-programs-are-run" class="nav-link" data-scroll-target="#path-determines-what-programs-are-run">6. PATH determines what programs are run</a></li>
+  <li><a href="#io-redirection" id="toc-io-redirection" class="nav-link" data-scroll-target="#io-redirection">7. I/O redirection</a></li>
+  <li><a href="#control-statements" id="toc-control-statements" class="nav-link" data-scroll-target="#control-statements">8. Control statements</a></li>
+  <li><a href="#scripts" id="toc-scripts" class="nav-link" data-scroll-target="#scripts">9. Scripts</a></li>
+  <li><a href="#getting-help-and-a-couple-tips" id="toc-getting-help-and-a-couple-tips" class="nav-link" data-scroll-target="#getting-help-and-a-couple-tips">10. Getting help and a couple tips</a></li>
+  <li><a href="#test-your-understanding" id="toc-test-your-understanding" class="nav-link" data-scroll-target="#test-your-understanding">Test your understanding</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ten Bash Essentials</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Greg Janée &lt;gjanee@ucsb.edu&gt;<br>
+May 2023</p>
+<p>Some essential concepts to get you started writing your first Bash script.</p>
+<section id="what-does-bash-or-any-shell-for-that-matter-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-bash-or-any-shell-for-that-matter-do">1. What does Bash (or any shell for that matter) do?</h2>
+<p>Bash is program on your machine that allows you to interactively run other programs. It:</p>
+<ul>
+<li>Writes a prompt, reads a line from the terminal window</li>
+<li>Performs various “expansions” to arrive at a final command or command pipeline</li>
+<li>Locates where the program(s) requested to be run are</li>
+<li>Runs the requested program(s) and links their input/output/error streams to and from files and into pipelines</li>
+<li>Writes any output to the terminal window</li>
+<li>Repeat</li>
+</ul>
+<p>These steps are described in more detail below.</p>
+</section>
+<section id="fundamentals-review" class="level2">
+<h2 class="anchored" data-anchor-id="fundamentals-review">2. Fundamentals review</h2>
+<p>Files in Unix and Unix-like systems are organized into hierarchical directories identified by “pathnames” as in <code>/Users/moe/somefile.txt</code>. Here the leading <code>/</code> represents the root directory on the machine, <code>Users</code> is a directory within that, <code>moe</code> a directory within that directory, and so forth until we get to a final directory or file.</p>
+<p>At any given time you are “in” a directory. Handy commands:</p>
+<ul>
+<li><code>pwd</code>: where am I?</li>
+<li><code>cd new_directory</code>: change directories</li>
+<li><code>ls</code>: what files and subdirectories are in here?</li>
+<li><code>ls -F</code>: same, but nicer formatting</li>
+</ul>
+<p>An “absolute” pathname begins with <code>/</code> and identifies a directory or file starting from the root directory as in the example above. A “relative” pathname does not begin with <code>/</code> and does the same, but relative to the current directory.</p>
+<p>Some pseudo directory names. Wherever you are:</p>
+<ul>
+<li><code>.</code>: current directory</li>
+<li><code>..</code>: parent directory of current directory</li>
+<li><code>~</code>: home directory</li>
+</ul>
+<p>So:</p>
+<ul>
+<li><code>/Users/shemp</code>: absolute pathname of Shemp’s home directory</li>
+<li><code>../shemp</code>: same, relative to <code>/Users/moe</code></li>
+<li><code>~</code>: your home directory</li>
+<li><code>~shemp</code>: Shemp’s home directory</li>
+</ul>
+<p>By convention Unix commands accept “options” followed by “arguments”. Options begin with a single (<code>-</code>) or double (<code>--</code>) hyphen. Multiple options that begin with a single hyphen can be combined for brevity.</p>
+<ul>
+<li><code>ls foo</code>: list files in directory <code>foo</code></li>
+<li><code>ls -A foo</code>: same, option <code>-A</code> to include hidden files</li>
+<li><code>ls -A -l foo</code>: add long listing option</li>
+<li><code>ls -Al foo</code>: equivalent to above</li>
+<li><code>python --version</code>: print Python version number</li>
+</ul>
+<p>But be aware that these are only conventions, and there are idiosyncracies in how commands are run.</p>
+</section>
+<section id="variables" class="level2">
+<h2 class="anchored" data-anchor-id="variables">3. Variables</h2>
+<p>Bash supports variables, and variables are essential in writing Bash scripts. To set a variable:</p>
+<pre><code>name=Moe</code></pre>
+<p>No space between the variable name and equals sign! Variables are referenced as <code>${name}</code>, or as just <code>$name</code> if not ambiguous. Lots of other stuff can go inside the braces, such as string processing and array indexing. Refer to the Bash manual or a good cheat sheet for examples.</p>
+<p>Names defined as above are local to the current Bash session or script. “Environment variables” are variables that are inherited by (visible to) programs and any scripts you run. To set, add <code>export</code>:</p>
+<pre><code>export DEBUG_ENABLED=1</code></pre>
+<p>The two most important environment variables are <code>HOME</code> (your home directory) and <code>PATH</code> (discussed below). The use of all-caps environment variable names is just a convention.</p>
+</section>
+<section id="expansions" class="level2">
+<h2 class="anchored" data-anchor-id="expansions">4. Expansions</h2>
+<p>Before running any commands Bash performs various kinds of expansions. The rules about what expansions it performs and when and in what order are confusing. If you feel lost, join the club.</p>
+<ol type="1">
+<li><p>Variable substitution.</p>
+<p><code>name=Moe</code><br>
+<code>echo "Hello $name"</code></p>
+<p>is expanded to</p>
+<p><code>echo "Hello Moe"</code></p>
+<p>The meaning of the above is that <code>$name</code> is literally replaced with <code>Moe</code> before the <code>echo</code> command is run.</p></li>
+<li><p>Command alias substitution. Aliases are handy abbreviations usually defined in the <code>~/.bashrc</code> Bash configuration file.</p>
+<p><code>alias ll="ls -l"</code><br>
+<code>ll foo</code></p>
+<p>is expanded to</p>
+<p><code>ls -l foo</code></p></li>
+<li><p>Wildcard expansion (“globbing”).</p>
+<p><code>wc -l *.csv</code></p>
+<p>is expanded to</p>
+<p><code>wc -l ASDN_Bird_eggs.csv species.csv ...</code></p>
+<p>As with variable substitutions, the globbing expansion literally replaces the wildcard expression with a list of filenames before the <code>wc</code> command is run.</p></li>
+<li><p>Running subcommands.</p>
+<p><code>now="$(date)"</code></p>
+<p>is expanded to</p>
+<p><code>now="Sat May  6 19:02:07 PDT 2023"</code></p>
+<p>The expression placed in the <code>$(...)</code> can be an entire command pipeline. When done, the subcommand is replaced with any output produced.</p></li>
+<li><p>Arithmetic.</p>
+<p><code>answer=$(( 21 * 2 ))</code></p>
+<p>is expanded to</p>
+<p><code>answer=42</code></p>
+<p>Bash can do integer arithmetic only.</p></li>
+</ol>
+<p>Takeaway: program(s) that are run see only the finally expanded command line.</p>
+</section>
+<section id="quoting" class="level2">
+<h2 class="anchored" data-anchor-id="quoting">5. Quoting</h2>
+<p>Quoting is another difficult area of Bash. It’s hard to get right.</p>
+<ul>
+<li><p>Double quotes support variable, subcommand, and arithmetic expansions. We’ve already seen these examples:</p>
+<p><code>echo "Hello $name"</code><br>
+<code>echo "Today is $(date)"</code></p>
+<p>get expanded to</p>
+<p><code>echo "Hello Moe"</code><br>
+<code>echo "Today is Sat May  6 19:02:07 PDT 2023"</code></p></li>
+<li><p>Single quotes don’t.</p>
+<p><code>echo 'Hello $name'</code></p>
+<p>just remains</p>
+<p><code>echo 'Hello $name'</code></p></li>
+</ul>
+<p>Generally, arguments to programs must be quoted to prevent Bash from expanding them into multiple arguments. This is easier to appreciate when you’re passing in an explicitly quoted string as in the examples above. But it’s less obvious that quoting is required even if you’re referencing a variable. Sometimes you want to allow a referenced variable to be expanded into multiple arguments, and quotes should be left off:</p>
+<pre><code>my_fave_ls_options="-l -F"
+ls $my_fave_ls_options foo</code></pre>
+<p>gets expanded to</p>
+<pre><code>ls -l -F foo</code></pre>
+<p>Other times you don’t:</p>
+<pre><code>query="SELECT * FROM table"
+sqlite3 db "$query"</code></pre>
+<p>gets expanded to</p>
+<pre><code>sqlite3 db "SELECT * FROM table"</code></pre>
+<p>If <code>$query</code> is not quoted in the previous example, <code>SELECT</code>, <code>*</code>, etc., will be passed as separate arguments, which is not what <code>sqlite3</code> expects. Making matters worse, <code>*</code> will then be interpreted as a wildcard and expanded into a list of all files in the current directory!</p>
+</section>
+<section id="path-determines-what-programs-are-run" class="level2">
+<h2 class="anchored" data-anchor-id="path-determines-what-programs-are-run">6. PATH determines what programs are run</h2>
+<p>A few commands (<code>cd</code>, <code>pwd</code>, <code>if</code>, <code>while</code>) are Bash built-ins. All other commands are simply programs on the system, whether coming packaged along with Unix (<code>ls</code>, <code>cp</code>, <code>mkdir</code>, <code>grep</code>, etc.) or installed later (<code>sqlite3</code>, <code>python</code>, etc.).</p>
+<p>The <code>PATH</code> environment variable is a colon-separated list of directories in which Bash looks for programs, in order. You can inspect it:</p>
+<pre><code>echo $PATH</code></pre>
+<p>To see where a command is coming from:</p>
+<pre><code>which ls</code></pre>
+<p>To see all places where you have Python installed (cf.&nbsp;<a href="https://xkcd.com/1987/" class="uri">https://xkcd.com/1987/</a>):</p>
+<pre><code>which -a python</code></pre>
+<p>You can modify <code>PATH</code> to, for example, add a directory to it (recall <code>export</code> is used for environment variables):</p>
+<pre><code>export PATH=$PATH:/another/directory/I/want/Bash/to/look/in</code></pre>
+<p>It’s typical to set <code>PATH</code> in one of the Bash configuration files <code>~/.bash_profile</code> or <code>~/.profile</code>, so that it is automatically set upon each login.</p>
+</section>
+<section id="io-redirection" class="level2">
+<h2 class="anchored" data-anchor-id="io-redirection">7. I/O redirection</h2>
+<p>Every program running in a Unix or Unix-like environment has three I/O streams: one for input (stdin), one for output (stdout), and one for error messages and other out-of-band output (stderr).</p>
+<p>By convention, Unix programs read from file(s) specified on the command line, but if none are given, from stdin. And also by convention, Unix programs write to stdout. In this way it is easy to construct pipelines. Ex:</p>
+<pre><code>wc -l *.csv | sort -n</code></pre>
+<p>Here the <code>wc -l</code> command, which counts the number of lines in files, is given filenames on the command line, so it counts the lines in those files. It writes its output to stdout. <code>sort -n</code> sorts lines in files. It was given no files to sort, so it sorts whatever lines come in via stdin. By piping these together (i.e., by hooking <code>wc</code>’s stdout to <code>sort</code>’s stdin using the pipe operator), the output from <code>wc -l</code> is thereby sorted.</p>
+<p>There are various operators for redirecting where stdin comes from and where stdout and stderr go:</p>
+<ul>
+<li><code>&lt; file</code>: read stdin from file</li>
+<li><code>&gt; file</code>: write stdout to file</li>
+<li><code>2&gt; file</code>: write stderr to file</li>
+<li><code>&gt;&amp; file</code>: write both stdout and stderr to file</li>
+<li><code>&gt;&gt; file</code>: append stdout to file</li>
+</ul>
+<p>Caution: except for <code>&gt;&gt;</code>, all forms of <code>&gt;</code> are destructive: Bash overwrites any existing file with an empty file before the program is run.</p>
+<p>Want to get rid of output you don’t want to see? Use the Unix black hole: <code>&gt;&amp; /dev/null</code>. (This is a cultural meme, you’ll see it on T-shirts and license plates.)</p>
+<p>The above are the main redirections, but there are others.</p>
+</section>
+<section id="control-statements" class="level2">
+<h2 class="anchored" data-anchor-id="control-statements">8. Control statements</h2>
+<p>The syntax of Bash’s control statements is a little funky. A conditional statement looks like this:</p>
+<pre><code>if [ sometest ]; then
+    ...
+fi</code></pre>
+<p>It can also be formatted like so:</p>
+<pre><code>if [ sometest ]
+then
+    ...
+fi</code></pre>
+<p>What can go in inside <code>[ ... ]</code>? A lot of things. Believe it or not, <code>[</code> is a program! Do a <code>man [</code> to read about it (see section 10 for other ways to get help).</p>
+<p>A <code>for</code> loop iterates over a list of items:</p>
+<pre><code>for file in *.csv; do
+    echo "$file has $(wc -l &lt; $file) lines"
+done</code></pre>
+<p>Recall expansions from section 4. The <code>*.csv</code> is expanded before the loop is run, ergo the above is equivalent to listing the files explicitly:</p>
+<pre><code>for file in ASDN_Bird_eggs.csv species.csv ...; do
+    echo "$file has $(wc -l &lt; $file) lines"
+done</code></pre>
+<p>Want to do something 99 times? You can use a <code>while</code> loop and a variable as a counter (recall arithmetic from section 4), or you can use <code>seq</code> (try <code>seq</code> by itself to see what it outputs):</p>
+<pre><code>for i in $(seq 99); do
+    echo "Putting $i bottles of beer on the wall"
+done</code></pre>
+<p>There are other control statements.</p>
+</section>
+<section id="scripts" class="level2">
+<h2 class="anchored" data-anchor-id="scripts">9. Scripts</h2>
+<p>A Bash script is a text file containing the same Bash commands you might type interactively. It’s analogous to an R or Python script but written in Bash instead of one of those other languages.</p>
+<p>Bash knows it is reading from a file instead of the terminal window, and it operates slightly differently:</p>
+<ul>
+<li>It doesn’t print a prompt.</li>
+<li>It doesn’t read Bash configuration files (<code>~/.bashrc</code>, <code>~/.bash_profile</code>, <code>~/.profile</code>, etc.). As a consequence, aliases and variables defined in those files are not visible to scripts. (Any environment variables set in configuration files <em>are</em> visible, but that’s because environment variables are inherited.)</li>
+</ul>
+<p>Bash makes arguments passed to your script available as variables <code>$1</code>, <code>$2</code>, etc. Variable <code>$#</code> is the number of arguments. Ex:</p>
+<pre><code>if [ $# -ne 3 ]; then
+    echo "This script requires 3 arguments"
+    exit 1  # terminate with error status (exit 0 = success)
+fi</code></pre>
+<p>A Bash script can be run as so:</p>
+<pre><code>bash myscript.sh</code></pre>
+<p>To run a script just by saying</p>
+<pre><code>myscript.sh</code></pre>
+<p>i.e., to make it look more like a command, requires that two things be done:</p>
+<ol type="1">
+<li><p>The first line of the script file must be:</p>
+<p><code>#!/bin/bash</code></p>
+<p>There can’t be any spaces before the <code>#!</code>. (You can similarly make a Python or R script directly runnable by including such a first line, but with the pathname of the R or Python interpreter to run.)</p></li>
+<li><p>Set the “execute” flag on the script file:</p>
+<p><code>chmod +x myscript.sh</code></p>
+<p>You can see that the file has the execute flag set by doing a long listing and looking for the <code>x</code> characters in the permissions mask.</p>
+<p><code>ls -l myscript.sh</code></p></li>
+</ol>
+<p>You might find that you still can’t run your script just by saying</p>
+<pre><code>myscript.sh</code></pre>
+<p>This is likely due to the current directory not being included in <code>PATH</code>. (<code>echo $PATH</code> to see.) You can either qualify the script name with a directory name:</p>
+<pre><code>./myscript.sh</code></pre>
+<p>or you can modify <code>PATH</code> per section 6.</p>
+<p>A complete example of a script:</p>
+<pre><code>#!/bin/bash
+# Add two numbers.
+if [ $# -ne 2 ]; then
+    echo "Supply two numbers, no more, no less"
+    exit 1
+fi
+first=$1
+second=$2
+echo "The sum of $first and $second is $(( $first + $second ))"</code></pre>
+</section>
+<section id="getting-help-and-a-couple-tips" class="level2">
+<h2 class="anchored" data-anchor-id="getting-help-and-a-couple-tips">10. Getting help and a couple tips</h2>
+<p>To get help on a command, for example <code>ls</code>, try one of the following:</p>
+<pre><code>man ls
+ls --help</code></pre>
+<p>Most but not all systems support <code>man</code>; MacOS does <em>not</em> support the <code>--help</code> option. Failing either of those, do an internet search for “ls man page”.</p>
+<p>When writing a script, it can be invaluable to run it through <a href="https://shellcheck.net" class="uri">https://shellcheck.net</a>. The advice is good and the creator of that tool knows way more about Bash than you or I. Other good resources:</p>
+<ul>
+<li>Official Bash user manual: <a href="https://www.gnu.org/software/bash/manual/" class="uri">https://www.gnu.org/software/bash/manual/</a></li>
+<li>Bash pitfalls, or, how to do things the right way: <a href="http://mywiki.wooledge.org/BashPitfalls" class="uri">http://mywiki.wooledge.org/BashPitfalls</a></li>
+<li>Cheat sheet that is better than most: <a href="https://www.pcwdld.com/bash-cheat-sheet" class="uri">https://www.pcwdld.com/bash-cheat-sheet</a></li>
+</ul>
+<p>And two tips.</p>
+<ul>
+<li><p>If you’re about to embark on a potentially destructive operation, first try just echoing the commands to confirm they’ll do what you want:</p>
+<p><code># rename files from .JPG to .jpg</code><br>
+<code>for file in *.JPG; do</code><br>
+<code>echo mv $file ${file/.JPG/.jpg}</code><br>
+<code>done</code></p>
+<p>Once you’re satisfied, remove <code>echo</code> and run your script for real.</p></li>
+<li><p><code>rm</code>, particulary when paired with a wildcard, is a notoriously dangerous command: it deletes files instantly and permanently. Consider creating an alias</p>
+<p><code>alias rm="rm -i"</code></p>
+<p>to confirm deletion.</p></li>
+</ul>
+</section>
+<section id="test-your-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="test-your-understanding">Test your understanding</h2>
+<p>Be sure to <code>cd</code> to the MEDS 213 git repo directory, week5 subdirectory, before answering these.</p>
+<ol type="1">
+<li><p>Compare the output of these three commands:</p>
+<p><code>ls</code><br>
+<code>ls .</code><br>
+<code>ls "$(pwd)/../week5"</code></p>
+<p>Explain why you see what you see.</p></li>
+<li><p>Try the following two commands:</p>
+<p><code>wc -l *.csv</code><br>
+<code>cat *.csv | wc -l</code></p>
+<p>The first prints filenames and line counts. The second prints a bare number. Why does it print that number, and why does it not print any filenames?</p></li>
+<li><p>You want to count the total number of lines in all CSV files and try this command:</p>
+<p><code>cat *.csv | wc -l species.csv</code></p>
+<p>What happens and why?</p></li>
+<li><p>You’re given</p>
+<p><code>name=Moe</code></p>
+<p>and you’d like to print “Moe_Howard”. You try this:</p>
+<p><code>echo "$name_Howard"</code></p>
+<p>but that doesn’t quite work. What fix can you apply to make this command give the desired effect?</p></li>
+<li><p>You create a script and run it like so:</p>
+<p><code>bash myscript.sh *.csv</code></p>
+<p>What are the values of variables <code>$1</code> and <code>$#</code>? Explain why the script does not see just one argument passed to it.</p></li>
+<li><p>You create a script and run it like so:</p>
+<p><code>bash myscript.sh "$(date)" $(date)</code></p>
+<p>In your script, what is the value of variable <code>$3</code>?</p></li>
+<li><p>Create a file you don’t care about (because you’re about to destroy it):</p>
+<p><code>echo "yo ho a line of text" &gt; junk_file.txt</code><br>
+<code>echo "another line" &gt;&gt; junk_file.txt</code></p>
+<p>You want to sort the lines in this file, so you try:</p>
+<p><code>sort junk_file.txt</code></p>
+<p>Well that prints the lines in sorted order, but it doesn’t actually change the file. You recall section 7 and try:</p>
+<p><code>sort junk_file.txt &gt; junk_file.txt</code></p>
+<p>What happens and why? How <em>can</em> you sort the lines in your file? (Hint: it involves creating a second file and using <code>mv</code>.)</p></li>
+<li><p>You want to delete all files ending in <code>.csv</code>, so you type (don’t actually try this):</p>
+<p><code>rm * .csv</code></p>
+<p>but as can be seen, your thumb accidentally hit the space bar and you got an extra space in there. What will <code>rm</code> do?</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp("https:\/\/UCSB-Library-Research-Data-Services\.github\.io\/bren-meds213-spring-2023\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // default icon
+          link.classList.add("external");
+      }
+    }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
