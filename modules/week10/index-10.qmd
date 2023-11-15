@@ -1,0 +1,41 @@
+---
+title: "Week 10 - Data licensing and publication"
+---
+
+## Part I - Data licensing
+
+### Learning goals
+
+-   Become familiar with data licensing in the academic context.
+-   Distinguish which research deliverables can or cannot be subject to copyright and explore alternatives to that.
+-   Gain an understanding of the Creative Commons license family and the differences in their applicability.
+
+### Slides
+
+[slides-10-part1.pptx](slides-10-part1.pptx)
+
+## Part II - Data publication
+
+### Learning goals
+
+-   Understand the importance of publishing research data.
+-   Identify and select appropriate approaches to data publication.
+-   Explain the role of persistent identifiers.
+
+### Slides
+
+[slides-10-part2.pptx](slides-10-part2.pptx)
+
+## Suggested readings\*
+
+1.  Carroll, M. W. (2015) Sharing Research Data and Intellectual Property Law: A Primer. PLoS Biol 13(8): e1002235. <https://doi.org/10.1371/journal.pbio.1002235>
+
+2.  Fay, C. (2019). Licensing R. <https://thinkr-open.github.io/licensing-r>
+
+3.  Reitz, K., & Schlusser, T. (2022). The Hitchhiker's guide to Python: best practices for development. " O'Reilly Media, Inc.". <https://docs.python-guide.org/writing/license>
+
+\*Useful links and other supporting materials are noted in the slides.
+
+## Homework
+
+No homework this week!

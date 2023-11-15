@@ -1,0 +1,35 @@
+---
+title: "Week 9 - Advanced database topics"
+---
+
+## Learning objectives
+
+-   Exposure to the concepts of:
+
+    -   Concurrency and transactions
+    -   Backups
+    -   Indexes
+
+## Slides
+
+[slides-09.pptx](slides-09.pptx)
+
+## Instructor materials
+
+[Instructor notes](instructor-notes-09.qmd)
+
+Instructor files:
+
+-   [concurrency.zip](concurrency.zip)
+-   [indexes.zip](indexes.zip)
+
+## Resources
+
+1.  Jeffrey D. Ullman and Jennifer Widom (2008). A First Course in Database Systems. 3rd ed. Upper Saddle River, NJ: Pearson/Prentice Hall.\
+    [Access via Library Catalog](https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma990032103790203776)
+
+    -   *Complete but theoretical introduction to relational databases, data modeling, and relational algebra.*
+
+## Homework
+
+[What makes a good index?](hw-09.qmd)

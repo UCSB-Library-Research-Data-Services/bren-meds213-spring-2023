@@ -1,0 +1,43 @@
+---
+titile: "Case Study D: Navigating the complexities of ownership zones with LiDAR data"
+---
+
+## Instructions
+
+**Read the scenario and answer the questions based on the weekly readings and the lecture:**
+
+Tina, a researcher working on coastal vulnerability analysis in Southern California, acquired LiDAR data from a vendor in 2017. Based on the acquired dataset, she submitted a paper to a high-impact academic journal early this year. The paper was accepted but is pending publication until Tina complies with the mandate of sharing supporting data and associated documentation in an open repository. While inspecting the data documentation, Max, the repository data manager, noticed that the files included raw and processed data from a vendor; however, no explicit declaration of authorization to share the data was included in the submission package. Tina presented an invoice of $20,000 USD certifying that she obtained the data and said she was told verbally that the data was not subject to any use restrictions.
+
+## Questions
+
+### Question 1
+
+Max should advise Tina to acquire explicit permission from the data vendor to share the data.
+
+-   [ ] True
+
+-   [ ] False
+
+### Question 2
+
+Because Tina paid for the data, Max can move forward with the data publication without infringing on any legal and ethical aspects.
+
+-   [ ] True
+
+-   [ ] False
+
+### Question 3
+
+If Tina does not acquire explicit permission from the vendor to share the data, Max can't publish the data in the repository.
+
+-   [ ] True
+
+-   [ ] False
+
+### Question 4
+
+If Tina does not acquire written permission to share the data, Max can suggest Tina share only aggregated data.
+
+-   [ ] True
+
+-   [ ] False

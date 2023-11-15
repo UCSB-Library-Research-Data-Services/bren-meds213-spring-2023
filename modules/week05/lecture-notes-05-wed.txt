@@ -1,0 +1,75 @@
+RECAP OF MONDAY
+- outer joins
+- self-joins: useful for answering questions like finding all pairs that
+  meet some criteria
+-- A.observer < B.observer business is a standard idiom
+- views
+-- CREATE TABLE AS SELECT analogous to variable
+-- CREATE VIEW analogous to function, gets re-evaluated each time referenced
+- set operations
+- data manipulation statements and reducing risk
+- reading and writing CSVs
+-- use SQLite built-ins .import, .output + .mode + .headers
+
+TRIGGERS
+- on some event, take some action(s)
+- event: insert, update, delete on some table
+- action: insert or update in same table or any other table
+- example: SQLite imports empty columns as empty strings, not NULLs,
+  which is lame
+- database.db build script (look at it) does post-import updates
+- trigger approach!
+- can't play with real Species table due to foreign keys
+-- .import --csv species.csv new_species
+- .nullvalue --NULL--
+- notice no NULLs!
+- CREATE TRIGGER fix_species
+      AFTER INSERT ON new_species
+      FOR EACH ROW
+      BEGIN
+          UPDATE new_species
+          SET Scientific_name = NULL
+          WHERE Code = new.Code AND Scientific_name = '';
+      END;
+
+=== BASH =================
+
+GETTING HELP
+- https://www.pcwdld.com/bash-cheat-sheet (and other cheat sheets)
+- GNU manual
+- shellcheck.net
+- man, --help
+- Google "... man page"
+
+RUNNING COMMANDS
+- I/O model for all programs running in Unix:
+-- one input stream, stdin
+-- two output streams, stdout & stderr
+- Unix conventions:
+-- programs read from stdin if no files specified on command line (ie, as args)
+-- programs write to stdout
+-- programs write error messages & out-of-band messages to stderr
+- can pipe one program's stdout to another's stdin:
+- wc -l *.csv | sort -n
+- wc is given files, it reports #lines on those files
+- wc -l 01_ASDN_Readme.txt
+-- #lines for that file
+- wc -l < 01_ASDN_Readme.txt
+-- no files given, #lines in stdin
+- equivalent: cat 01_ASDN_Readme.txt | wc -l
+- on output side, try sqlite3 -csv database.db 'SELECT Code FROM Species'
+-- cmd > output.dat
+-- output o tfile, info message still appears because it's in stderr
+-- > redirect stdout
+-- 2> redirect stderr
+-- >& stdout + stderr
+
+PATH
+- where are commands coming from?
+- some are built in to Bash (cd, pwd, if, while)
+- most are programs, whether from Unix (ls, mkdir, grep) or installed
+  (sqlite3, python, etc.)
+- Bash looks at PATH
+- echo $PATH
+- which -a command: see where a program is being read from
+- PATH can be set in .bash_profile or .profile

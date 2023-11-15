@@ -1,0 +1,15 @@
+---
+title: "Week 7 - Little Bobby Tables"
+---
+
+View this classic XKCD cartoon: <https://xkcd.com/327/>
+
+For the purposes of this problem you may assume that at some point the school's software performs the query
+
+```         
+SELECT *
+    FROM Students
+    WHERE (name = '%s' AND year = 2023);
+```
+
+where the student's name is directly substituted for the `%s`. Explain exactly how Little Bobby Tables' name can cause a catastrophe. Explain what happens to the `AND year = 2023` clause in the query.

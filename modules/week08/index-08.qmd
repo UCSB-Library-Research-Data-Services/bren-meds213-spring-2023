@@ -1,0 +1,43 @@
+---
+title: "Week 8 - Sensitive data"
+---
+
+## Learning goals
+
+-   Understand the importance of protecting sensitive data and ensuring privacy and confidentiality.
+-   Identify and evaluate established approaches and techniques for de-identifying and anonymizing data to mitigate the risk of re-identification.
+-   Apply the acquired techniques while quantifying the information loss and utility, utilizing an R package.
+
+## Student notes
+
+Before class, install the sdcMicro package if you choose not to use the servers.
+
+If testing out using sensitive data, make sure to launch it from RStudio, not from the online website.
+
+## Slides and other materials
+
+[slides-08.pptx](slides-08.pptx)
+
+[Class data GitHub repository, week 8](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2023-class-data/tree/main/week8) for in-class demo and homework
+
+## Resources
+
+1.  sdcMicro Documentation: <https://sdcpractice.readthedocs.io/en/latest/intro.html>
+
+2.  sdcMicro Shiny app: <https://sdcappdocs.readthedocs.io/en/latest/introsdcApp.html>
+
+Other useful links can be found on slides.
+
+## Suggested readings
+
+1.  Bledsoe, E. K., Burant, J. B., Higino, G. T., Roche, D. G., Binning, S. A., Finlay, K., ... & Srivastava, D. S. (2022). Data rescue: saving environmental data from extinction. Proceedings of the Royal Society B, 289(1979), <https://doi.org/10.1098/rspb.2022.0938>
+
+2.  Bourgault, B., Tremblay, H.; Schloss, I.R.; Plante, S. & Archambault, P. (2017). "Commercially Sensitive" Environmental Data: A Case Study of Oil Seep Claims for the Old Harry Prospect in the Gulf of St. Lawrence, Canada. Case Studies in the Environment. <https://doi.org/10.1525/cse.2017.sc.454841>
+
+3.  Gehrke, J., Kifer, D., Machanavajjhala, A. (2011). ℓ-Diversity. In: van Tilborg, H.C.A., Jajodia, S. (eds) Encyclopedia of Cryptography and Security. Springer, Boston, MA. <https://doi.org/10.1007/978-1-4419-5906-5_899>
+
+4.  Samarati, P., & Sweeney, L. (1998). Protecting privacy when disclosing information: k-anonymity and its enforcement through generalization and suppression. <https://dataprivacylab.org/dataprivacy/projects/kanonymity/paper3.pdf>
+
+## Homework
+
+[sdcMicro exercise](hw-08.qmd)

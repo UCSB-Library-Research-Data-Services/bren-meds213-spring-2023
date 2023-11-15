@@ -1,0 +1,5 @@
+---
+title: "Week 5 - Protect yourself"
+---
+
+Some example strategies were mentioned in class for reducing the possibility of performing UPDATEs and DELETEs that have catastrophic consequences. What strategy will you use?

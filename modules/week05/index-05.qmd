@@ -1,0 +1,58 @@
+---
+title: "Week 5 - SQLite, SQL, and Bash"
+---
+
+## Learning objectives
+
+-   Continued exploration of SQL concepts including joins, views, set operations, and triggers
+-   Read and write data from SQLite
+-   Write a basic Bash script
+
+## Slides and other materials
+
+[slides-05-intro.pptx](slides-05-intro.pptx)
+
+[slides-05-triggers.pptx](slides-05-triggers.pptx)
+
+Lecture notes:
+
+-   [lecture-notes-05-mon.txt](lecture-notes-05-mon.txt)
+-   [lecture-notes-05-wed.txt](lecture-notes-05-wed.txt)
+
+[ASDN dataset ER (entity-relationship) diagram](asdn-er-diagram.png)
+
+[Class data GitHub repository, week 5](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2023-class-data/tree/main/week5)
+
+[Ten Bash Essentials](bash-essentials.qmd)
+
+## Bash resources
+
+1.  <https://swcarpentry.github.io/shell-novice/>
+
+    -   *Good Carpentry lesson, our lesson on Bash is drawn from this.*
+
+2.  <https://www.gnu.org/software/bash/manual/>
+
+    -   *The official user manual.*
+
+3.  <https://www.pcwdld.com/bash-cheat-sheet>
+
+    -   *A cheat sheet that is better than most.*
+
+4.  <https://www.shellcheck.net/>
+
+    -   *Indispensable tool for writing scripts.*
+
+5.  <http://mywiki.wooledge.org/BashPitfalls>
+
+    -   *How to do things the right way in Bash.*
+
+## Homework
+
+[Protect yourself](hw-05-1.qmd)
+
+[Create a trigger](hw-05-2.qmd)
+
+[Create a test harness](hw-05-3.qmd)
+
+[Bash scripting](hw-05-4.qmd)

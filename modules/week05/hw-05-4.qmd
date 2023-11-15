@@ -1,0 +1,5 @@
+---
+title: "Week 5 - Bash scripting"
+---
+
+Read [Ten Bash Essentials](bash-essentials.qmd) and answer the 8 questions at the end. Be sure you are in the [week5 directory](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2023-class-data/tree/main/week5) of the class data GitHub repository before answering the questions, as they rely on the files contained therein.

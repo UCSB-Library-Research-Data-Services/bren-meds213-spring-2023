@@ -1,0 +1,31 @@
+---
+title: "Case Study A: Containing the flames of bias in machine learning"
+---
+
+## Instructions
+
+**Read the scenario and answer questions based on the weekly readings and the lecture:**
+
+Wildfires have become increasingly common and destructive in many regions worldwide, causing significant environmental and social problems. In response, many communities have implemented fire prevention and management strategies, including using machine learning (ML) algorithms to predict and mitigate the risk of wildfires.
+
+Oakdale, located in a densely forested area in British Columbia, Canada, has implemented an ML algorithm to predict the risk of wildfires and prioritize fire prevention resources. The algorithm uses a variety of inputs, including historical fire data, weather patterns, topography, and vegetation coverage, to generate a risk score for each area of the city. However, after several months of using the algorithm, city officials noticed that specific neighborhoods with low-income and minority populations consistently receive lower risk scores than other areas with very similar environmental conditions. Upon closer examination of those patterns in the data, they realized that the historical data used to train the algorithm was heavily concentrated on more affluent and predominantly white neighborhoods, resulting in a skewed view of the fire risks for the whole city.
+
+## Questions
+
+### Question 1
+
+This case presents an ethical concern primarily associated with what?
+
+### Question 2
+
+According to McGovern et al. (2022), which AI/ML issues can be identified in this case study? Justify your answer.
+
+### Question 3
+
+Suppose you were hired as a consultant by Oakdale's city officials. Which of the following recommendations would you give them to prevent perpetuating bias and inequitable outcomes? (Select all that apply)
+
+-   [ ] Implement transparency measures that make the algorithms' decision-making processes more visible and understandable to stakeholders. This may include clarifying how decisions are made, sharing data sources, and providing access to model outputs. Fully document any limitations and shortcomings of the model and data.
+
+-   [ ] Involve diverse stakeholders in the algorithm development and testing, including individuals from communities whose outputs may disproportionately impact. This can help identify and address potential biases and ensure that the algorithm is designed with the interests of all community members in mind.
+
+-   [ ] Continue using the algorithm as the official decision-making source until the re-training is completed. After all, ML methods are more efficient than traditional fire prevention strategies (e.g., fire breaks and vegetation management).

@@ -1,0 +1,71 @@
+---
+title: "Installing SQLite"
+---
+
+SQLite (the sqlite3 command) comes already installed on Mac and Linux machines. However even with those machines some configuration of SQLite will be required for this course, see below.
+
+## Windows installation
+
+If not already installed, install Git for Windows. Instructions and some good default settings can be found [here](https://ucsbcarpentry.github.io/2022-07-12-ucsb-bash/#shell). Note that it is not necessary to install Git or Bash in order to run SQLite on Windows; SQLite can be run from the desktop or from the DOS command prompt. But for this course we will be using Bash.
+
+Next, install SQLite from <https://www.sqlite.org/download.html>. Select, under "Precompiled Binaries for Windows," the download that includes "A bundle of command-line tools for managing SQLite database files." Extract the download into a directory C:\\sqlite. The SQLite command line tool will be located at a path resembling C:\\sqlite\\sqlite-tools-win32-x86-3410200\\sqlite3.exe. Instructions for further setting up to run SQLite under the DOS command prompt can be found [here](https://www.kiltandcode.com/2021/01/21/how-to-install-and-use-sqlite-on-windows/) if you're interested, but we won't be needing that.
+
+To be able to easily run SQLite from any directory, update your Bash path by editing \~/.bash_profile. If you're not familiar with Unix text editors, trying using nano from the Bash prompt:
+
+```         
+cd ~
+nano .bash_profile
+```
+
+If your sqlite3.exe is located in C:\\sqlite\\sqlite-tools-win32-x86-3410200, the equivalent Unix pathname is /c/sqlite/sqlite-tools-win32-x86-3410200. You want to add this directory (or whatever yours is called) to your PATH environment variable. To do so, add the following line to your .bash_profile:
+
+```         
+export PATH=$PATH:/c/sqlite/sqlite-tools-win32-x86-3410200
+```
+
+Again, your pathname may differ depending on where sqlite3.exe is located.
+
+With that set up, after starting a new Bash session you will be able to run SQLite from any directory simply by typing:
+
+```         
+sqlite3
+```
+
+## Configuring sqlite3
+
+For this class it will be necessary to configure SQLite every time it runs. This is accomplished by created a file \~/.sqliterc. So, from Bash:
+
+```         
+cd ~
+nano .sqliterc
+```
+
+In this file put the following two lines:
+
+```         
+.mode box
+PRAGMA foreign_keys = ON;
+```
+
+The first line turns on some nice display formatting. The second line is necessary to enable certain SQL functionality this is disabled by default.
+
+## Confirming that SQLite works
+
+From any directory, you should be able to run sqlite3, issue a "PRAGMA foreign_keys" command that returns 1, and get output resembling below.
+
+```         
+bash% sqlite3
+-- Loading resources from C:\Users\user\.sqliterc
+SQLite version 3.39.4 2022-09-29 15:55:41
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> PRAGMA foreign_keys;
+┌──────────────┐
+│ foreign_keys │
+├──────────────┤
+│ 1            │
+└──────────────┘
+sqlite> .exit
+bash%
+```

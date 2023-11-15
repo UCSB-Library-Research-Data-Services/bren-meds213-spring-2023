@@ -1,0 +1,48 @@
+project:
+  type: website
+
+website:
+  title: "Bren MEDS 213 Spring 2023"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - text: Modules
+        menu:
+          - modules/week01/index-01.qmd
+          - modules/week02/index-02.qmd
+          - modules/week03/index-03.qmd
+          - modules/week04/index-04.qmd
+          - modules/week05/index-05.qmd
+          - modules/week06/index-06.qmd
+          - modules/week07/index-07.qmd
+          - modules/week08/index-08.qmd
+          - modules/week09/index-09.qmd
+          - modules/week10/index-10.qmd
+      - text: Assignments
+        menu:
+          - modules/week01/hw-01.qmd
+          - modules/week03/hw-03-1.qmd
+          - modules/week03/hw-03-2.qmd
+          - modules/week03/hw-03-3.qmd
+          - modules/week04/hw-04.qmd
+          - modules/week05/hw-05-1.qmd
+          - modules/week05/hw-05-2.qmd
+          - modules/week05/hw-05-3.qmd
+          - modules/week05/hw-05-4.qmd
+          - modules/week06/hw-06.qmd
+          - modules/week07/hw-07-1.qmd
+          - modules/week07/hw-07-2.qmd
+          - modules/week07/hw-07-3.qmd
+          - modules/week07/hw-07-4.qmd
+          - modules/week08/hw-08.qmd
+          - modules/week09/hw-09.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    link-external-icon: true
+
+editor: source

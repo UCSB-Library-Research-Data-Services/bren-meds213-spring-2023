@@ -1,0 +1,24 @@
+---
+title: "Week 7 - Who were the winners?"
+---
+
+At the conclusion of the ASDN project the PIs decided to hand out first, second, and third prizes to the observers who measured the most eggs. Who won? Please use R and dbplyr to answer this question, and please submit your R code. Your code should print out:
+
+```         
+# Ordered by: desc(total_eggs)
+  Name            total_eggs
+  <chr>                <int>
+1 Vanessa Loverti        163
+2 Dylan Kessler           87
+3 Richard Lanctot         50
+```
+
+You'll want to load database tables using statements such as:
+
+```         
+egg_table <- tbl(conn, "Bird_eggs")
+```
+
+and then use tidyverse grouping, summarization, joining, and other functions to compute the desired result.
+
+Also, take your final expression and pipe it into `show_query()`. If you used multiple R statements, did dbplyr create a temporary table, or did it manage to do everything in one query? Did it limit to the first three rows using an R expression or an SQL LIMIT clause?

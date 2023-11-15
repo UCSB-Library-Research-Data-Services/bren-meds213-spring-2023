@@ -1,0 +1,19 @@
+---
+title: "Week 7 - Who's the culprit?"
+---
+
+You're reading up on how eggs are aged by floating them in water [^1]:
+
+[^1]: Liebezeit, Joseph R., et al. "Assessing the Development of Shorebird Eggs Using the Flotation Method: Species-Specific and Generalized Regression Models." The Condor, vol. 109, no. 1, 2007, pp. 32--47. JSTOR, <http://www.jstor.org/stable/4122529>
+
+![](egg-float-graph.png)
+
+when you receive an urgent phone call from a colleague who says they just discovered that an observer, who worked at the "nome" site between 1998 and 2008 inclusive, had been floating eggs in salt water and not freshwater. The density of salt water being different, those measurements are incorrect and need to be adjusted. The colleague says that this incorrect technique was used on exactly 36 nests, but before you can ask who the observer was, the phone is disconnected. Who made this error? That is, looking at nest data for "nome" between 1998 and 2008 inclusive, and for which egg age was determined by floating, can you determine the name of the observer who observed exactly 36 nests? Please submit your SQL. Your SQL should return exactly one row, the answer. That is, your query should produce:
+
+```         
+┌──────────────────┬────────────┐
+│       Name       │ nest_count │
+├──────────────────┼────────────┤
+│ (name hidden)    │ 36         │
+└──────────────────┴────────────┘
+```

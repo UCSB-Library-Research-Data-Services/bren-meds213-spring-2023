@@ -1,0 +1,44 @@
+---
+title: "Week 7 - Programming with databases"
+---
+
+## Learning objectives
+
+-   Review: understand how the data model relates to queries
+-   Understand the basic database programming model
+-   Access an SQLite database from Python and R
+-   Understand how to use the Python/Pandas and R/dbplyr convenience functions
+
+## Slides and other materials
+
+[slides-07.pptx](slides-07.pptx)
+
+Coding transcripts:
+
+-   [transcript-07-mon.ipynb](transcript-07-mon.ipynb)
+-   [transcript-07-wed-python.ipynb](transcript-07-wed-python.ipynb)
+-   [transcript-07-wed-r.R](transcript-07-wed-r.R)
+
+## Resources
+
+1.  <https://peps.python.org/pep-0249/>
+
+    -   *Common Python-RDBMS API*
+
+2.  <https://docs.python.org/3.11/library/sqlite3.html>
+
+    -   *Python SQLite module*
+
+3.  <https://dbplyr.tidyverse.org/>
+
+    -   *R dbplyr documentation*
+
+## Homework
+
+[Little Bobby Tables](hw-07-1.qmd)
+
+[Who's the culprit?](hw-07-2.qmd)
+
+[Characterizing egg variation](hw-07-3.qmd)
+
+[Who were the winners?](hw-07-4.qmd)

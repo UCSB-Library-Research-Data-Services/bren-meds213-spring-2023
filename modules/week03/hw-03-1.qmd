@@ -1,0 +1,46 @@
+---
+title: "Week 3 - SQL problem 1"
+---
+
+It's a useful skill in life (I'm not being rhetorical, I really mean that, it's a useful skill) to be able to construct an experiment to answer a hypothesis. Suppose you're not sure what the AVG function returns if there are NULL values in the column being averaged. Suppose you either didn't have access to any documentation, or didn't trust it. What experiment could you run to find out what happens?
+
+There are two parts to this problem.
+
+# Part 1
+
+Construct an SQL experiment to determine the answer to the question above. Does SQL abort with some kind of error? Does it ignore NULL values? Do the NULL values somehow factor into the calculation, and if so, how?
+
+I would suggest you start by creating a table (in the bird database, in a new database, in a transient in-memory database, doesn't matter) with a single column that has data type REAL (for part 2 below, it must be REAL). You can make your table a temp table or not, your choice.
+
+```         
+CREATE TEMP TABLE mytable... ;
+```
+
+Now insert some real numbers and at least one NULL into your table.
+
+```         
+INSERT INTO mytable... ;
+```
+
+(Hmm, can you insert multiple rows at once, or do you have to do a separate INSERT for each row?)
+
+Once you have your little table constructed, try doing an AVG on the column and see what is returned. What would the average be if the function ignored NULLs? What would the average be if it somehow factored them in? What is actually returned?
+
+Please submit both your SQL and your answer to the question about how AVG operates in the presence of NULL values.
+
+# Part 2
+
+If SQL didn't have an AVG function, you could compute the average value of a column by doing something like this on your table:
+
+```         
+SELECT SUM(mycolumn)/COUNT(*) FROM mytable;
+SELECT SUM(mycolumn)/COUNT(mycolumn) FROM mytable;
+```
+
+Which query above is correct? Please explain why.
+
+Now that you're done with your table, you can delete it if desired:
+
+```         
+DROP TABLE mytable;
+```

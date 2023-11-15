@@ -1,0 +1,40 @@
+---
+title: "Bren MEDS 213: Databases and Data Management"
+---
+
+Greg Janée (gjanee\@ucsb.edu) and Renata Curty (rcurty\@ucsb.edu)
+
+This is an archive of the materials used for a 4-unit, letter-grade course delivered in Spring 2023 as part of the [Master of Environmental Data Science (MEDS)](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) program in the [Bren School of Environmental Science & Management](https://bren.ucsb.edu). It includes PowerPoint presentations, instructor notes, live coding transcripts, supplemental materials and readings, and homework assignments.
+
+The goals of the course were to give MEDS students the skills they need to practically, successfully, and ethically manage their data, and to create, manage, and use relational databases where appropriate. Relational database topics went farther than just SQL queries and included a significant unit on data modeling and database constraints and integrity, in addition to advanced database topics such as triggers and indexes and accessing databases from programming environments. The data management portion tied into the students' capstone projects in a couple places, and included analyzing data from an ethical perspective, creating standards-compliant metadata, and employing data de-identification techniques. The course also included a unit on the Unix command line, with an emphasis on creating reusable Bash scripts, given in the spirit that Bash is a generally useful tool that all data scientists should have at least some familiarity with.
+
+For the database portion of the course the [Arctic Shorebird Demographics Network](https://doi.org/10.18739/A2222R68W) dataset, obtained from the [Arctic Data Center](https://arcticdata.io), was used as a running example. While this dataset is not distributed as a relational database (it is packaged as a set of related CSV files), its structure is highly amenable to a relational approach and provides a realistic example of where and why one would want to use a relational database in the Earth and environmental sciences. It also provides just enough complexity to support realistic and complex queries and views. Note that the dataset used in the course, and included in this archive, is a cleaned-up subset of the full dataset. It is necessarily a subset of the full dataset to keep the size and complexity manageable for pedagogical purposes, and it had to be cleaned up because, unfortunately, the full dataset has many errors that would have precluded creating foreign keys.
+
+SQLite was used as the database platform. To get SQLite to behave as other relational databases do in terms of data typing and constraints, the `STRICT` keyword was added to table definitions. However, in the classroom it was discovered that this is a relatively new feature of SQLite and that databases that use this keyword cannot be opened at all by older versions of SQLite, and thus it was removed.
+
+A class data GitHub repository, linked below, was used as the mechanism for distributing files to students. Each week a new directory of files was added to the repository and the students were asked to pull the repository to their local environment. The repository linked here includes the files for all weeks.
+
+## Course content
+
+[Syllabus](syllabus.qmd)
+
+[Installing SQLite](installing-sqlite.qmd)
+
+[Resources](resources.qmd)
+
+[Class data GitHub repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2023-class-data)
+
+## Modules
+
+| Week | Topic/Content                                                          |
+|---------------------|---------------------------------------------------|
+| 1    | [Relational databases and data modeling](modules/week01/index-01.qmd)  |
+| 2    | [Ethical and responsible data management](modules/week02/index-02.qmd) |
+| 3    | [SQLite and SQL](modules/week03/index-03.qmd)                          |
+| 4    | [Reproducible and FAIR data](modules/week04/index-04.qmd)              |
+| 5    | [SQLite, SQL, and Bash](modules/week05/index-05.qmd)                   |
+| 6    | [Metadata standards](modules/week06/index-06.qmd)                      |
+| 7    | [Programming with databases](modules/week07/index-07.qmd)              |
+| 8    | [Sensitive data](modules/week08/index-08.qmd)                          |
+| 9    | [Advanced database topics](modules/week09/index-09.qmd)                |
+| 10   | [Data licensing and publication](modules/week10/index-10.qmd)          |

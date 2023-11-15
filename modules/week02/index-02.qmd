@@ -1,0 +1,43 @@
+---
+title: "Week 2 - Ethical and responsible data management"
+---
+
+## Learning objectives
+
+-   Understand fundamental ethical and responsible data management principles, focusing on the importance of data documentation, preventing bias and harm, properly handling sensitive data, ownership, and licensing issues
+-   Apply ethical and responsible data management principles to real-world scenarios
+
+## Slides
+
+[slides-02.pptx](slides-02.pptx)
+
+## Preparatory work for in-class exercise
+
+*Required readings*
+
+1.  Boté, J. J., & Térmens, M. (2019). Reusing data: Technical and ethical challenges. DESIDOC Journal of Library & Information Technology, 39(6) <http://hdl.handle.net/2445/151341>
+
+2.  McGovern, A., Ebert-Uphoff, I., Gagne, D., & Bostrom, A. (2022). Why we need to focus on developing ethical, responsible, and trustworthy artificial intelligence approaches for environmental science. Environmental Data Science, 1, E6. <https://doi.org/10.1017/eds.2022.5>
+
+*Questions to consider: (no need to answer the questions on paper)*
+
+-   Boté and Térmens (2019) present some technical and ethical challenges researchers may face when using pre-existing data. Based on the lecture and our group discussion on day 3, in what ways do you think the technical challenges highlighted in this paper can also have ethical implications?
+-   Can you think of ways some of the ethical concerns presented by Boté and Térmens (2019) can affect other stages of the data lifecycle other than reuse?
+-   Based on concrete examples, McGovern et al. (2022) discuss how AI and ML can go wrong for environmental sciences. While the community is still grappling with these challenges, what responsible and ethical data management practices could help to minimize such problems?
+-   Reflecting on both settings of readings, can you identify any ethical concerns that resonate with your capstone project? How have you or do you plan to mitigate them?
+
+*Additional suggested readings are noted in the slides.*
+
+## In-class exercise
+
+*Instructions*
+
+1.  Find a partner (preferably someone from a different capstone project team).
+2.  Read the cases listed below, discuss them with your partner, and answer the quizzes individually.
+    -   [Case Study A: Containing the flames of bias in machine learning](case-a.qmd)
+    -   [Case Study B: The caveat is the caviar: navigating ethics to protect endangered river wildlife](case-b.qmd)
+    -   [Case Study C: To reuse or not reuse, that is the key question!](case-c.qmd)
+    -   [Case Study D: Navigating the complexities of ownership zones](case-d.qmd)
+3.  Switch partners and discuss your answers.
+4.  Reflect on your answers and change them or refine the open ones if you'd like.
+5.  Submit your final answers (individually) before the end of the class.

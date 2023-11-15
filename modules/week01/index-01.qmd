@@ -1,0 +1,49 @@
+---
+title: "Week 1 - Relational databases and data modeling"
+---
+
+## Learning objectives
+
+-   Benefits of relational databases
+-   Relational data model and SQL data definition
+-   Data modeling
+
+## Slides
+
+[slides-01.pptx](slides-01.pptx)
+
+## Resources
+
+1.  <https://learning.nceas.ucsb.edu/2022-04-arctic/data-modeling-essentials.html>
+
+    -   *Very brief introduction to data modeling, ties into "tidy data."*
+
+2.  Christoph Wohner, Johannes Peterseil, and Hermann Klug (2022). Designing and implementing a data model for describing environmental monitoring and research sites. Ecological Informatics **70**, 101708.\
+    <https://doi.org/10.1016/j.ecoinf.2022.101708>
+
+    -   *Good case study.*
+
+3.  Gerald A. Burnette (2022). Managing environmental data: principles, techniques, and best practices. CRC Press.\
+    [Access via Library Catalog](https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma9917095897506531)
+
+    -   *Comprehensive text, specific to environmental sciences.*
+
+4.  Graeme C. Simsion and Graham C. Witt (2005). Data Modeling Essentials. 3rd ed. Amsterdam: Morgan Kaufmann.\
+    [Access via Library Catalog](https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma9916939156906531)\
+    [Google Books](https://books.google.com/books?hl=en&lr=&id=0f9oLxovqIMC&oi=fnd&pg=PP1&ots=KBR1dNlNbu&sig=nG1oa0DyqnPFk4LK8ZRDdhWBw7k#v=onepage&q&f=false)
+
+    -   *Comprehensive text, not specific to the environmental sciences.*
+
+5.  Hartmut Hebbel (1994). Environmental data modeling. Annals of Operations Research **54**, 263-278.\
+    <https://doi.org/10.1007/BF02031737>
+
+    -   *A broader view of data organization.*
+
+6.  Jeffrey D. Ullman and Jennifer Widom (2008). A First Course in Database Systems. 3rd ed. Upper Saddle River, NJ: Pearson/Prentice Hall.\
+    [Access via Library Catalog](https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma990032103790203776)
+
+    -   *Complete but theoretical introduction to relational databases, data modeling, and relational algebra.*
+
+## Homework
+
+[Data modeling exercise](hw-01.qmd)

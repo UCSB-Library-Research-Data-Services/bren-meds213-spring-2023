@@ -1,0 +1,45 @@
+---
+title: "Week 3 - SQL problem 2"
+---
+
+If you want to know which site has the largest area, it's tempting to say
+
+```
+SELECT Site_name, MAX(Area) FROM Site;
+```
+
+but as explained in class, databases will correctly compute the maximum but will select an arbitrary row to fill in the Site_name column.  No good!  This misleading behavior is more apparent if we do an average instead of a maximum:
+
+```
+SELECT Site_name, AVG(Area) FROM Site;
+
+┌───────────┬───────────┐
+│ Site_name │ AVG(Area) │
+├───────────┼───────────┤
+│ Barrow    │ 440.6125  │
+└───────────┴───────────┘
+```
+
+for there is no site whose area exactly equals the average, and so there is nothing you could reasonably put in Site_name, and it certainly wouldn't be Barrow.  (SQLite is special in that if you do a MIN or MAX, it will return the row (or one of the rows, if there are multiple rows) that matches the minimum or maximum.  But other databases do not do that.)  So, we need a plan B.
+
+# Part 1
+
+Find the site name and area of the site having the largest area.  Do so by ordering the rows in a particularly convenient order, and using LIMIT to select just the first row.  Your result should look like:
+
+```
+┌──────────────┬────────┐
+│  Site_name   │  Area  │
+├──────────────┼────────┤
+│ Coats Island │ 1239.1 │
+└──────────────┴────────┘
+```
+
+Please submit your SQL.
+
+# Part 2
+
+Do the same, but use a nested query.  First, create a query that finds the maximum area.  Then, create a query that selects the site name and area of the site whose area equals the maximum.  Your overall query will look something like:
+
+```
+SELECT Site_name, Area FROM Site WHERE Area = (SELECT ...);
+```

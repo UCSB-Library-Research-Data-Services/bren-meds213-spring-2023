@@ -1,0 +1,50 @@
+---
+title: "Week 3 - SQL problem 3"
+---
+
+Your mission, should you choose to accept it, is to list the scientific names of bird species in descending order of their maximum average egg volumes. That is, compute the average volume of the eggs in each nest, and then for the nests of each species compute the maximum of those average volumes, and list by species in descending order of maximum volume. You final table should look like:
+
+```         
+┌─────────────────────────┬──────────────────┐
+│     Scientific_name     │  Max_avg_volume  │
+├─────────────────────────┼──────────────────┤
+│ Pluvialis squatarola    │ 36541.8531755592 │
+│ Pluvialis dominica      │ 33847.8550096089 │
+│ Arenaria interpres      │ 23338.620942275  │
+│ Calidris fuscicollis    │ 13277.1428014342 │
+│ Calidris alpina         │ 12196.2368406617 │
+│ Charadrius semipalmatus │ 11266.9746753467 │
+│ Phalaropus fulicarius   │ 8906.7745740725  │
+└─────────────────────────┴──────────────────┘
+```
+
+(By the way, regarding the leader in egg size above, [Birds of the World](https://birdsoftheworld.org/) says that Pluvialis squatarola's eggs are "Exceptionally large for size of female (ca. 16% weight of female)".)
+
+To calculate the volume of an egg, use the simplified formula
+
+$${\pi \over 6} W^2 L$$
+
+where $W$ is the egg width and $L$ is the egg length. You can use 3.14 for $\pi$. (The real formula takes into account the ovoid shape of eggs, but only width and length are available to us here.)
+
+A good place to start is just to group bird eggs by nest (i.e., Nest_ID) and compute average volumes:
+
+```         
+CREATE TEMP TABLE Averages AS
+    SELECT Nest_ID, AVG(...) AS Avg_volume
+        FROM ...
+        GROUP BY ...;
+```
+
+You can now join that table with Bird_nests, so that you can group by species, and also join with the Species table to pick up scientific names. To do just the first of those joins, you could say something like
+
+```         
+SELECT Species, MAX(...)
+    FROM Bird_nests, Averages USING (Nest_ID)
+    GROUP BY ...;
+```
+
+That's not the whole story, we want scientific names not species codes. Another join is needed. A couple strategies here. One, you can modify the above query to also join with the Species table (you'll need to replace USING with ON ...). Two, you can save the above as another temp table and join it to Species separately.
+
+Don't forget to order the results. Here it is convenient to give computed quantities nice names so you can refer to them.
+
+Please submit all of the SQL you used to solve the problem. Bonus points if you can do all of the above in one statement.

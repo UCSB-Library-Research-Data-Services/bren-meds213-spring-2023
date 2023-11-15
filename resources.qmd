@@ -1,0 +1,19 @@
+---
+title: "Resources"
+---
+
+## Bibliography
+
+-   Burnette. (2022). Managing environmental data: principles, techniques, and best practices. CRC Press. <https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma9917095897506531>
+
+-   Chapman, AD, & Grafton, O. (2008). Guide to Best Practices for Generalising Sensitive Species-Occurrence Data (v1.0). <https://doi.org/10.15468/doc-b02j-gt10>
+
+-   Crystal-Ornelas, R., Varadharajan, C., O'Ryan, D., Ramírez-Muñoz, J., Jones, M. B., Lehnert, K. A., ... & Servilla, M. (2022). Enabling FAIR data in Earth and environmental science with community-centric (meta)data reporting formats. Scientific Data, 9(1), 700. <https://doi.org/10.1038/s41597-022-01606-w>
+
+-   Jones, M. B., O'Brien, M., Mecum, B., Boettiger, C., Schildhauer, M., Maier, M., Whiteaker, T., Earl, S., & Chong, S. (2019). Ecological Metadata Language version 2.2.0. KNB Data Repository. <https://doi.org/10.5063/F11834T2>
+
+-   Labastida, I., & Margoni, T. (2020). Licensing FAIR Data for Reuse. Data Intelligence, 2(1-2), 199-207. <https://doi.org/10.1162/dint_a_00042>
+
+-   McGovern, A., Ebert-Uphoff, I., Gagne, D., & Bostrom, A. (2022). Why we need to focus on developing ethical, responsible, and trustworthy artificial intelligence approaches for environmental science. Environmental Data Science, 1, E6. <https://doi.org/10.1017/eds.2022.5>
+
+-   Recknagel, F., & Michener, W. K. (Eds.). (2018). Ecological informatics: Data management and knowledge discovery (3rd ed.). Springer.

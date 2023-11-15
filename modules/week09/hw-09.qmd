@@ -1,0 +1,82 @@
+---
+title: Week 9 - What makes a good index?
+---
+
+Recall from class that an index I~C~ on a column C in a table T is in effect a mini-table, kept in sync with T, that contains all the values of column C in order. If there are a million rows in table T, there will be a million values in index I~C~. If the values of column C are unique, the index will hold a million unique values. If column C takes on only a few possible values, then index I~C~ will still have a million values, but many of those values will be repeated.
+
+Suppose we are given a query that includes a constraint against column C, i.e., that includes `WHERE C = someval` possibly among other constraints. To use index I~C~ means that the database looks up the constraint value `someval` in the index to obtain a smaller number of table rows (in the ideal case, just one row in the case of a unique index) to subsequently examine and match additional constraints against. The essential purpose of an index is to reduce the number of table rows that must be examined.
+
+For the purposes of this assignment we will be working with a database that has the same structure as previous class databases but in which the Bird_nests table has 1 million rows, each of which has been fattened to occupy multiple kilobytes. As a consequence, the database file is approximately 4GB. The database file can be found on taylor.bren.ucsb.edu at `/courses/EDS213/database-long-wide.db`. To use it you will have to copy or download it to your own space.
+
+We will also be working with the following query:
+
+```         
+SELECT Nest_ID
+    FROM Bird_nests
+    WHERE Site = 'nome' AND
+          Species = 'ruff' AND
+          Year = 1983 AND
+          Observer = 'cbishop' AND
+          ageMethod = 'float';
+```
+
+This query returns exactly one row.
+
+# Part 1
+
+Answer the following questions.
+
+1.  Is there already an index on the Bird_nests table? If so, what is that index and will SQLite use it in the above query? Why or why not?
+
+2.  Will adding an index on a column not mentioned in the WHERE clause be used by the database? Why or why not?
+
+# Part 2
+
+Query optimization, which falls under the general heading of "database tuning," is a complex subject, as query performance depends on the query or queries being supported, the distribution and nature of the data, the abilities and characteristics of the query planner, and the costs of creating and maintaining indexes. Still, we can make a general observation about what makes for a good index ("good" meaning improving query performance here) by examining the effects of adding different indexes on the Bird_nests table and timing the above query.
+
+Your task is to conduct at least 10 experiments. In each experiment perform the following steps:
+
+1.  Create an index on a column or columns.
+2.  Time the above query.
+3.  Drop the index (to avoid accumulating indexes on the table).
+4.  Also, determine the number of distinct values in the index, i.e., the number of distinct values in the column or number of distinct tuples if the index is over multiple columns.
+
+What experiments to run?
+
+-   Run an initial experiment with no added index. For this experiment only, record the number of distinct values as 1.
+-   Try adding an index on each column mentioned in the WHERE clause (e.g., Site): that's 5 experiments right there.
+-   For other experiments, try adding an index on multiple columns, e.g., Site and Observer, or even 3 or 4 columns together.
+
+When done, you will want your results in the form of a CSV file with three columns: label, query time, and number of distinct values.
+
+For timing, you will probably want to use the Bash test harness you developed in week 5. You can run your test harness manually, and manually retrieve the number of distinct values for step 4 above. But you can also automate the whole process; some hints for doing so are below. Be careful when running your test harness, as in the end you want just one row in your CSV file per experiment.
+
+Once you have your data, load it in Jupyter or RStudio and create a log-log scatter plot of the number of distinct index values (X axis) versus query time (Y axis). (Results will be difficult to see if both axes are not logarithmic.) What relationship do you observe? Please hypothesize why you see the relationship you do.
+
+Please upload your Jupyter notebook or Rmarkdown document. You do not need to submit your data.
+
+# Modifying your test harness
+
+A few tips on modifying your test harness to make it more useful for this assignment. First, if you find it annoying to have to try different numbers of repetitions to get positive and more precise timings, you can automate your script to try different numbers of repetitions until it achieves something reasonable. Here's one idea:
+
+```         
+num_reps=1
+while true; do
+    start=$SECONDS
+    for _ in $(seq $num_reps); do
+        sqlite3 $db_file "$query" >& /dev/null
+    done
+    end=$SECONDS
+    if [ $((end - start)) -gt 3 ]; then
+        break
+    fi
+    echo "Too fast, trying again!"
+    num_reps=$((num_reps * 10))
+done
+```
+
+This will try 1 repetition, then 10, then 100, etc.
+
+Second, you can gather the number of distinct values by adding an `sqlite3 -csv $db_file "$num_values_query"` command and saving the output in a variable, and then echoing that variable out to your CSV file along with your other variables.
+
+And third, if you make the column(s) you want to index an argument to your script, you can automate adding and dropping indexes by adding more sqlite3 commands.

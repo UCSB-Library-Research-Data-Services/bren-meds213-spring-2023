@@ -1,0 +1,150 @@
+---
+title: "Week 5 - Create a trigger"
+---
+
+**For this assignment, you *must* use [week5/database.db](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2023-class-data/tree/main/week5) in the class data GitHub repository!**
+
+The Bird_eggs table uniquely identifies each egg by a pair (Nest_ID, Egg_num). The egg numbers for a given nest always have the sequential values 1, 2, 3, 4, etc. For example, there are 3 eggs in nest 14eabaage01:
+
+```         
+SELECT * FROM Bird_eggs WHERE Nest_ID = '14eabaage01';
+┌───────────┬──────┬──────┬─────────────┬─────────┬────────┬───────┐
+│ Book_page │ Year │ Site │   Nest_ID   │ Egg_num │ Length │ Width │
+├───────────┼──────┼──────┼─────────────┼─────────┼────────┼───────┤
+│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 1       │ 39.14  │ 33.0  │
+│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 2       │ 41.51  │ 33.39 │
+│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 3       │ 48.29  │ 33.4  │
+└───────────┴──────┴──────┴─────────────┴─────────┴────────┴───────┘
+```
+
+# Part 1
+
+When inserting a new egg measurement, wouldn't it be nice if the database just automatically filled in the next sequential egg number for us? Indeed, we can accomplish this with an AFTER INSERT trigger that does an UPDATE.
+
+The schema for the database has been modified for this exercise so that Egg_num can be NULL and furthermore has a default value of NULL. This means we can insert a row without supplying an egg number. For example, we might say:
+
+```         
+INSERT INTO Bird_eggs
+    (Book_page, Year, Site, Nest_ID, Length, Width)
+    VALUES ('b14.6', 2014, 'eaba', '14eabaage01', 12.34, 56.78);
+```
+
+If this were the first egg measurement for this particular nest, immediately after the insert we would see:
+
+```         
+.nullvalue -NULL-
+SELECT * FROM Bird_eggs WHERE Nest_ID = '14eabaage01';
+┌───────────┬──────┬──────┬─────────────┬─────────┬────────┬───────┐
+│ Book_page │ Year │ Site │   Nest_ID   │ Egg_num │ Length │ Width │
+├───────────┼──────┼──────┼─────────────┼─────────┼────────┼───────┤
+│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ -NULL-  │ 12.34  │ 56.78 │
+└───────────┴──────┴──────┴─────────────┴─────────┴────────┴───────┘
+```
+
+If there were already some egg measurements for this nest (as in fact there are), immediately after the insert we would see:
+
+```         
+.nullvalue -NULL-
+SELECT * FROM Bird_eggs WHERE Nest_ID = '14eabaage01';
+┌───────────┬──────┬──────┬─────────────┬─────────┬────────┬───────┐
+│ Book_page │ Year │ Site │   Nest_ID   │ Egg_num │ Length │ Width │
+├───────────┼──────┼──────┼─────────────┼─────────┼────────┼───────┤
+│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 1       │ 39.14  │ 33.0  │
+│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 2       │ 41.51  │ 33.39 │
+│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ 3       │ 48.29  │ 33.4  │
+│ b14.6     │ 2014 │ eaba │ 14eabaage01 │ -NULL-  │ 12.34  │ 56.78 │
+└───────────┴──────┴──────┴─────────────┴─────────┴────────┴───────┘
+```
+
+Your job is to create a trigger that will fire an UPDATE statement that will fill in a value for Egg_num in either situation above.
+
+Your trigger will have the form
+
+```         
+CREATE TRIGGER egg_filler
+    AFTER INSERT ON Bird_eggs
+    FOR EACH ROW
+    BEGIN
+        UPDATE ...;
+    END;
+```
+
+A word of warning. Notice the two semicolons above: the UPDATE statement must be terminated by a semicolon, and the CREATE TRIGGER statement must be terminated by a semicolon.
+
+The crux is in the UPDATE statement. Recall from class that in your UPDATE statement you can refer to the values just inserted as new.Book_page, new.Year, new.Site, new.Nest_ID, etc. For example, using the INSERT above, new.Nest_ID will have the value '14eabaage01' and new.Length will have the value 12.34. You need to figure out:
+
+-   What column(s) to update. Well that's easy, it's just Egg_num.
+
+-   What Egg_num's new value should be. Hint: the value can be computed from a SELECT statement. What SELECT statement could you use that will return the right value to use as the next sequential egg number?
+
+-   What row(s) to modify. Well, you want to modify just one row, the row that was just inserted. What WHERE clause could you use to identify this brand-new row? It has a unique signature.
+
+You can try out your trigger by creating it, doing an INSERT, and then seeing what the rows for that particular nest look like. If your trigger doesn't work for some reason, you may need to `DROP TRIGGER egg_filler;` before creating it again. As before, you will probably find it convenient to write your trigger code in a separate file, and load it into SQLite using the .read built-in command.
+
+Please submit your SQL.
+
+# Part 2
+
+Why stop there? Recall that Book_page, Year, and Site all duplicate the information from the Bird_nests table. Wouldn't it be nice if the database automatically filled in those values as well? Then we could just say:
+
+```         
+INSERT INTO Bird_eggs
+    (Nest_ID, Length, Width)
+    VALUES ('14eabaage01', 12.34, 56.78);
+```
+
+This can be accomplished by augmenting your previous trigger. Two options. One, you can add more UPDATE statements:
+
+```         
+CREATE TRIGGER egg_filler
+    AFTER INSERT ON Bird_eggs
+    FOR EACH ROW
+    BEGIN
+        UPDATE Bird_eggs SET Egg_num = (SELECT...) WHERE...;
+        UPDATE Bird_eggs SET Book_page = (SELECT...) WHERE...;
+        UPDATE Bird_eggs SET Year = (SELECT...) WHERE...;
+        etc.
+    END;
+```
+
+Or two, you can add more clauses to a single UPDATE statement:
+
+```         
+CREATE TRIGGER egg_filler
+    AFTER INSERT ON Bird_eggs
+    FOR EACH ROW
+    BEGIN
+        UPDATE Bird_eggs
+            SET
+                Egg_num = (SELECT...),
+                Book_page = (SELECT...),
+                Year = (SELECT...),
+                etc.
+            WHERE ...;
+    END;
+```
+
+(Honestly, this is not the most compact or efficient SQL, but sometimes it's better sticking with a simple and understandable approach.)
+
+You need to figure out what SELECT statements to use to find the values to insert. That is, given that you can reference new.Nest_ID, new.Length, and new.Width, what SELECT statements could you use to find the correct values for Book_page, Year, and Nest_ID?
+
+Try out your trigger, marvel at what you have automated, and submit your SQL.
+
+# Part 3
+
+Okay, there isn't a part 3. But wouldn't it be nice to be able to insert egg measurements even more compactly? That is, instead of having to say:
+
+```         
+INSERT INTO Bird_eggs
+    (Nest_ID, Length, Width)
+    VALUES ('14eabaage01', 12.34, 56.78);
+```
+
+what if you could just say:
+
+```         
+INSERT INTO Bird_eggs
+    VALUES ('14eabaage01', 12.34, 56.78);
+```
+
+Well you can do that! It involves creating a view and adding an INSTEAD OF INSERT trigger on the view. If there's time I'll show an example in class.

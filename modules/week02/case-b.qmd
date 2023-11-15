@@ -1,0 +1,23 @@
+---
+title: "Case Study B: The caveat of the caviar: navigating ethics to protect endangered river wildlife"
+---
+
+## Instructions
+
+**Read the scenario and answer questions based on the weekly readings and the lecture:**
+
+A team of environmental scientists from the University of Wisconsin is researching the impact of climate change on the Mississippi River wildlife. The research involves collecting data on various environmental factors, including water temperature, salinity, pH, and nutrient levels, as well as data on the abundance and diversity of aquatic species on the lower basins of the river.
+
+The team collects the data using various methods, including river sensors, underwater cameras, and traditional sampling techniques. The data is stored on a cloud-based platform, allowing sharing and real-time collaboration with multiple partners. However, the researchers soon realized that some of the collected data might be sensitive, including information on the distribution and abundance of the pallid sturgeon, recently listed by the Wisconsin Department of Natural Resources as one of the endangered species. They also realized that some data points might be of commercial interest, which can threaten the protection of the species and its habitat. For example, exposing the exact locations of the pallid sturgeon and their critical habitats could lead to increased poaching or unauthorized fishing, as the species is highly valued for its caviar.
+
+Researchers face ethical considerations related to sensitive data sharing. They want to comply with best practices in open science. However, in this process, they must balance the need to share their data openly to advance research and understanding of climate change and the Mississippi River ecosystem while protecting sensitive data and preventing it from being used for commercial purposes that could harm the environment.
+
+## Questions
+
+### Question 1
+
+As a data manager, what recommendations would you offer to the researchers to avoid commercial exploitation of the pallid sturgeon while contributing to advancing the research in the field? You do not need to write a long essay; elaborating your advice in bullet points is enough.
+
+### Question 2
+
+As a general rule, the \_\_\_\_\_\_\_\_\_\_\_\_\_ of endangered, sensitive species should not be shared publicly. (hint: 1-2 words)

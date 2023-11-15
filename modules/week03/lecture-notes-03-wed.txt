@@ -1,0 +1,114 @@
+RECAP
+- open SQLite on database file
+- .table, .schema to find out what's inside
+- SELECT DISTINCT Location
+      FROM Site
+      ORDER BY Location
+      LIMIT 3;
+- write query in file, use .read to execute it
+- good idea to capture schema in SQL file to recreate database,
+  for documentation
+
+FILTERING
+- SELECT * FROM Site WHERE Area < 200;
+- ...AND Latitude > 60, etc.
+- not equals: classic is <>, but everybody supports != nowadays
+- string matching
+-- double up single quotes to create a single quote: 'I don''t like this'
+-- LIKE '...', % for wildcard
+-- string matching might be case (in)sensitive, check database settings
+-- regexp usually supported via functions
+
+EXPRESSIONS
+- SELECT Site_name, Area*2.47 FROM Site;
+- expr AS name to give name to computed column
+- look at SQLite function list, lots of 'em
+- || to concatenate strings
+
+AGGREGATION & GROUPING
+- SELECT COUNT(*) FROM Species;
+- number of rows
+- SELECT COUNT(Scientific_name) FROM Species;
+- number of non-NULL values
+- SELECT COUNT(DISTINCT Relevance) FROM Species;
+- same as SELECT DISTINCT, but see how many rows are returned
+- SELECT AVG(Area) FROM Site;
+- MIN, MAX, etc.
+- careful: SELECT Location, AVG(Area) FROM Site;
+-- !! picks arbitrary value for location
+- enter grouping
+- SQL will return one row per group
+- SELECT Location, MAX(Area)
+      FROM Site
+      GROUP BY Location;
+- WHERE to filter rows going into grouping operation
+- HAVING to filter rows coming out of grouping operation
+- SELECT Location, MAX(Area) AS Max_area
+      FROM Site
+      GROUP BY Location
+      HAVING Max_area > 200
+      ORDER BY Max_area DESC;
+
+RELATIONAL ALGEBRA
+- result of every operation is another table
+- even SELECT COUNT(*) returns a little baby table
+- CREATE TEMP TABLE AS SELECT... to save query
+- can nest queries
+-- SELECT ... FROM (SELECT ...)
+-- another place: WHERE column IN (SELECT ...)
+-- there are others
+
+NULL PROCESSING
+- NULL means unknown
+- SELECT COUNT(*) FROM Bird_nests WHERE floatAge > 5;
+- or <= 5
+- still missing rows, because a NULL value is neither > 5 nor <= 5
+- must use IS NULL or IS NOT NULL
+- aggregate functions omit NULLs like R does
+
+JOINS, THE HEART AND SOUL OF RDBMS
+- SELECT * FROM Camp_assignment;
+- but we want full names, not abbreviations
+- so follow linkage shown in ER diagram
+- SELECT * FROM Camp_assignment, Personnel
+      ON Camp_assignment.Observer = Personnel.Abbreviation
+      LIMIT 10;
+- or use JOIN instead of bare ,
+- or INNER JOIN to be verbose
+- note qualifications by table name; unneeded if column names are
+  unambiguous (but duplicate column names often occur)
+- mega-rows: get all columns from both tables
+- (database doesn't actually do that unless required, is more efficient)
+- more commonly, ask for selected columns
+- SELECT Year, Site, Name, Start, End
+      FROM Camp_assignment, Personnel
+      ON Camp_assignment.Observer = Personnel.Abbreviation
+      LIMIT 10;
+- use table abbreviations for conciseness
+- SELECT Year, Site, Name, Start, End
+      FROM Camp_assignment CA, Personnel P
+      ON CA.Observer = P.Abbreviation
+      LIMIT 10;
+- can also use AS for readability
+- 3 way join:
+- SELECT *
+      FROM Camp_assignment CA, Personnel P, Site S
+      ON CA.Observer = P.Abbreviation AND CA.Site = S.Code
+      LIMIT 3;
+- can add WHERE clauses, etc.: WHERE CA.Observer = 'lmckinnon'
+- notice denormalization that is happening
+- which is the idea: normalize for data organization/compactness
+- temporarily denormalize to relate data back together
+- another example: how many bird eggs are in each nest?
+- can get away with USING since same column name
+- SELECT Nest_id, COUNT(*)
+      FROM Bird_nests, Bird_eggs
+      USING (NEST_Id)
+      GROUP BY Nest_id;
+- let's add in some nicer species names; need to add Species to the join
+- switch to ON... instead of USING, also need to qualify column names
+- SELECT BN.Nest_id, S.Scientific_name, COUNT(*) AS Egg_count
+      FROM Bird_nests BN, Bird_eggs BE, Species S
+      ON BE.Nest_id = BN.Nest_id AND BN.Species = S.Code
+      GROUP BY BN.Nest_id;
+- save via CREATE TEMP TABLE mytable AS SELECT...

@@ -1,0 +1,9 @@
+---
+title: "Week 8 - sdcMicro exercise"
+---
+
+Your team has successfully obtained a dataset[^1] that encompasses whale entanglement data associated with specific fisheries along the West Coast. This dataset, named `whale-sdc.csv`, and an accompanying file called `whale-exercise.Rmd`, are available on the [class data GitHub repository, week 8 directory](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2023-class-data/tree/main/week8).
+
+[^1]: This dataset was purposefully adapted exclusively for instruction use.
+
+In groups of two or three, your task is to thoroughly examine the dataset and complete the provided R Markdown file. This entails implementing the necessary code and addressing the given questions. To ensure proper identification, please include the names of all participating members in the YAML header before submitting the modified R Markdown file.

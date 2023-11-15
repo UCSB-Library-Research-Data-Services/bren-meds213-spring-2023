@@ -1,0 +1,9 @@
+---
+title: "Week 4 - Project organization and documentation"
+---
+
+1.  Fill out and upload a [Project Organization & Documentation Worksheet](worksheet.docx) for your capstone project (one per group).
+
+2.  Fill out and upload a [README.txt](README.txt) file for your capstone project (one per group).
+
+3.  Reproducible R project. Submit the link to your GitHub repository with the R project example with a Binder Badge and a `renv.lock` file.

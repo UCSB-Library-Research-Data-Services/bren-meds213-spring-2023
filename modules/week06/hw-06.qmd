@@ -1,0 +1,11 @@
+---
+title: "Week 6 - EML record"
+---
+
+Each Capstone group should create an EML metadata record using the EML R Package for one of the analysis-ready datasets the project has generated or reused (consider a tabular dataset with 5-8 columns).
+
+All groups must include the minimum elements covered in class, plus any additional attributes and descriptions required to describe your chosen dataset fully. For example, if attributes have specific units of measure, you should incorporate them into the code.
+
+Explore the package documentation, the README.md file you created for Week 4, and the important resources listed on [Week 6 - Metadata standards](index-06.qmd).
+
+Submit two files, the R script and the XML.

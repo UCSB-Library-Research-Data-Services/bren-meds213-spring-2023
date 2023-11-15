@@ -1,0 +1,68 @@
+---
+title: "Course syllabus"
+---
+
+## Overview
+
+This course will teach students the fundamentals of relational databases and data management. Students will learn the principles of database modeling and design and gain practical experience applying SQL (Structured Query Language) to manage and manipulate relational databases. The course also introduces the role and application of data documentation and metadata standards for interoperability and effective data management. By the end of the course, students will be equipped to make informed decisions about managing databases and data ethically and responsibly, focusing on issues such as bias, data privacy, sharing, ownership, and licensing.
+
+## Learning objectives
+
+-   Understand the fundamental principles of relational databases and relational data modeling, including table structures, primary and foreign keys, relationships between tables, and data normalization.
+
+-   Understand how to use the Unix command line and how manage SQLite databases from the command line.
+
+-   Use SQL to retrieve, manipulate, and manage data stored in a relational database.
+
+-   Demonstrate proficiency in querying, filtering, sorting, and programmatically accessing and interacting with relational databases from R and Python.
+
+-   Become familiar with advanced database topics such as concurrency, transactions, indexing, backups, and publication.
+
+-   Understand the role of good data documentation and metadata standards for interoperability, effective data management, and reproducibility.
+
+-   Operationalize the FAIR principles into data management practices.
+
+-   Produce a metadata record in EML (Ecological Metadata Language) and apply metadata crosswalks to programmatically convert metadata schemas.
+
+-   Understand the ethics of sensitive data and how to de-identify sensitive data.
+
+-   Evaluate ethical and responsible data management practices, including bias, data privacy, sharing, ownership, and licensing issues.
+
+## Schedule\*
+
+| Week              | Topic/Content                                                          |
+|----------------------|-------------------------------------------------|
+| 1 *(April 3-5)*   | [Relational databases and data modeling](modules/week01/index-01.qmd)  |
+| 2 *(April 10-12)* | [Ethical and responsible data management](modules/week02/index-02.qmd) |
+| 3 *(April 17-19)* | [SQLite and SQL](modules/week03/index-03.qmd)                          |
+| 4 *(April 24-26)* | [Reproducible and FAIR data](modules/week04/index-04.qmd)              |
+| 5 *(May 1-3)*     | [SQLite, SQL, and Bash](modules/week05/index-05.qmd)                   |
+| 6 *(May 8-10)*    | [Metadata standards](modules/week06/index-06.qmd)                      |
+| 7 *(May 15-17)*   | [Programming with databases](modules/week07/index-07.qmd)              |
+| 8 *(May 22-24)*   | [Sensitive data](modules/week08/index-08.qmd)                          |
+| 9 *(May 31)*      | [Advanced database topics](modules/week09/index-09.qmd)                |
+| 10 *(June 5-6)*   | [Data licensing and publication](modules/week10/index-10.qmd)          |
+
+\*Schedule subject to change.
+
+## Course assessment
+
+Your performance in this course will depend 90% on weekly homework assignments and quizzes and 10% on participation. There will be no graded exercises or homework the last week.
+
+## Attendance and homework policy
+
+Attendance is required. Material will be given in class that is not covered by slides or background readings.
+
+Homework is expected to be turned in on time. A generous amount of time will be given to complete assignments. Do not wait until the last minute to work on homework in case something unexpected comes up. Homework turned in late will be docked 25% per day.
+
+## Code of conduct
+
+All students are expected to read and comply with the [UCSB Student Conduct Code](http://www.sa.ucsb.edu/regulations/student-conduct-code/student-conduct-code). We expect cooperation from all members to help ensure a welcoming and inclusive environment for everybody. We are determined to make our courses welcoming, inclusive and harassment-free for everyone regardless of gender, gender identity and expression, race, age, sexual orientation, disability, physical appearance, or religion (or lack thereof). We do not tolerate harassment of class participants, teaching assistants, or instructors in any form. Derogatory, abusive, or demeaning language or imagery will not be tolerated.
+
+## Student support
+
+We understand that ongoing crises impact students differently based on experiences, identities, living situations and resources, family responsibilities, and unforeseen challenges. We encourage you to prioritize your well-being. We are here to help you reach your learning and career goals. You are always welcome to reach out to our teaching team so that we can best support you. Please see the [UCSB Campus Resource Guide](https://www.ucsb.edu/students) for campus student support and services.
+
+## Disabled students program
+
+Students with disabilities and/or alternative learning needs are encouraged to work with the [Disabled Students Program](https://dsp.sa.ucsb.edu/) at UCSB to ensure we can best support your learning and success.

@@ -1,0 +1,57 @@
+---
+title: "Week 3 - SQLite and SQL"
+---
+
+## Learning objectives
+
+-   Understand the relationship of SQL to relational databases
+-   Understand how SQLite differs from client/server databases
+-   Understand basic SQL syntax and statements
+-   Be able to answer basic questions about data
+
+## Slides and other materials
+
+[slides-03.pptx](slides-03.pptx)
+
+Lecture notes:
+
+-   [lecture-notes-03-mon.txt](lecture-notes-03-mon.txt)
+-   [lecture-notes-03-wed.txt](lecture-notes-03-wed.txt)
+
+[ASDN dataset ER (entity-relationship) diagram](asdn-er-diagram.png)
+
+[Class data GitHub repository, week 3](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2023-class-data/tree/main/week3)
+
+## Resources
+
+1.  <http://swcarpentry.github.io/sql-novice-survey/>
+
+    -   *Good Carpentry lesson, our lesson is drawn from this.*
+
+2.  C.J. Date and Hugh Darwen (1993). A Guide to the SQL Standard. 3rd ed. Reading, MA: Addison-Wesley.\
+    [Access via Library Catalog](https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma9913412734306531)
+
+    -   *The ANSI standard.*
+
+3.  Joe Celko (1995). Joe Celko's SQL For Smarties: Advanced SQL Programming. San Francisco, CA: Morgan Kaufmann.\
+    [Access via Library Catalog](https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma9913962957206531)
+
+    -   *This guy is an SQL guru. Newer versions of this book are available online, check the Library catalog (a bug is preventing me from linking directly).*
+
+4.  Grant Allen and Mike Owens (2010). The Definitive Guide to SQLite. 2nd ed. Berkeley, CA: Apress.\
+    [Access via Library Catalog](https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma9914806582006531)
+
+    -   *Good reference. Can access online!*
+
+5.  Jeffrey D. Ullman and Jennifer Widom (2008). A First Course in Database Systems. 3rd ed. Upper Saddle River, NJ: Pearson/Prentice Hall.\
+    [Access via Library Catalog](https://search.library.ucsb.edu/permalink/01UCSB_INST/1aqck9j/alma990032103790203776)
+
+    -   *Complete but theoretical introduction to relational databases, data modeling, and relational algebra.*
+
+## Homework
+
+[SQL problem 1](hw-03-1.qmd)
+
+[SQL problem 2](hw-03-2.qmd)
+
+[SQL problem 3](hw-03-3.qmd)

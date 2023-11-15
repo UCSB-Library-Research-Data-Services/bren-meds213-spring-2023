@@ -1,0 +1,55 @@
+---
+title: "Week 4 - Reproducible and FAIR data"
+---
+
+## Learning goals
+
+-   Understand the implications of data management and organization for reproducible and FAIR (Findable, Accessible, Interoperable, and Reusable) data science.
+-   Operationalize reproducibility and the FAIR principles by adopting good and responsible data management, code, and workflow documentation practices in your daily work.
+-   Apply strategies to mitigate issues that could prevent reproducibility.
+
+## Slides
+
+[slides-04.pptx](slides-04.pptx)
+
+## In-class exercise
+
+### Renv for R (graded)
+
+Open the project example in the [class data GitHub repository, week 4](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2023-class-data/tree/main/week4) in RStudio.
+
+Inspect files and documentation. Take a quick look. What opportunities for improvement can you spot in this project (README, file naming, and organization)?
+
+-   Let's look together at the scripts. Any issues when you try to run it?
+-   Create a `renv.lock` file for the project
+-   Organize the files in a way that would make things better (optional)
+
+### Venv for Python (optional)
+
+-   Let's use the terminal in VS Code on the tsosie server and see how we can set up a virtual environment for Python
+
+### Binder (optional)
+
+-   Create a project on GitHub using the data and code from the project example (give a good name to it!)
+-   "Binderize" your example repo
+-   Share the link to your repo
+
+[Virtual environments notes](virtual-environments-notes.docx)
+
+## Recommended readings
+
+1.  Marwick B, Boettiger C, Mullen L. 2018. Packaging data analytical work reproducibly using R (and friends). PeerJ Preprints 6:e3192v2 <https://doi.org/10.7287/peerj.preprints.3192v2>.
+
+2.  Powers, S. M., & Hampton, S. E. (2019). Open science, reproducibility, and transparency in ecology. Ecological applications : a publication of the Ecological Society of America, 29(1), e01822. <https://doi.org/10.1002/eap.1822>.
+
+3.  PyPA Guides. (Apr. 4, 2023). Installing packages using pip and virtual environments. <https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment>.
+
+4.  Ushey, K. (April, 6, 2023). Renv: Project environments (Version 0.17.3) \[Computer software\]. Retrieved from <https://cran.r-project.org/web/packages/renv/renv.pdf>.
+
+5.  Wilkinson, M. D., Dumontier, M., Aalbersberg, I. J., Appleton, G., Axton, M., Baak, A., Blomberg, N., Boiten, J. W., da Silva Santos, L. B., Bourne, P. E., Bouwman, J., Brookes, A. J., Clark, T., Crosas, M., Dillo, I., Dumon, O., Edmunds, S., Evelo, C. T., Finkers, R., Gonzalez-Beltran, A., ... Mons, B. (2016). The FAIR Guiding Principles for scientific data management and stewardship. Scientific data, 3, 160018. [https://doi.org/10.1038/sdata.2016.18Links](https://doi.org/10.1038/sdata.2016.18)
+
+*Other suggested readings and resources are noted in the slide deck.*
+
+## Homework
+
+[Project organization and documentation](hw-04.qmd)

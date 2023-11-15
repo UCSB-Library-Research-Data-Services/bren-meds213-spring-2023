@@ -1,0 +1,33 @@
+---
+title: "Case Study C: To reuse or not reuse, that is the key question!"
+---
+
+## Instructions
+
+**Read the scenario and answer the questions based on the weekly readings and the lecture:**
+
+Adam is a researcher for a non-profit organization dedicated to accelerating the adoption of solar energy. The organization relies on data from various sources, including sensors, satellite imagery, and field measurements, to inform solar energy allocation, usage, and conservation decisions.
+
+Recently, he identified an available dataset containing data on the solar energy market size, including trends, competition, and customer demand. These data can inform business and policy decisions related to solar energy adoption. Adam is particularly excited because this is a multivariate time series dataset from the past ten years. Also, the data documentation listed many important variables for his project, including the compound annual growth rates (CAGR) for solar energy companies. However, when Adam inspected some of the data files, he noticed a few data points that needed to be corrected. For example, some rows had NAs; others had 000, 999, and -999 or were utterly blank; the documentation does not help him infer those values.
+
+When he contacted the corresponding researcher for clarification, he was told these inconsistencies could have been caused either due to system migration or by human error in inaccurate data entry. The researcher mentioned that his team had multiple contributors throughout the years and noted there were no enforced validation rules or data quality checks. Ultimately, Adam should choose a solution that balances the benefits of using the existing dataset with the potential risks of using incomplete or inaccurate data.
+
+Adam faces a dilemma. On the one hand, the dataset could provide valuable insights into the solar energy market and inform better policies and management decisions. On the other hand, the missing and anomalous data could affect the dataset's overall quality and integrity, potentially leading to incorrect conclusions and decisions.
+
+## Questions
+
+### Question 1
+
+Suppose Adam is leaning toward reusing the dataset despite the identified problems. What general ethical and responsible steps would you advise him to take moving forward? (Select all that apply)
+
+-   [ ] Adam should carefully examine the dataset to map all existing issues to determine the extent of missing and anomalous data and how it could affect the accuracy of his analysis.
+
+-   [ ] If Adam collects new data, he should enforce data validation rules to tables and perform quality checks to avoid similar problems.
+
+-   [ ] If Adam integrates new data and perform all necessarily adjustments to remove uncertainties and other problems in the data, he no longer needs to attribute original data creators.
+
+-   [ ] If the dataset has significant missing or anomalous data, Adam may need to collect additional data to ensure the analysis is accurate and representative. This may involve additional time and resources but could lead to more accurate and reliable insights.
+
+-   [ ] Adam may be able to proceed with the analysis after carefully documenting and accounting for any uncertainties or limitations in the data.
+
+-   [ ] Adam should produce new documentation for the dataset based on all improvements he makes to the original data.

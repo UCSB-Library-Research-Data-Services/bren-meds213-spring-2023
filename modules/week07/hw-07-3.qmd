@@ -1,0 +1,90 @@
+---
+title: "Week 7 - Characterizing egg variation"
+---
+
+You read [Egg Dimensions and Neonatal Mass of Shorebirds](https://www.jstor.org/stable/1367334) by Robert E. Ricklefs and want to see how the egg data we've been using in class compares to his results. Specifically, Ricklefs reported, "Coefficients of variation were 4 to 9% for egg volume" for shorebird eggs gathered in Manitoba, Canada. What is the range of coefficients of variation in our ASDN dataset?
+
+The "coefficient of variation," or CV, is a unitless measure of the variation of a sample, defined as the standard deviation divided by the mean and multiplied by 100 to express as a percentage. Thus, a CV of 10% means the standard deviation is 10% of the mean value. For the purposes of this computation, we will copy Ricklefs and use as a proxy for egg volume the formula
+
+$$ W^2 L $$
+
+where $W$ is egg width and $L$ is egg length.
+
+Your task is to create a Python program that reads data from the ASDN database and uses Pandas to compute, for each species in the database (for which there is egg data), the coefficient of variation of volume using the above formula. There are many ways this can be done. Because this assignment is primarily about programming in Python, please follow the steps below. Please submit your Python code when done.
+
+# Step 1
+
+Create a query that will return the distinct species for which there is egg data (not all species and not all nests have egg data), so that you can then loop over those species. Your query should return two columns, species code and scientific name.
+
+# Step 2
+
+After you've connected to the database and created a cursor `c`, iterate over the species like so:
+
+```         
+species_query = """SELECT Code, Scientific_name FROM..."""
+for row in c.execute(species_query):
+    species_code = row[0]
+    scientific_name = row[1]
+    # query egg data for that species (step 3)
+    # compute statistics and print results (step 4)
+```
+
+# Step 3
+
+You will need to construct a query template that gathers egg data for a species that will be supplied as a parameter. You can compute the formula
+
+$$ W^2 L $$
+
+in SQL or in Pandas. For simplicity, SQL is suggested:
+
+```         
+egg_query = """SELECT Width*Width*Length AS Volume FROM..."""
+```
+
+Within the loop, you will want to execute the query on the current species in the loop iteration. You may use the Pandas function `pd.read_sql` to do so and also directly load the results into a dataframe:
+
+```         
+df = pd.read_sql(egg_query, conn, ...)
+```
+
+Do a `help(pd.read_sql)` to figure out how to pass parameters to a query.
+
+# Step 4
+
+Finally, and still within your loop, you'll want to compute statistics and print out the results:
+
+```         
+cv = round(df.Volume.std()/df.Volume.mean()*100, 2)
+print(f"{scientific_name} {cv}%")
+```
+
+Your output should look like this:
+
+```         
+Charadrius semipalmatus 8.99%
+Pluvialis dominica 19.88%
+Pluvialis squatarola 6.94%
+Calidris alpina 5.46%
+Calidris fuscicollis 16.77%
+Phalaropus fulicarius 4.65%
+Arenaria interpres 21.12%
+```
+
+# Appendix
+
+It's not necessary to use `pd.read_sql` to get data into a dataframe, it's just a convenience. To do so manually (and to show you it's not that hard), imagine that your query returns three columns. Collect the row data into three separate lists, then manually create a dataframe specifying the contents as a dictionary:
+
+```         
+rows = c.execute("SELECT Species, Width, Length FROM...").fetchall()
+species_column = [t[0] for t in rows]
+width_column = [t[1] for t in rows]
+length_column = [t[2] for t in rows]
+
+df = pd.DataFrame(
+    {
+        "species": species_column,
+        "width": width_column,
+        "length": length_column
+    }
+)
+```
