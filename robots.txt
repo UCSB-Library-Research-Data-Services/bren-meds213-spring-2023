@@ -1,1 +1,1 @@
-Sitemap: https://UCSB-Library-Research-Data-Services.github.io/bren-meds213-spring-2023/sitemap.xml
+Sitemap: https://ucsb-library-research-data-services.github.io/bren-meds213-spring-2023/sitemap.xml

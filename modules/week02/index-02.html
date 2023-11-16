@@ -527,7 +527,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/UCSB-Library-Research-Data-Services\.github\.io\/bren-meds213-spring-2023\/");
+      var filterRegex = new RegExp("https:\/\/ucsb-library-research-data-services\.github\.io\/bren-meds213-spring-2023");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
