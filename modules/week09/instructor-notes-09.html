@@ -329,7 +329,7 @@ Files
 <a href="../../modules/week09/concurrency/concurrency.sql" class="filename listing-filename">concurrency.sql</a>
 </td>
 </tr>
-<tr data-index="2" data-listing-file-modified-sort="1700083492494" data-listing-filename-sort="experiment.sh">
+<tr data-index="2" data-listing-file-modified-sort="1700190998832" data-listing-filename-sort="experiment.sh">
 <td>
 <a href="../../modules/week09/concurrency/experiment.sh" class="filename listing-filename">experiment.sh</a>
 </td>
@@ -348,7 +348,7 @@ No matching items
 </div>
 <p>The above files, which can be downloaded <em>in toto</em> as <a href="concurrency.zip">concurrency.zip</a>, can be used to demonstrate the necessity of using transactions and locking to avoid race conditions. <code>concurrency.db</code> is an SQLite database created by running the commands in <code>concurrency.sql</code>. It contains a single value <span class="math inline">\(V\)</span> in a single row in a single table.</p>
 <p><code>worker.py</code> is a Python program that adds a specified delta value to <span class="math inline">\(V\)</span> a specified number of times. For example, <code>python worker.py 500 1</code> adds 1 to <span class="math inline">\(V\)</span> 500 times. By default it does no locking at all, but if a <code>wt</code> (“with transactions”) argument is added, as in <code>python worker.py 500 1 wt</code>, it wraps each update in a transaction.</p>
-<p><code>experiment.sh</code> is a Bash script that resets <span class="math inline">\(V\)</span> to 0, runs two instances of <code>worker.py</code> concurrently, one adding +1 to <span class="math inline">\(V\)</span> 500 times and the other adding -1 to <span class="math inline">\(V\)</span> 500 times, and then prints the final value of <span class="math inline">\(V\)</span>. By default it does no locking, but as with <code>worker.py</code>, if it is run with a<code>wt</code> argument then transactions and locking are employed. With no race conditions the final value of <span class="math inline">\(V\)</span> will of course be 0, but if race conditions occur, <span class="math inline">\(V\)</span> will likely have a random nonzero value.</p>
+<p><code>experiment.sh</code> is a Bash script that resets <span class="math inline">\(V\)</span> to 0, runs two instances of <code>worker.py</code> concurrently, one adding +1 to <span class="math inline">\(V\)</span> 500 times and the other adding -1 to <span class="math inline">\(V\)</span> 500 times, and then prints the final value of <span class="math inline">\(V\)</span>. By default it does no locking, but as with <code>worker.py</code>, if it is run with a <code>wt</code> argument then transactions and locking are employed. With no race conditions the final value of <span class="math inline">\(V\)</span> will of course be 0, but if race conditions occur, <span class="math inline">\(V\)</span> will likely have a random nonzero value.</p>
 <p>The database configuration, the connection details, and the timing delays have all been designed to make race conditions very likely to occur. (It is suprisingly difficult to get race conditions to occur due to SQLite’s default locking and due to artifacts of operating system timeslicing.) This experimental setup has been tested on MacOS, Windows, and several Unix platforms and consistently yields the desired result. Here’s an example run without transactions:</p>
 <pre><code>% ./experiment.sh
 value = 14
@@ -383,12 +383,12 @@ Files
 <a href="../../modules/week09/indexes/build-big-db.sql" class="filename listing-filename">build-big-db.sql</a>
 </td>
 </tr>
-<tr data-index="1" data-listing-file-modified-sort="1700083492495" data-listing-filename-sort="generate-rows">
+<tr data-index="1" data-listing-file-modified-sort="1700190998833" data-listing-filename-sort="generate-rows">
 <td>
 <a href="../../modules/week09/indexes/generate-rows" class="filename listing-filename">generate-rows</a>
 </td>
 </tr>
-<tr data-index="2" data-listing-file-modified-sort="1700083492495" data-listing-filename-sort="index-timer">
+<tr data-index="2" data-listing-file-modified-sort="1700190998833" data-listing-filename-sort="index-timer">
 <td>
 <a href="../../modules/week09/indexes/index-timer" class="filename listing-filename">index-timer</a>
 </td>
